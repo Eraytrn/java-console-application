@@ -11,10 +11,10 @@
 	<packaging>jar</packaging>
 
 	<!-- More Project Information -->
-	<name>recipe-cost-calculator-app</name>
-	<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+	<name>java-console-application</name>
+	<url>https://github.com/Eraytrn/java-console-application</url>
 	<scm>
-		<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+		<url>https://github.com/Eraytrn/java-console-application</url>
 	</scm>
 	<inceptionYear>2024</inceptionYear>
 	<developers>
@@ -57,7 +57,7 @@
 			</roles>
 		</contributor>
 	</contributors>
-	<description>CE 204 2023-2024 Midterm Project (Recipe Cost Calculator Application) </description>
+	<description></description>
 	<organization>
 		<name>Recep Tayyip Erdogan University</name>
 		<url>www.erdogan.edu.tr</url>
@@ -65,7 +65,7 @@
 	<!-- Environment Settings -->
 	<issueManagement>
 		<system>Github</system>
-		<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+		<url>https://github.com/Eraytrn/java-console-application</url>
 	</issueManagement>
 	<ciManagement>
 		<system>Github</system>
@@ -78,25 +78,25 @@
 				<sendOnWarning>true</sendOnWarning>
 			</notifier>
 		</notifiers>
-		<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+		<url>https://github.com/Eraytrn/java-console-application</url>
 	</ciManagement>
 	<repositories>
 		<repository>
-			<id>ce204-midterm-eray-turan-doganay-kanbur-java</id>
-			<name>ce204-midterm-eray-turan-doganay-kanbur-java</name>
-			<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+			<id>java-console-application</id>
+			<name>java-console-application</name>
+			<url>https://github.com/Eraytrn/java-console-application</url>
 		</repository>
 	</repositories>
 	<distributionManagement>
 		<site>
-			<name>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</name>
-			<id>ce204-midterm-eray-turan-doganay-kanbur-java</id>
+			<name>https://github.com/Eraytrn/java-console-application</name>
+			<id>java-console-application</id>
 		</site>
-		<downloadUrl>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java/releases/download/v1.0.6/RecipeCostCalculatorApp.jar</downloadUrl>
+		<downloadUrl>https://github.com/Eraytrn/java-console-application/releases/download/v1.0.6/recipe-cost-calculator-app.jar</downloadUrl>
 		<repository>
-			<id>ce204-midterm-eray-turan-doganay-kanbur-java</id>
-			<name>ce204-midterm-eray-turan-doganay-kanbur-java</name>
-			<url>https://github.com/Eraytrn/ce204-midterm-eray-turan-doganay-kanbur-java</url>
+			<id>java-console-application</id>
+			<name>java-console-application</name>
+			<url>https://github.com/Eraytrn/java-console-application</url>
 		</repository>
 	</distributionManagement>
 	<properties>
@@ -109,7 +109,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -122,18 +122,18 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.32</version>
+			<version>2.0.9</version>
 		</dependency>
 		<!-- Logback Implementation -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.2.6</version>
+			<version>1.4.11</version>
 		</dependency>
 		<dependency>
     <groupId>org.apache.maven.doxia</groupId>
     <artifactId>doxia-core</artifactId>
-    <version>1.9</version> <!-- veya uyumlu bir sürüm -->
+    <version>2.0.0</version> <!-- veya uyumlu bir sürüm -->
 </dependency>
 
 	</dependencies>
@@ -143,14 +143,16 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>17</source>
+					<target>17</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.1.2</version>
 				<configuration>
 					<includes>
 						<include>**/MenuTests.java</include>
@@ -162,7 +164,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.7</version>
+				<version>0.8.10</version>
 				<executions>
 					<execution>
 						<goals>
@@ -182,7 +184,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>4.0.0-M12</version>
+				<version>4.0.0-M13</version>
 				<configuration>
 					<port>9000</port>
 					<tempWebappDirectory>${basedir}/target/site</tempWebappDirectory>
@@ -246,7 +248,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.2.4</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -311,7 +313,7 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>2.9</version>
+					<version>3.5.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

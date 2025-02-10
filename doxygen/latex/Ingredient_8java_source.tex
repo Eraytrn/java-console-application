@@ -1,0 +1,57 @@
+\doxysection{Ingredient.\+java}
+\hypertarget{Ingredient_8java_source}{}\label{Ingredient_8java_source}\index{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/Ingredient.java@{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/Ingredient.java}}
+\mbox{\hyperlink{Ingredient_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00005}\mbox{\hyperlink{namespacecom_1_1turankanbur_1_1calculator}{00005}}\ \textcolor{keyword}{package\ }com.turankanbur.calculator;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.io.Serializable;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00021}00021\ \textcolor{keyword}{interface\ }IMainIngredient\{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00023}00023\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00030}00030\ \ \ \ \ \ \textcolor{keywordtype}{void}\ addIngredient(\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient,\ String\ file);}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00037}00037\ \ \ \ \ \ \textcolor{keywordtype}{void}\ saveToFile(String\ fileName);}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ loadFromFile(String\ fileName);}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00049}00049\ \ \ \ \ \ \textcolor{keywordtype}{void}\ listIngredients();}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00057}00057\ \ \ \ \ \ \textcolor{keywordtype}{void}\ editIngredientPrice(String\ ingredientName,\ \textcolor{keywordtype}{int}\ newPrice);}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00065}00065\ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ findIngredientByName(String\ name);}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00073}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{00073}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ \textcolor{keyword}{implements}\ Serializable\ \{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{long}\ serialVersionUID\ =\ 1L;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{private}\ String\ name;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ price;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00097}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{Ingredient}}(String\ name,\ \textcolor{keywordtype}{int}\ price)\ \{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ this.price\ =\ price;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00107}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{00107}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{getName}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00111}00111\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00112}00112\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00119}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{00119}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{getPrice}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ price;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00128}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aa98e8d3f3458e0922557e85bfcafdfc6}{00128}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aa98e8d3f3458e0922557e85bfcafdfc6}{setPrice}}(\textcolor{keywordtype}{int}\ price)\ \{}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ this.price\ =\ price;}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Ingredient_8java_source_l00131}00131\ \}}
+
+\end{DoxyCode}

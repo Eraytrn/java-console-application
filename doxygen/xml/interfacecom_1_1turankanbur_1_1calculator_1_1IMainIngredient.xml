@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient" kind="interface" language="Java" prot="package">
+    <compoundname>com::turankanbur::calculator::IMainIngredient</compoundname>
+    <derivedcompoundref refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement" prot="public" virt="non-virtual">com.turankanbur.calculator.IngredientManagement</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a380cdbc08aadcbab1ad50f5c7281dfad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainIngredient.addIngredient</definition>
+        <argsstring>(Ingredient ingredient, String file)</argsstring>
+        <name>addIngredient</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.addIngredient</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" kindref="compound">Ingredient</ref></type>
+          <declname>ingredient</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds an ingredient to the list of managed ingredients.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ingredient</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ingredient to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save the ingredients to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="30" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1afe75fe291ba0addcccf9dcc21a2912b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainIngredient.saveToFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>saveToFile</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.saveToFile</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the managed ingredients to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="37" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a50aa2091f47585e19dac995d06dc8dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainIngredient.loadFromFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>loadFromFile</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.loadFromFile</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads ingredients from a file and populates the managed ingredients list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1ae5344c73b3d6e80b04a33d20a7fa1898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainIngredient.listIngredients</definition>
+        <argsstring>()</argsstring>
+        <name>listIngredients</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.listIngredients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all managed ingredients along with their names and prices. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="49" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a4c2a33c10921866fcb86b275f17aef48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainIngredient.editIngredientPrice</definition>
+        <argsstring>(String ingredientName, int newPrice)</argsstring>
+        <name>editIngredientPrice</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.editIngredientPrice</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>ingredientName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>newPrice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Edits the price of a specified ingredient.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ingredientName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the ingredient to edit </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new price of the ingredient </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="57" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a1b5b49e7933dfac99f4ec4ab1317acd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" kindref="compound">Ingredient</ref></type>
+        <definition>Ingredient com.turankanbur.calculator.IMainIngredient.findIngredientByName</definition>
+        <argsstring>(String name)</argsstring>
+        <name>findIngredientByName</name>
+        <qualifiedname>com.turankanbur.calculator.IMainIngredient.findIngredientByName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds an ingredient by its name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the ingredient to find </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the ingredient if found, or null if not found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="65" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for serializing and deserializing objects. This interface is implemented by classes whose objects need to be persisted. Represents an ingredient used in a recipe. This class provides methods to get and set the name and price of the ingredient. Interface representing main ingredients in a recipe or dish. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>com.turankanbur.calculator.IMainIngredient</label>
+      </node>
+      <node id="2">
+        <label>com.turankanbur.calculator.IngredientManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="21" column="11" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" bodystart="21" bodyend="66"/>
+    <listofallmembers>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a380cdbc08aadcbab1ad50f5c7281dfad" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>addIngredient</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a4c2a33c10921866fcb86b275f17aef48" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>editIngredientPrice</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a1b5b49e7933dfac99f4ec4ab1317acd9" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>findIngredientByName</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1ae5344c73b3d6e80b04a33d20a7fa1898" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>listIngredients</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a50aa2091f47585e19dac995d06dc8dd4" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>loadFromFile</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1afe75fe291ba0addcccf9dcc21a2912b3" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainIngredient</scope><name>saveToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,411 @@
+\doxysection{com.\+turankanbur.\+calculator.\+Ingredient\+Management Class Reference}
+\hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+Inheritance diagram for com.\+turankanbur.\+calculator.\+Ingredient\+Management\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.736156cm]{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a5d0cc26f5698a18fec8624efecccb960}{Ingredient\+Management}} (String name, int price)
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a49858502a36b4af3178f8e3ccde0df0d}{add\+Ingredient}} (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} ingredient, String file)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a3aa55d99f0ae451655de8d675d6852fa}{get\+Ingredients}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_abf2fc0b9cd0c421fc9c46d8b4deacf63}{set\+Ingredient}} (List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}})
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427}{save\+To\+File}} (String file\+Name)
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{load\+From\+File}} (String file\+Name)
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}{list\+Ingredients}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_aeef4b512196171a875638e2bca2b0722}{edit\+Ingredient\+Price}} (String ingredient\+Name, int new\+Price)
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a7e245d5acf5d722891a5a88275cb0ee3}{find\+Ingredient\+By\+Name}} (String name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{com.\+turankanbur.\+calculator.\+Ingredient}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{Ingredient}} (String name, int price)
+\item 
+String \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{get\+Name}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{get\+Price}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aa98e8d3f3458e0922557e85bfcafdfc6}{set\+Price}} (int price)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality for handling end-\/of-\/file (EOF) conditions. Provides functionality for reading bytes from a file input stream. Provides functionality for writing bytes to a file output stream. Provides functionality for handling input/output (I/O) operations. Provides functionality for reading objects from an input stream. Provides functionality for writing objects to an output stream. Allows classes to implement serialization, allowing their objects to be converted into byte streams. Provides an implementation of the List interface backed by an array. Provides functionality for storing and manipulating collections of objects. Manages the ingredients used in recipes. This class provides methods for adding, listing, editing, and loading/saving ingredients to/from a file. 
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00058}{58}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a5d0cc26f5698a18fec8624efecccb960}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a5d0cc26f5698a18fec8624efecccb960} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!IngredientManagement@{IngredientManagement}}
+\index{IngredientManagement@{IngredientManagement}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{IngredientManagement()}{IngredientManagement()}}
+{\footnotesize\ttfamily com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+Ingredient\+Management (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{price }\end{DoxyParamCaption})}
+
+Constructs an Ingredient\+Management object with the specified name and price for the base ingredient. Initializes the list of ingredients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the base ingredient \\
+\hline
+{\em price} & the price of the base ingredient \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00080}{80}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ super(name,\ price);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ this.ingredients\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a49858502a36b4af3178f8e3ccde0df0d}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a49858502a36b4af3178f8e3ccde0df0d} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!addIngredient@{addIngredient}}
+\index{addIngredient@{addIngredient}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{addIngredient()}{addIngredient()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+add\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}}]{ingredient,  }\item[{String}]{file }\end{DoxyParamCaption})}
+
+Adds an ingredient to the list of managed ingredients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & the ingredient to add \\
+\hline
+{\em file} & the name of the file to save the ingredients to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00092}{92}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}.add(ingredient);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00759}{com.\+turankanbur.\+calculator.\+Menu.\+add\+Ingredient()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_aeef4b512196171a875638e2bca2b0722}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_aeef4b512196171a875638e2bca2b0722} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!editIngredientPrice@{editIngredientPrice}}
+\index{editIngredientPrice@{editIngredientPrice}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{editIngredientPrice()}{editIngredientPrice()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+edit\+Ingredient\+Price (\begin{DoxyParamCaption}\item[{String}]{ingredient\+Name,  }\item[{int}]{new\+Price }\end{DoxyParamCaption})}
+
+Edits the price of a specified ingredient.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient\+Name} & the name of the ingredient to edit \\
+\hline
+{\em new\+Price} & the new price of the ingredient \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00190}{190}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Ingredient\ ingredient\ :\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}})\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ingredient.getName().equals(ingredientName))\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ingredient.setPrice(newPrice);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}The\ price\ of"{}}\ +\ ingredientName\ +\ \textcolor{stringliteral}{"{}\ ingredient\ has\ been\ succesfully\ updated."{}});}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ saveToFile("{}example.bin"{});}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}The\ price\ of\ specified\ ingredient\ could\ not\ found."{}});}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a7e245d5acf5d722891a5a88275cb0ee3}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a7e245d5acf5d722891a5a88275cb0ee3} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!findIngredientByName@{findIngredientByName}}
+\index{findIngredientByName@{findIngredientByName}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{findIngredientByName()}{findIngredientByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+find\+Ingredient\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+Finds an ingredient by its name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the ingredient to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ingredient if found, or null if not found 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00209}{209}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Ingredient\ ingredient\ :\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}})\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ingredient.getName().equalsIgnoreCase(name))\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ingredient;}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00857}{com.\+turankanbur.\+calculator.\+Menu.\+edit\+Ingredient()}}, and \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a3aa55d99f0ae451655de8d675d6852fa}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a3aa55d99f0ae451655de8d675d6852fa} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+get\+Ingredients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of managed ingredients.
+
+\begin{DoxyReturn}{Returns}
+the list of managed ingredients 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00103}{103}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}};}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l01015}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Recipe()}}, and \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!listIngredients@{listIngredients}}
+\index{listIngredients@{listIngredients}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{listIngredients()}{listIngredients()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+list\+Ingredients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lists all managed ingredients along with their names and prices. 
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00168}{168}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}.isEmpty())\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}No\ ingredients\ found\ to\ list."{}});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}.size();\ i++)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{Ingredient}}\ ingredient\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}.get(i);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}Ingredient\ "{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Name:\ "{}}\ +\ ingredient.getName());}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Price:\ "{}}\ +\ ingredient.getPrice()+\ \textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Ingredient_8java_source_l00107}{com.\+turankanbur.\+calculator.\+Ingredient.\+get\+Name()}}, \mbox{\hyperlink{Ingredient_8java_source_l00119}{com.\+turankanbur.\+calculator.\+Ingredient.\+get\+Price()}}, and \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00857}{com.\+turankanbur.\+calculator.\+Menu.\+edit\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l00795}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Ingredient()}}, and \mbox{\hyperlink{Menu_8java_source_l00824}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Ingredient\+For\+Guest()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+load\+From\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption})}
+
+Loads ingredients from a file and populates the managed ingredients list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the file to load from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00144}{144}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileInputStream\ fis\ =\ \textcolor{keyword}{new}\ FileInputStream(fileName);\ ObjectInputStream\ ois\ =\ \textcolor{keyword}{new}\ ObjectInputStream(fis))\ \{}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{Ingredient}}\ loadedIngredient\ =\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aead73dd2c9dd5f90d40ebb73e76ecbfb}{Ingredient}})\ ois.readObject();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}}.add(loadedIngredient);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ and\ discard\ the\ marker}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ois.readUTF();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (EOFException\ e)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ Reached\ end\ of\ file}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ |\ ClassNotFoundException\ e)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ loading\ from\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00759}{com.\+turankanbur.\+calculator.\+Menu.\+add\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l01015}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Recipe()}}, \mbox{\hyperlink{Menu_8java_source_l00857}{com.\+turankanbur.\+calculator.\+Menu.\+edit\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l00795}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Ingredient()}}, and \mbox{\hyperlink{Menu_8java_source_l00824}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Ingredient\+For\+Guest()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+save\+To\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption})}
+
+Saves the managed ingredients to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the file to save to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00122}{122}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileOutputStream\ fos\ =\ \textcolor{keyword}{new}\ FileOutputStream(fileName);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObjectOutputStream\ oos\ =\ \textcolor{keyword}{new}\ ObjectOutputStream(fos))\ \{}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Ingredient\ ingredient\ :\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}})\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeObject(ingredient);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeUTF(\textcolor{stringliteral}{"{}\#END\_INGREDIENT\#"{}});\ \textcolor{comment}{//\ Add\ a\ marker\ between\ ingredients}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Ingredient\ has\ been\ succesfully\ saved\ to\ file"{}});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ saving\ to\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l00759}{com.\+turankanbur.\+calculator.\+Menu.\+add\+Ingredient()}}, \mbox{\hyperlink{Menu_8java_source_l00857}{com.\+turankanbur.\+calculator.\+Menu.\+edit\+Ingredient()}}, and \mbox{\hyperlink{Menu_8java_source_l00941}{com.\+turankanbur.\+calculator.\+Menu.\+remove\+Ingredient()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_abf2fc0b9cd0c421fc9c46d8b4deacf63}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_abf2fc0b9cd0c421fc9c46d8b4deacf63} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!setIngredient@{setIngredient}}
+\index{setIngredient@{setIngredient}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{setIngredient()}{setIngredient()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+set\+Ingredient (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$}]{ingredients }\end{DoxyParamCaption})}
+
+Sets the list of managed ingredients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredients} & the list of ingredients to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00112}{112}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ this.ingredients\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}{ingredients}};}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1}\label{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a252d95c3f970a81acaadf669950221c1} 
+\index{com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}!ingredients@{ingredients}}
+\index{ingredients@{ingredients}!com.turankanbur.calculator.IngredientManagement@{com.turankanbur.calculator.IngredientManagement}}
+\doxysubsubsection{\texorpdfstring{ingredients}{ingredients}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}$>$ com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+ingredients}
+
+Manages the ingredients used in recipes. This class provides methods for adding, listing, editing, and loading/saving ingredients to/from a file. 
+
+Definition at line \mbox{\hyperlink{IngredientManagement_8java_source_l00069}{69}} of file \mbox{\hyperlink{IngredientManagement_8java_source}{Ingredient\+Management.\+java}}.
+
+
+
+Referenced by \mbox{\hyperlink{IngredientManagement_8java_source_l00092}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+add\+Ingredient()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00190}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+edit\+Ingredient\+Price()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00209}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+find\+Ingredient\+By\+Name()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00103}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+get\+Ingredients()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00168}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+list\+Ingredients()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00144}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+load\+From\+File()}}, \mbox{\hyperlink{IngredientManagement_8java_source_l00122}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+save\+To\+File()}}, and \mbox{\hyperlink{IngredientManagement_8java_source_l00112}{com.\+turankanbur.\+calculator.\+Ingredient\+Management.\+set\+Ingredient()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/\mbox{\hyperlink{IngredientManagement_8java}{Ingredient\+Management.\+java}}\end{DoxyCompactItemize}

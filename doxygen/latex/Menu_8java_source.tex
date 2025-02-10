@@ -1,0 +1,1099 @@
+\doxysection{Menu.\+java}
+\hypertarget{Menu_8java_source}{}\label{Menu_8java_source}\index{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/Menu.java@{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/Menu.java}}
+\mbox{\hyperlink{Menu_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00012}00012\ \textcolor{keyword}{package\ }com.turankanbur.calculator;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00017}00017\ \textcolor{keyword}{import}\ java.io.FileInputStream;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00022}00022\ \textcolor{keyword}{import}\ java.io.FileOutputStream;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00027}00027\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00032}00032\ \textcolor{keyword}{import}\ java.io.ObjectInputStream;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00037}00037\ \textcolor{keyword}{import}\ java.io.ObjectOutputStream;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00042}00042\ \textcolor{keyword}{import}\ java.io.Serializable;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00047}00047\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00052}00052\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00057}00057\ \textcolor{keyword}{import}\ java.util.Scanner;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00065}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{00065}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{Menu}}\ \textcolor{keyword}{implements}\ Serializable\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{long}\ serialVersionUID\ =\ 1L;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00078}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aad190a04054dc1f110dfccc10f407ece}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aad190a04054dc1f110dfccc10f407ece}{main}}(String[]\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{Menu}}\ rcp\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{Menu}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ Scanner\ scanner\ =\ \textcolor{keyword}{new}\ Scanner(System.in);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ rcp.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{userMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00098}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{00098}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}()}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ ProcessBuilder(\textcolor{stringliteral}{"{}cmd"{}},\ \textcolor{stringliteral}{"{}/c"{}},\ \textcolor{stringliteral}{"{}cls"{}}).inheritIO().start().waitFor();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ e.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00116}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{00116}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{userMenu}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}User\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Register"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Login"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Guest\ Mode"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/Exit"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ your\ choice:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ exitRequested\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}R"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}r"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aef7a9dcf89dd0d83794e82703dce4dab}{registerUser}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}L"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}l"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1407d1ed36c8383d44b0c6c9ff71a411}{loginUser}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}G"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}g"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a05a7f16c56b101a6f9840888f1df14aa}{guestMode}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}E"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}e"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ exitRequested\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{userMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ exitRequested;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00167}00167\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00173}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aef7a9dcf89dd0d83794e82703dce4dab}{00173}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aef7a9dcf89dd0d83794e82703dce4dab}{registerUser}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Register\ User"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ username:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ String\ username\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ password:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ String\ password\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (ObjectOutputStream\ outputStream\ =\ \textcolor{keyword}{new}\ ObjectOutputStream(\textcolor{keyword}{new}\ FileOutputStream(\textcolor{stringliteral}{"{}register.bin"{}})))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ outputStream.writeObject(\textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1User}{User}}(username,\ password));}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}User\ registered\ successfully."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{userMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00200}00200\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00206}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1407d1ed36c8383d44b0c6c9ff71a411}{00206}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1407d1ed36c8383d44b0c6c9ff71a411}{loginUser}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Login"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Enter\ username:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ String\ username\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Enter\ password:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ String\ password\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (ObjectInputStream\ inputStream\ =\ \textcolor{keyword}{new}\ ObjectInputStream(\textcolor{keyword}{new}\ FileInputStream(\textcolor{stringliteral}{"{}register.bin"{}})))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1User}{User}}\ user;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((user\ =\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1User}{User}})\ inputStream.readObject())\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (user.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1User_a97399787514bd7cae661ed9be97eede7}{getUsername}}().equals(username)\ \&\&\ user.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1User_ad5e7fbaf18b7cbcb1953e5300af5d6e0}{getPassword}}().equals(password))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ |\ ClassNotFoundException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Error"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Incorrect\ username\ or\ password.\ Please\ try\ again."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a32be5e207d15391b9b009f6c1ef6aa40}{userMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00237}00237\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00239}00239\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00246}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a05a7f16c56b101a6f9840888f1df14aa}{00246}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a05a7f16c56b101a6f9840888f1df14aa}{guestMode}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00247}00247\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00249}00249\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00251}00251\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Guest\ Mode"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00253}00253\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00255}00255\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00256}00256\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00258}00258\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Welcome\ To\ Recipe\ Cost\ Calculator\ App(Guest\ Mode)"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Ingredient\ Management"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00262}00262\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Recipe\ Costing"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Plan\ Meal"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00266}00266\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/About"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00268}00268\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}5-\/Exit"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6d0f64d41e3bb367665aa3ffaf8054d4}{selectMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00271}00271\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00278}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{00278}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(Scanner\ Scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00279}00279\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00280}00280\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00283}00283\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ the\ welcome\ message\ and\ the\ menu\ options}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00285}00285\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Welcome\ To\ Recipe\ Cost\ Calculator\ App"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00287}00287\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Ingredient\ Management"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00289}00289\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Recipe\ Costing"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Plan\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00293}00293\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/About"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00295}00295\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}5-\/Exit"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00296}00296\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_afd68d9a49f4664af10f2f9dc7f2af464}{selectMenu}}(Scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00298}00298\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00300}00300\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00306}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{00306}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00307}00307\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00309}00309\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00310}00310\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ the\ welcome\ message\ and\ the\ menu\ options}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00314}00314\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Welcome\ To\ Recipe\ Cost\ Calculator\ App"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00316}00316\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Ingredient\ Management"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00318}00318\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Recipe\ Costing"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00320}00320\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Plan\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00321}00321\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/About"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00324}00324\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}5-\/Exit"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00325}00325\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00326}00326\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6d0f64d41e3bb367665aa3ffaf8054d4}{selectMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00327}00327\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00334}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_afd68d9a49f4664af10f2f9dc7f2af464}{00334}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_afd68d9a49f4664af10f2f9dc7f2af464}{selectMenu}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00335}00335\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operations"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}I"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}i"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}R"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}r"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a47f9dbb6da59ea70e5235e0f3616deb4}{RecipeCosting}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}P"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}p"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a85a0b1d3f1c517cc10b09fdea2ca3034}{PlanMeal}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}A"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}a"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6585a50e1f7491785e6c5d2a04be9984}{About}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}5"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}E"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}e"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00369}00369\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ scanner.close();\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00371}00371\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00372}00372\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00374}00374\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00380}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6d0f64d41e3bb367665aa3ffaf8054d4}{00380}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6d0f64d41e3bb367665aa3ffaf8054d4}{selectMenuForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00381}00381\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00382}00382\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operations"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00385}00385\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}I"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}i"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_af2e590d0b927420dd6f16a29db58fc99}{IngredientManagementForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}R"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}r"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a2b654e4d7adf220403947031cab9317f}{RecipeCostingForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}P"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}p"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aaca852f333c82f4a8ed573b0e2eafa5d}{PlanMealForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}A"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}a"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a90226ffe862b85beb4d63f5f06d41791}{AboutForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}5"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}E"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}e"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00419}00419\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00420}00420\ \ \ \ \ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00421}00421\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00422}00422\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00423}00423\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00425}00425\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00431}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a64d464b5d449f8b241360dc96dca6798}{00431}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a64d464b5d449f8b241360dc96dca6798}{IngredientManagement}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00432}00432\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00433}00433\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00434}00434\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00435}00435\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredient\ Management\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00436}00436\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00437}00437\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Add\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00438}00438\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/View\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00439}00439\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Edit\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00440}00440\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/Remove\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00441}00441\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}5-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00442}00442\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00443}00443\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00445}00445\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00446}00446\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00447}00447\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00448}00448\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00449}00449\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}A"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00450}00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}a"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3a93d3eb4cd5243a3b25dcdd68c6299d}{addIngredient}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00454}00454\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00455}00455\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00456}00456\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00457}00457\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00458}00458\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a160a45812969b71f33f8911a9467011b}{viewIngredient}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00460}00460\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00461}00461\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}E"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00462}00462\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}e"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ae56f188083c5d75e1411b57a1936b193}{editIngredient}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00465}00465\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00466}00466\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}R"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00467}00467\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}r"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a02a598ee21df087aefee1832cc8f41b7}{removeIngredient}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00469}00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00470}00470\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}5"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00471}00471\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00472}00472\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00473}00473\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00474}00474\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00475}00475\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00476}00476\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00477}00477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00481}00481\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00482}00482\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00483}00483\ \ \ \ \ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00484}00484\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00485}00485\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00486}00486\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00487}00487\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00493}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_af2e590d0b927420dd6f16a29db58fc99}{00493}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_af2e590d0b927420dd6f16a29db58fc99}{IngredientManagementForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00494}00494\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00495}00495\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00497}00497\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00498}00498\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00499}00499\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredient\ Management\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00501}00501\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00502}00502\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00503}00503\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/View\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00505}00505\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00507}00507\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00508}00508\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00509}00509\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00510}00510\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00511}00511\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00512}00512\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00513}00513\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00514}00514\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00515}00515\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a9551a30f5aa3b2fb791c5a8b1b42da3f}{viewIngredientForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00519}00519\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00520}00520\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00521}00521\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00522}00522\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00523}00523\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00524}00524\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00525}00525\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00526}00526\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00527}00527\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00529}00529\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_af2e590d0b927420dd6f16a29db58fc99}{IngredientManagementForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00530}00530\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00531}00531\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00532}00532\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00533}00533\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00534}00534\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00535}00535\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00541}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a47f9dbb6da59ea70e5235e0f3616deb4}{00541}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a47f9dbb6da59ea70e5235e0f3616deb4}{RecipeCosting}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00542}00542\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00543}00543\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00545}00545\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00546}00546\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00547}00547\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Recipe\ Costing\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00548}00548\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00549}00549\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00550}00550\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00551}00551\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Create\ Recipe"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00552}00552\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00553}00553\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/View\ Recipes"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00555}00555\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Edit\ Recipes"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00556}00556\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00557}00557\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}4-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00558}00558\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00559}00559\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00560}00560\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00561}00561\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00562}00562\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00563}00563\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00564}00564\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00565}00565\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00566}00566\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}C"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00567}00567\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}c"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00568}00568\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a5c7799ba8249f060dc832808e65dc64d}{CreateRecipe}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00569}00569\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00571}00571\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00572}00572\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00573}00573\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(\textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a745fbc2030305907d61c9954d4578069}{viewRecipe}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00577}00577\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00578}00578\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00579}00579\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00580}00580\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}E"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00581}00581\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}e"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00582}00582\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ae56f188083c5d75e1411b57a1936b193}{editIngredient}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00584}00584\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00585}00585\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00586}00586\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00587}00587\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00591}00591\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00592}00592\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00594}00594\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a47f9dbb6da59ea70e5235e0f3616deb4}{RecipeCosting}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00595}00595\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00596}00596\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00597}00597\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00598}00598\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00599}00599\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00605}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a2b654e4d7adf220403947031cab9317f}{00605}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a2b654e4d7adf220403947031cab9317f}{RecipeCostingForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00606}00606\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00607}00607\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{Menu}}\ a\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu}{Menu}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00608}00608\ \ \ \ \ \ \ \ \ a.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00609}00609\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00610}00610\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00611}00611\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00612}00612\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Recipe\ Costing\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00613}00613\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00614}00614\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00615}00615\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00616}00616\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/View\ Recipe"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00617}00617\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00618}00618\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00619}00619\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00620}00620\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00621}00621\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00622}00622\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00623}00623\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00624}00624\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00625}00625\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00626}00626\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00627}00627\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00628}00628\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aa7b0e82ab3195587e43acfdbda5780ed}{viewRecipeForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00631}00631\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00632}00632\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00633}00633\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00634}00634\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00638}00638\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00639}00639\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a2b654e4d7adf220403947031cab9317f}{RecipeCostingForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00642}00642\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00643}00643\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00644}00644\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00645}00645\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00646}00646\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00647}00647\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00653}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a85a0b1d3f1c517cc10b09fdea2ca3034}{00653}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a85a0b1d3f1c517cc10b09fdea2ca3034}{PlanMeal}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00654}00654\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00655}00655\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00657}00657\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00658}00658\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00659}00659\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Plan\ Meal\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00660}00660\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00661}00661\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00662}00662\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00663}00663\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/Create\ Meal"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00664}00664\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00665}00665\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/View\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00666}00666\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00667}00667\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}3-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00668}00668\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00669}00669\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00670}00670\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00671}00671\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00672}00672\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00673}00673\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00674}00674\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00675}00675\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00676}00676\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00677}00677\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}C"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00678}00678\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}c"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad3946db636273739e1456092c34511ac}{CreateMeal}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00681}00681\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00682}00682\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00683}00683\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00684}00684\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00685}00685\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00686}00686\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00687}00687\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad5481339a0104e64062e0d77291b8c1f}{viewMeal}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00689}00689\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00690}00690\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00691}00691\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00692}00692\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00693}00693\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00696}00696\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00697}00697\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a85a0b1d3f1c517cc10b09fdea2ca3034}{PlanMeal}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00700}00700\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00701}00701\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00702}00702\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00703}00703\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00704}00704\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00710}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aaca852f333c82f4a8ed573b0e2eafa5d}{00710}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aaca852f333c82f4a8ed573b0e2eafa5d}{PlanMealForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00711}00711\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00712}00712\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00713}00713\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00714}00714\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00715}00715\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00716}00716\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Plan\ Meal\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00717}00717\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00718}00718\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00719}00719\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00720}00720\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}1-\/View\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00721}00721\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00722}00722\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}2-\/Main\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00723}00723\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00724}00724\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Press\ First\ Character\ for\ further\ Operation\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00725}00725\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00726}00726\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00727}00727\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00728}00728\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00729}00729\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00730}00730\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00731}00731\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}V"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00732}00732\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}v"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00733}00733\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00734}00734\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1800dcfe54b9ff5c645c87130480c8f2}{viewMealForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00735}00735\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00736}00736\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00737}00737\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00738}00738\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}M"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00739}00739\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}m"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00740}00740\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00741}00741\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00742}00742\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00743}00743\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00744}00744\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00745}00745\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00746}00746\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aaca852f333c82f4a8ed573b0e2eafa5d}{PlanMealForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00747}00747\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00748}00748\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00749}00749\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00750}00750\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00751}00751\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00759}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3a93d3eb4cd5243a3b25dcdd68c6299d}{00759}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3a93d3eb4cd5243a3b25dcdd68c6299d}{addIngredient}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00760}00760\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00761}00761\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00762}00762\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00763}00763\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00764}00764\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00765}00765\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients-\/Add\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00766}00766\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00767}00767\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00768}00768\ \ \ \ \ \ \ \ \ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00769}00769\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Ingredients\ Name:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00770}00770\ \ \ \ \ \ \ \ \ String\ name\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00771}00771\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00772}00772\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients\ Price:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00773}00773\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ price\ =\ scanner.nextInt();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00774}00774\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00775}00775\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}(name,\ price);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00776}00776\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00777}00777\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00778}00778\ \ \ \ \ \ \ \ \ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00779}00779\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00780}00780\ \ \ \ \ \ \ \ \ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a49858502a36b4af3178f8e3ccde0df0d}{addIngredient}}(ingredient,\ \textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00781}00781\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00782}00782\ \ \ \ \ \ \ \ \ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427}{saveToFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00783}00783\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00784}00784\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00785}00785\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00786}00786\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00787}00787\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00788}00788\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00789}00789\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00795}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a160a45812969b71f33f8911a9467011b}{00795}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a160a45812969b71f33f8911a9467011b}{viewIngredient}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00796}00796\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00797}00797\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00798}00798\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ingredient\ recipeCalculator\ =\ new\ Ingredient(null,\ 0);}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00799}00799\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00800}00800\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00801}00801\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00802}00802\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00803}00803\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}{listIngredients}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00804}00804\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00805}00805\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ and\ display\ total\ stock\ and\ price}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00806}00806\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00807}00807\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00808}00808\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00809}00809\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00810}00810\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00811}00811\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00812}00812\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00813}00813\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00814}00814\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00815}00815\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00816}00816\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00817}00817\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00818}00818\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00824}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a9551a30f5aa3b2fb791c5a8b1b42da3f}{00824}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a9551a30f5aa3b2fb791c5a8b1b42da3f}{viewIngredientForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00825}00825\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00826}00826\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00827}00827\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ingredient\ recipeCalculator\ =\ new\ Ingredient(null,\ 0);}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00828}00828\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00829}00829\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00830}00830\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00831}00831\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00832}00832\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}{listIngredients}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00833}00833\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00834}00834\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ and\ display\ total\ stock\ and\ price}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00835}00835\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00836}00836\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00837}00837\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00838}00838\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00839}00839\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00840}00840\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00841}00841\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00842}00842\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00843}00843\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Returning\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00844}00844\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00845}00845\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00846}00846\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00847}00847\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00848}00848\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00849}00849\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00857}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ae56f188083c5d75e1411b57a1936b193}{00857}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ae56f188083c5d75e1411b57a1936b193}{editIngredient}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00858}00858\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00859}00859\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00860}00860\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ingredient\ rps\ =\ new\ Ingredient(null,\ 0);}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00861}00861\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ingredient\ listing\ =\ new\ Ingredient(null,\ 0);}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00862}00862\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00863}00863\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00864}00864\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00865}00865\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients-\/Edit\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00866}00866\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00867}00867\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00868}00868\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00869}00869\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00870}00870\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00871}00871\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00872}00872\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}{listIngredients}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00873}00873\ \ \ \ \ \ \ \ \ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00874}00874\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00875}00875\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ Ingredient\ Name\ to\ Edit:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00876}00876\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00877}00877\ \ \ \ \ \ \ \ \ String\ editName\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00878}00878\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00879}00879\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IngredientManagement\ management2\ =\ new\ IngredientManagement(editName,\ 0);}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00880}00880\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00881}00881\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ existing\ ingredients\ for\ user\ to\ choose\ from}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00882}00882\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00883}00883\ \ \ \ \ \ \ \ \ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00884}00884\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00885}00885\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ ingredient\ by\ name}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00886}00886\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00887}00887\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredientToEdit\ =\ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a7e245d5acf5d722891a5a88275cb0ee3}{findIngredientByName}}(editName);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00888}00888\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00889}00889\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ingredientToEdit\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00890}00890\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prompt\ user\ for\ new\ values}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00891}00891\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00892}00892\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}New\ Ingredients\ Price:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00893}00893\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00894}00894\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newPrice\ =\ scanner.nextInt();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00895}00895\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00896}00896\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ ingredient}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00897}00897\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00898}00898\ \ \ \ \ \ \ \ \ \ \ \ \ ingredientToEdit.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_aa98e8d3f3458e0922557e85bfcafdfc6}{setPrice}}(newPrice);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00899}00899\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00900}00900\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ to\ file}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00901}00901\ \ \ \ \ \ \ \ \ \ \ \ \ management1.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427}{saveToFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00902}00902\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ updated\ list}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00903}00903\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00904}00904\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00905}00905\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredient\ not\ found.\ Please\ enter\ a\ valid\ name."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00906}00906\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00907}00907\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00908}00908\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00909}00909\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Save"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00910}00910\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00911}00911\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Cancel"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00912}00912\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00913}00913\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ character\ for\ the\ operation\ :\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00914}00914\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00915}00915\ \ \ \ \ \ \ \ \ String\ a1\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00916}00916\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00917}00917\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (a1)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00918}00918\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}s"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00919}00919\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}S"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00920}00920\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00921}00921\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00922}00922\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00923}00923\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}c"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00924}00924\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}C"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00925}00925\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00926}00926\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00927}00927\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00928}00928\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00929}00929\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00930}00930\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00931}00931\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00932}00932\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00933}00933\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00941}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a02a598ee21df087aefee1832cc8f41b7}{00941}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a02a598ee21df087aefee1832cc8f41b7}{removeIngredient}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00942}00942\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00943}00943\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00944}00944\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00945}00945\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ listing\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{keyword}{null},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00946}00946\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00947}00947\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00948}00948\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00949}00949\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients-\/Remove\ Menu"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00950}00950\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00951}00951\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00952}00952\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00953}00953\ \ \ \ \ \ \ \ \ listing.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00954}00954\ \ \ \ \ \ \ \ \ listing.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_acb89dcbcc6ad5671419a183bd40e89e9}{listIngredients}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00955}00955\ \ \ \ \ \ \ \ \ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00956}00956\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00957}00957\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ Ingredient\ Name\ to\ Remove:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00958}00958\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00959}00959\ \ \ \ \ \ \ \ \ String\ removeName\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00960}00960\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00961}00961\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ ingredients\ from\ file}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00962}00962\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00963}00963\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ ingredientManagement\ =\ \textcolor{keyword}{new}\ com.turankanbur.calculator.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a5d0cc26f5698a18fec8624efecccb960}{IngredientManagement}}(removeName,\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00964}00964\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00965}00965\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ existing\ ingredients\ for\ user\ to\ choose\ from}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00966}00966\ \ \ \ \ \ \ \ \ ingredientManagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00967}00967\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00968}00968\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ the\ ingredient\ by\ name}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00969}00969\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredientToRemove\ =\ ingredientManagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a7e245d5acf5d722891a5a88275cb0ee3}{findIngredientByName}}(removeName);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00970}00970\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00971}00971\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ingredientToRemove\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00972}00972\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ the\ ingredient}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00973}00973\ \ \ \ \ \ \ \ \ \ \ \ \ ingredientManagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a3aa55d99f0ae451655de8d675d6852fa}{getIngredients}}().remove(ingredientToRemove);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00974}00974\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00975}00975\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ to\ file}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00976}00976\ \ \ \ \ \ \ \ \ \ \ \ \ ingredientManagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_ac0f2519b9b7f8c95b76220d3dc466427}{saveToFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00977}00977\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredient\ removed\ successfully."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00978}00978\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00979}00979\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredient\ not\ found.\ Please\ enter\ a\ valid\ name."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00980}00980\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00981}00981\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00982}00982\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00983}00983\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00984}00984\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Save"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00985}00985\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00986}00986\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Cancel"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00987}00987\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00988}00988\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ First\ character\ for\ the\ operation\ :\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00989}00989\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00990}00990\ \ \ \ \ \ \ \ \ String\ a1\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00991}00991\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00992}00992\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (a1)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00993}00993\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}s"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00994}00994\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}S"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00995}00995\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00996}00996\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00997}00997\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}c"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00998}00998\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}C"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l00999}00999\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01000}01000\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01001}01001\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01002}01002\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01003}01003\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01004}01004\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01005}01005\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01006}01006\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01015}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a5c7799ba8249f060dc832808e65dc64d}{01015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a5c7799ba8249f060dc832808e65dc64d}{CreateRecipe}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01016}01016\ \ \ \ \ \ \ \ \ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01017}01017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}\ management\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement}{IngredientManagement}}(\textcolor{stringliteral}{"{}null"{}},\ 0);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01018}01018\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01019}01019\ \ \ \ \ \ \ \ \ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a8bf40cd4431ddffe3969b2f4e3833530}{loadFromFile}}(\textcolor{stringliteral}{"{}ingredients.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01020}01020\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01021}01021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Available\ ingredients\ from\ management}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01022}01022\ \ \ \ \ \ \ \ \ List<Ingredient>\ availableIngredients\ =\ management.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_a3aa55d99f0ae451655de8d675d6852fa}{getIngredients}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01023}01023\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01024}01024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ available\ ingredients\ to\ the\ user}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01025}01025\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Available\ Ingredients:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01026}01026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ availableIngredients.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01027}01027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient\ =\ availableIngredients.get(i);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01028}01028\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println((i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}.\ "{}}\ +\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{getName}}()\ +\ \textcolor{stringliteral}{"{}\ -\/\ Price:\ "{}}\ +\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{getPrice}}()+\textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01029}01029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01030}01030\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01031}01031\ \ \ \ \ \ \ \ \ List<Ingredient>\ selectedIngredients\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01032}01032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ totalCost\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01033}01033\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Enter\ ingredient\ numbers\ (press\ 'q'\ to\ finish):"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01034}01034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01035}01035\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Ingredient\ number:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01036}01036\ \ \ \ \ \ \ \ \ \ \ \ \ String\ input\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01037}01037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (input.equalsIgnoreCase(\textcolor{stringliteral}{"{}q"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01038}01038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01039}01039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01040}01040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01041}01041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Integer.parseInt(input)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01042}01042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ availableIngredients.size())\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01043}01043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ ingredient\ number.\ Please\ try\ again."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01044}01044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01045}01045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01046}01046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient\ =\ availableIngredients.get(index);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01047}01047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Enter\ quantity\ for\ "{}}\ +\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{getName}}()\ +\ \textcolor{stringliteral}{"{}:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01048}01048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantity\ =\ Integer.parseInt(scanner.nextLine());\ \textcolor{comment}{//\ Get\ quantity\ input\ from\ user}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01049}01049\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01050}01050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ and\ accumulate\ cost\ for\ selected\ ingredients}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01051}01051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ingredientCost\ =\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{getPrice}}()\ *\ quantity;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01052}01052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalCost\ +=\ ingredientCost;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01053}01053\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01054}01054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedIngredients.add(ingredient);\ \textcolor{comment}{//\ Add\ the\ selected\ ingredient\ to\ the\ list}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01055}01055\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (NumberFormatException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01056}01056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Please\ enter\ a\ number."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01057}01057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01058}01058\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01059}01059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01060}01060\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Enter\ recipe\ name:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01061}01061\ \ \ \ \ \ \ \ \ String\ recipeName\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01062}01062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ recipes\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01063}01063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f}{createRecipeFromUserInput}}(availableIngredients,\ recipes,\ recipeName,\ totalCost,}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01064}01064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedIngredients);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01065}01065\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01066}01066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01067}01067\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01068}01068\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01069}01069\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01070}01070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01071}01071\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01072}01072\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01078}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a745fbc2030305907d61c9954d4578069}{01078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a745fbc2030305907d61c9954d4578069}{viewRecipe}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01079}01079\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01080}01080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ recipeManager\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01081}01081\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01082}01082\ \ \ \ \ \ \ \ \ recipeManager.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{listRecipes}}(\textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01083}01083\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01084}01084\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01085}01085\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01086}01086\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01087}01087\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01088}01088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01089}01089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01090}01090\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01091}01091\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Returning\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01092}01092\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01093}01093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01094}01094\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01095}01095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01096}01096\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01097}01097\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01103}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aa7b0e82ab3195587e43acfdbda5780ed}{01103}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_aa7b0e82ab3195587e43acfdbda5780ed}{viewRecipeForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01104}01104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ recipeManager\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01105}01105\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01106}01106\ \ \ \ \ \ \ \ \ recipeManager.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{listRecipes}}(\textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01107}01107\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01108}01108\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01109}01109\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01110}01110\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01111}01111\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01112}01112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01113}01113\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01114}01114\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01115}01115\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Returning\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01116}01116\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01117}01117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01118}01118\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01119}01119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01120}01120\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01121}01121\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01129}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad3946db636273739e1456092c34511ac}{01129}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad3946db636273739e1456092c34511ac}{CreateMeal}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01130}01130\ \ \ \ \ \ \ \ \ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01131}01131\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01132}01132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ recipeManager\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01133}01133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(\textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01134}01134\ \ \ \ \ \ \ \ \ recipeManager.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{listRecipes}}(\textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01135}01135\ \ \ \ \ \ \ \ \ List<Recipe>\ availableRecipes\ =\ recipeManager.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e}{getRecipes}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01136}01136\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01137}01137\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Available\ Recipes:"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01138}01138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ availableRecipes.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01139}01139\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ recipe\ =\ availableRecipes.get(i);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01140}01140\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println((i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}.\ "{}}\ +\ recipe.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a72cb7be3b47594b37a0dbd54698030ed}{getName}}());}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01141}01141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01142}01142\ \ \ \ \ \ \ \ \ List<Recipe>\ selectedRecipes\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01143}01143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01144}01144\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Select\ a\ recipe\ number\ to\ include\ in\ the\ meal\ (press\ 'q'\ to\ finish):\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01145}01145\ \ \ \ \ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01146}01146\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01147}01147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}q"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01148}01148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01149}01149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01150}01150\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01151}01151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01152}01152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ selectedRecipeIndex\ =\ Integer.parseInt(userInput)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01153}01153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedRecipeIndex\ <\ 0\ ||\ selectedRecipeIndex\ >=\ availableRecipes.size())\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01154}01154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ recipe\ number\ selected.\ Please\ try\ again."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01155}01155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01156}01156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01157}01157\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01158}01158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ selectedRecipe\ =\ availableRecipes.get(selectedRecipeIndex);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01159}01159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedRecipes.add(selectedRecipe);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01160}01160\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01161}01161\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (NumberFormatException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01162}01162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Please\ enter\ a\ valid\ recipe\ number\ or\ 'q'\ to\ finish."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01163}01163\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01164}01164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01165}01165\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01166}01166\ \ \ \ \ \ \ \ \ System.out.print(\textcolor{stringliteral}{"{}Enter\ meal\ name:\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01167}01167\ \ \ \ \ \ \ \ \ String\ mealName\ =\ scanner.nextLine();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01168}01168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}\ meals\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01169}01169\ \ \ \ \ \ \ \ \ meals.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement_a51d4bda2e34df97cd88c962d2d5ff0c3}{createMealFromUserInput}}(mealName,\ selectedRecipes,\ recipeManager);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01170}01170\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01171}01171\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01172}01172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01173}01173\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01174}01174\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01175}01175\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01176}01176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01177}01177\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01178}01178\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01184}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad5481339a0104e64062e0d77291b8c1f}{01184}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ad5481339a0104e64062e0d77291b8c1f}{viewMeal}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01185}01185\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01186}01186\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}\ mealmanagement\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01187}01187\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01188}01188\ \ \ \ \ \ \ \ \ mealmanagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement_ab4e8b6e6461496e6dbe02b44738434b6}{listMeals}}(\textcolor{stringliteral}{"{}meals.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01189}01189\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01190}01190\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01191}01191\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01192}01192\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01193}01193\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01194}01194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01195}01195\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01196}01196\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01197}01197\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Returning\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01198}01198\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_afd68d9a49f4664af10f2f9dc7f2af464}{selectMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01199}01199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01200}01200\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01201}01201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01202}01202\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01203}01203\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01209}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1800dcfe54b9ff5c645c87130480c8f2}{01209}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a1800dcfe54b9ff5c645c87130480c8f2}{viewMealForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01210}01210\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01211}01211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}\ mealmanagement\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement}{MealManagement}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01212}01212\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01213}01213\ \ \ \ \ \ \ \ \ mealmanagement.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1MealManagement_ab4e8b6e6461496e6dbe02b44738434b6}{listMeals}}(\textcolor{stringliteral}{"{}meals.bin"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01214}01214\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01215}01215\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Press\ 'c'\ to\ return\ to\ the\ main\ menu."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01216}01216\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01217}01217\ \ \ \ \ \ \ \ \ String\ userInput\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01218}01218\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01219}01219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput.equalsIgnoreCase(\textcolor{stringliteral}{"{}c"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01220}01220\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01221}01221\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01222}01222\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Invalid\ input.\ Returning\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01223}01223\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_afd68d9a49f4664af10f2f9dc7f2af464}{selectMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01224}01224\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01225}01225\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01226}01226\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01227}01227\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01228}01228\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01229}01229\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01235}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6585a50e1f7491785e6c5d2a04be9984}{01235}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6585a50e1f7491785e6c5d2a04be9984}{About}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01236}01236\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01237}01237\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01238}01238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01239}01239\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01240}01240\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}*****\ RECIPE\ COST\ CALCULATOR\ APP\ *****"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01241}01241\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01242}01242\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ This\ Project\ Is\ About\ Recipe\ Cost\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01243}01243\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01244}01244\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Add\ ,\ View,\ Edit\ And\ Remove\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01245}01245\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01246}01246\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Create\ and\ View\ Recipes"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01247}01247\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01248}01248\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Create\ and\ View\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01249}01249\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01250}01250\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}<<<<-\/Press\ 1\ for\ Main\ Menu-\/>>>>"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01251}01251\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01252}01252\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01253}01253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01254}01254\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01255}01255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01256}01256\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01257}01257\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a3c4df9c7728bb43b8d99e0027552e181}{printMenu}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01258}01258\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01259}01259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01260}01260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01261}01261\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01262}01262\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a6585a50e1f7491785e6c5d2a04be9984}{About}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01263}01263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01264}01264\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01265}01265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01266}01266\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01276}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a90226ffe862b85beb4d63f5f06d41791}{01276}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a90226ffe862b85beb4d63f5f06d41791}{AboutForGuest}}(Scanner\ scanner)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01277}01277\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01278}01278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01279}01279\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01280}01280\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}*****\ RECIPE\ COST\ CALCULATOR\ APP\ *****"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01281}01281\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01282}01282\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ This\ Project\ Is\ About\ Recipe\ Cost\ "{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01283}01283\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01284}01284\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Add\ ,\ View,\ Edit\ And\ Remove\ Ingredient"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01285}01285\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01286}01286\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Create\ and\ View\ Recipes"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01287}01287\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01288}01288\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}=>\ In\ This\ Project\ We\ Can\ Create\ and\ View\ Meals"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01289}01289\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01290}01290\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}<<<<-\/Press\ 1\ for\ Main\ Menu-\/>>>>"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01291}01291\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01292}01292\ \ \ \ \ \ \ \ \ String\ choice\ =\ scanner.next();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01293}01293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01294}01294\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01295}01295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01296}01296\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a7cfaa699759fb3d2b5069ca281cf7eba}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01297}01297\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_ac3fe800fd5f46fedd6a6ec3c6e8003ca}{printMenuForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01298}01298\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01299}01299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01300}01300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01301}01301\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Please\ enter\ a\ valid\ key!"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01302}01302\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Menu_a90226ffe862b85beb4d63f5f06d41791}{AboutForGuest}}(scanner);}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01303}01303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01304}01304\ \ \ \ \ \ \ \ \ scanner.close();}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01305}01305\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8java_source_l01306}01306\ \}}
+
+\end{DoxyCode}

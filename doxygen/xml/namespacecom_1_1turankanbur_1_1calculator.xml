@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecom_1_1turankanbur_1_1calculator" kind="namespace" language="Java">
+    <compoundname>com::turankanbur::calculator</compoundname>
+    <innerclass refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient" prot="package">com::turankanbur::calculator::IMainIngredient</innerclass>
+    <innerclass refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal" prot="package">com::turankanbur::calculator::IMainMeal</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" prot="public">com::turankanbur::calculator::Ingredient</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement" prot="public">com::turankanbur::calculator::IngredientManagement</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" prot="public">com::turankanbur::calculator::Meal</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement" prot="public">com::turankanbur::calculator::MealManagement</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1Menu" prot="public">com::turankanbur::calculator::Menu</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" prot="public">com::turankanbur::calculator::Recipe</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" prot="public">com::turankanbur::calculator::RecipeManagement</innerclass>
+    <innerclass refid="classcom_1_1turankanbur_1_1calculator_1_1User" prot="public">com::turankanbur::calculator::User</innerclass>
+    <briefdescription>
+<para>The com.ucoruh.calculator package contains all the classes and files related to the Recipe Cost Calculator Application. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The package <ref refid="namespacecom_1_1turankanbur_1_1calculator" kindref="compound">com.turankanbur.calculator</ref> contains classes related to a calculator application. It includes classes for managing ingredients, performing calculations, and other utility functions.</para>
+<para>Package containing classes related to meal management and calculation.</para>
+<para>Package containing classes related to meal and recipe management.</para>
+<para>Package containing classes related to recipe management and calculation.</para>
+<para>Package containing classes related to user management and authentication. </para>
+    </detaileddescription>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Ingredient.java" line="5" column="15"/>
+  </compounddef>
+</doxygen>

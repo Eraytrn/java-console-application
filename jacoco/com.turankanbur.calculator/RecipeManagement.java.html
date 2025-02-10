@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RecipeManagement.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-console-application</a> &gt; <a href="index.source.html" class="el_package">com.turankanbur.calculator</a> &gt; <span class="el_source">RecipeManagement.java</span></div><h1>RecipeManagement.java</h1><pre class="source lang-java linenums">/**
+ * Package containing classes related to meal and recipe management.
+ */
+package com.turankanbur.calculator;
+
+/**
+ * Provides functionality for handling end-of-file (EOF) conditions.
+ */
+import java.io.EOFException;
+
+/**
+ * Provides functionality for reading bytes from a file input stream.
+ */
+import java.io.FileInputStream;
+
+/**
+ * Provides functionality for writing bytes to a file output stream.
+ */
+import java.io.FileOutputStream;
+
+/**
+ * Provides functionality for handling input/output (I/O) operations.
+ */
+import java.io.IOException;
+
+/**
+ * Provides functionality for reading objects from an input stream.
+ */
+import java.io.ObjectInputStream;
+
+/**
+ * Provides functionality for writing objects to an output stream.
+ */
+import java.io.ObjectOutputStream;
+
+/**
+ * Allows classes to implement serialization, allowing their objects to be converted into byte streams.
+ */
+import java.io.Serializable;
+
+/**
+ * Provides an implementation of the List interface backed by an array.
+ */
+import java.util.ArrayList;
+
+/**
+ * Provides functionality for storing and manipulating collections of objects.
+ */
+import java.util.List;
+
+/**
+ * Manages recipes, including adding, saving, loading, and listing recipes. This
+ * class provides functionality to create recipes from user input and interact
+ * with recipe data stored in files.
+ */
+public class RecipeManagement  implements Serializable {
+
+	/**
+	 * Unique identifier for ensuring version compatibility of serialized objects.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** List of recipes managed by this RecipeManagement instance. */
+	private List&lt;Recipe&gt; recipes;
+
+	/** Constructs a RecipeManagement object with an empty list of recipes. */
+<span class="fc" id="L67">	public RecipeManagement() {</span>
+		
+<span class="fc" id="L69">		this.recipes = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L70">	}</span>
+
+	/**
+	 * Adds a recipe to the list of managed recipes and saves it to a file.
+	 *
+	 * @param recipe   the recipe to add
+	 * @param fileName the name of the file to save the recipes to
+	 */
+	
+	
+	public void addRecipe(Recipe recipe, String fileName) {
+		// Load existing recipes from file
+<span class="fc" id="L82">		List&lt;Recipe&gt; existingRecipes = loadFromFile(fileName);</span>
+
+		// Add the new recipe to the existing list
+<span class="fc" id="L85">		existingRecipes.add(recipe);</span>
+
+		// Save all recipes to file
+<span class="fc" id="L88">		saveToFile(existingRecipes, fileName);</span>
+<span class="fc" id="L89">	}</span>
+
+	/**
+	 * Retrieves the list of managed recipes.
+	 *
+	 * @return the list of managed recipes
+	 */
+	public List&lt;Recipe&gt; getRecipes() {
+<span class="fc" id="L97">		return this.recipes;</span>
+	}
+
+	/**
+	 * Saves a list of recipes to a file.
+	 *
+	 * @param recipes  the list of recipes to save
+	 * @param fileName the name of the file to save to
+	 */
+	public static void saveToFile(List&lt;Recipe&gt; recipes, String fileName) {
+<span class="fc" id="L107">		try (FileOutputStream fos = new FileOutputStream(fileName);</span>
+<span class="fc" id="L108">				ObjectOutputStream oos = new ObjectOutputStream(fos)) {</span>
+
+<span class="fc bfc" id="L110" title="All 2 branches covered.">			for (Recipe r : recipes) {</span>
+<span class="fc" id="L111">				oos.writeObject(r);</span>
+<span class="fc" id="L112">				oos.writeUTF(&quot;#END_RECIPE#&quot;);</span>
+<span class="fc" id="L113">			}</span>
+
+<span class="fc" id="L115">		} catch (IOException e) {</span>
+<span class="fc" id="L116">			System.err.println(&quot;Error saving to file: &quot; + e.getMessage());</span>
+<span class="fc" id="L117">		}</span>
+<span class="fc" id="L118">	}</span>
+
+	/**
+	 * Loads recipes from a file and returns them as a list.
+	 *
+	 * @param fileName the name of the file to load from
+	 * @return the list of loaded recipes
+	 */
+	public static List&lt;Recipe&gt; loadFromFile(String fileName) {
+<span class="fc" id="L127">		List&lt;Recipe&gt; loadedRecipes = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L129">		try (FileInputStream fis = new FileInputStream(fileName); ObjectInputStream ois = new ObjectInputStream(fis)) {</span>
+
+			while (true) {
+				try {
+<span class="fc" id="L133">					Recipe loadedRecipe = (Recipe) ois.readObject();</span>
+<span class="fc" id="L134">					loadedRecipes.add(loadedRecipe);</span>
+
+<span class="fc" id="L136">					ois.readUTF();</span>
+
+<span class="fc" id="L138">				} catch (EOFException e) {</span>
+<span class="fc" id="L139">					break; // Reached end of file</span>
+<span class="fc" id="L140">				}</span>
+			}
+
+<span class="fc" id="L143">		} catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L144">			System.err.println(&quot;Error loading from file: &quot; + e.getMessage());</span>
+<span class="fc" id="L145">		}</span>
+<span class="fc" id="L146">		return loadedRecipes;</span>
+	}
+
+	/**
+	 * Creates a recipe from user input and adds it to the list of managed recipes.
+	 *
+	 * @param availableIngredients the list of available ingredients
+	 * @param recipeManager        the RecipeManagement object to interact with
+	 *                             recipe data
+	 * @param recipeName           the name of the recipe
+	 * @param totalCost            the total cost of the recipe
+	 * @param selectedIngredients  the list of selected ingredients for the recipe
+	 */
+	public static void createRecipeFromUserInput(List&lt;Ingredient&gt; availableIngredients, RecipeManagement recipeManager,
+			String recipeName, double totalCost, List&lt;Ingredient&gt; selectedIngredients) {
+
+		// Print recipe details
+<span class="fc" id="L163">		System.out.println(&quot;\nRecipe Name: &quot; + recipeName);</span>
+<span class="fc" id="L164">		System.out.println(&quot;Total Cost: &quot; + totalCost + &quot;$&quot;);</span>
+<span class="fc" id="L165">		System.out.println(&quot;Ingredients:&quot;);</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">		for (Ingredient ingredient : selectedIngredients) {</span>
+<span class="fc" id="L167">			System.out.println(&quot;- &quot; + ingredient.getName() + &quot;: &quot; + ingredient.getPrice() + &quot;$&quot; + &quot; per unit&quot;);</span>
+<span class="fc" id="L168">		}</span>
+
+		// Create the recipe
+<span class="fc" id="L171">		Recipe recipe = new Recipe(recipeName, selectedIngredients, totalCost);</span>
+
+		// Add the recipe to the existing recipe manager and save to file
+<span class="fc" id="L174">		recipeManager.addRecipe(recipe, &quot;recipes.bin&quot;);</span>
+
+<span class="fc" id="L176">	}</span>
+
+	/**
+	 * Lists all managed recipes along with their names, total costs, and
+	 * ingredients.
+	 *
+	 * @param filename the name of the file to load recipes from
+	 */
+	
+	public void listRecipes(String filename) {
+		// Load recipes from file
+<span class="fc" id="L187">		recipes = loadFromFile(filename);</span>
+
+<span class="fc bfc" id="L189" title="All 2 branches covered.">		if (recipes.isEmpty()) {</span>
+<span class="fc" id="L190">			System.out.println(&quot;No recipes found to list.&quot;);</span>
+<span class="fc" id="L191">			return;</span>
+		}
+
+<span class="fc bfc" id="L194" title="All 2 branches covered.">		for (int i = 0; i &lt; recipes.size(); i++) {</span>
+<span class="fc" id="L195">			Recipe recipe = recipes.get(i);</span>
+<span class="fc" id="L196">			System.out.println(&quot;\nRecipe &quot; + (i + 1) + &quot;:&quot;);</span>
+<span class="fc" id="L197">			System.out.println(&quot;    Name: &quot; + recipe.getName());</span>
+<span class="fc" id="L198">			System.out.println(&quot;    Total Cost: &quot; + recipe.getTotalCost()+ &quot;$&quot;);</span>
+<span class="fc" id="L199">			System.out.println(&quot;    Ingredients:&quot;);</span>
+<span class="fc" id="L200">			List&lt;Ingredient&gt; ingredients = recipe.getIngredients();</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">			for (int j = 0; j &lt; ingredients.size(); j++) {</span>
+<span class="fc" id="L202">				Ingredient ingredient = ingredients.get(j);</span>
+<span class="fc" id="L203">				System.out.println(&quot;        - &quot; + ingredient.getName() + &quot;: &quot; + ingredient.getPrice ()+ &quot;$&quot; + &quot; per unit&quot;);</span>
+			}
+		}
+<span class="fc" id="L206">		System.out.println(&quot;-------------------------\n&quot;);</span>
+<span class="fc" id="L207">	}</span>
+
+	
+	/**
+	 * Sets the list of recipes managed by this RecipeManagement instance.
+	 *
+	 * @param recipes2 the list of recipes to set
+	 */
+	public void setRecipes(List&lt;Recipe&gt; recipes2) {
+<span class="fc" id="L216">		this.recipes = recipes2;</span>
+
+<span class="fc" id="L218">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

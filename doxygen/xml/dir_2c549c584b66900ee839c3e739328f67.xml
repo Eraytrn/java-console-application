@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_2c549c584b66900ee839c3e739328f67" kind="dir">
+    <compoundname>recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator</compoundname>
+    <innerfile refid="Ingredient_8java">Ingredient.java</innerfile>
+    <innerfile refid="IngredientManagement_8java">IngredientManagement.java</innerfile>
+    <innerfile refid="Meal_8java">Meal.java</innerfile>
+    <innerfile refid="MealManagement_8java">MealManagement.java</innerfile>
+    <innerfile refid="Menu_8java">Menu.java</innerfile>
+    <innerfile refid="Recipe_8java">Recipe.java</innerfile>
+    <innerfile refid="RecipeManagement_8java">RecipeManagement.java</innerfile>
+    <innerfile refid="User_8java">User.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/"/>
+  </compounddef>
+</doxygen>

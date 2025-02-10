@@ -1,0 +1,139 @@
+\doxysection{com.\+turankanbur.\+calculator.\+Meal Class Reference}
+\hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Meal}{}\label{classcom_1_1turankanbur_1_1calculator_1_1Meal}\index{com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}}
+Inheritance diagram for com.\+turankanbur.\+calculator.\+Meal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1turankanbur_1_1calculator_1_1Meal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Meal_a0e2657a2ceb568bb607d8591a27b355f}{Meal}} (String name, List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ recipes)
+\item 
+String \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Meal_a6f4d3fb44f945f0a25fc05de0c148801}{get\+Name}} ()
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Meal_a441805269b65f72578e69da99ad4c44b}{get\+Recipes}} ()
+\item 
+double \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Meal_aca8c449430aa7a4087085ad840d468bb}{get\+Total\+Cost}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a meal consisting of one or more recipes. Provides functionality to calculate the total cost of the meal. 
+
+Definition at line \mbox{\hyperlink{Meal_8java_source_l00078}{78}} of file \mbox{\hyperlink{Meal_8java_source}{Meal.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Meal_a0e2657a2ceb568bb607d8591a27b355f}\label{classcom_1_1turankanbur_1_1calculator_1_1Meal_a0e2657a2ceb568bb607d8591a27b355f} 
+\index{com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}!Meal@{Meal}}
+\index{Meal@{Meal}!com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}}
+\doxysubsubsection{\texorpdfstring{Meal()}{Meal()}}
+{\footnotesize\ttfamily com.\+turankanbur.\+calculator.\+Meal.\+Meal (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$}]{recipes }\end{DoxyParamCaption})}
+
+Constructs a Meal object with the specified name and list of recipes. Calculates the total cost of the meal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the meal \\
+\hline
+{\em recipes} & the list of recipes included in the meal \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Meal_8java_source_l00107}{107}} of file \mbox{\hyperlink{Meal_8java_source}{Meal.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ this.recipes\ =\ recipes;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ calculateTotalCost();}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Meal_a6f4d3fb44f945f0a25fc05de0c148801}\label{classcom_1_1turankanbur_1_1calculator_1_1Meal_a6f4d3fb44f945f0a25fc05de0c148801} 
+\index{com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}!getName@{getName}}
+\index{getName@{getName}!com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String com.\+turankanbur.\+calculator.\+Meal.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the name of the meal.
+
+\begin{DoxyReturn}{Returns}
+the name of the meal 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Meal_8java_source_l00118}{118}} of file \mbox{\hyperlink{Meal_8java_source}{Meal.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{MealManagement_8java_source_l00141}{com.\+turankanbur.\+calculator.\+Meal\+Management.\+list\+Meals()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Meal_a441805269b65f72578e69da99ad4c44b}\label{classcom_1_1turankanbur_1_1calculator_1_1Meal_a441805269b65f72578e69da99ad4c44b} 
+\index{com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}!getRecipes@{getRecipes}}
+\index{getRecipes@{getRecipes}!com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}}
+\doxysubsubsection{\texorpdfstring{getRecipes()}{getRecipes()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ com.\+turankanbur.\+calculator.\+Meal.\+get\+Recipes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of recipes included in the meal.
+
+\begin{DoxyReturn}{Returns}
+the list of recipes 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Meal_8java_source_l00127}{127}} of file \mbox{\hyperlink{Meal_8java_source}{Meal.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ recipes;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Meal_aca8c449430aa7a4087085ad840d468bb}\label{classcom_1_1turankanbur_1_1calculator_1_1Meal_aca8c449430aa7a4087085ad840d468bb} 
+\index{com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}!getTotalCost@{getTotalCost}}
+\index{getTotalCost@{getTotalCost}!com.turankanbur.calculator.Meal@{com.turankanbur.calculator.Meal}}
+\doxysubsubsection{\texorpdfstring{getTotalCost()}{getTotalCost()}}
+{\footnotesize\ttfamily double com.\+turankanbur.\+calculator.\+Meal.\+get\+Total\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the total cost of the meal.
+
+\begin{DoxyReturn}{Returns}
+the total cost of the meal 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Meal_8java_source_l00136}{136}} of file \mbox{\hyperlink{Meal_8java_source}{Meal.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ totalCost;}
+\DoxyCodeLine{00138\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{MealManagement_8java_source_l00123}{com.\+turankanbur.\+calculator.\+Meal\+Management.\+create\+Meal\+From\+User\+Input()}}, and \mbox{\hyperlink{MealManagement_8java_source_l00141}{com.\+turankanbur.\+calculator.\+Meal\+Management.\+list\+Meals()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/\mbox{\hyperlink{Meal_8java}{Meal.\+java}}\end{DoxyCompactItemize}

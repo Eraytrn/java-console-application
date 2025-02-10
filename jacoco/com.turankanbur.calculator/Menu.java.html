@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Menu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-console-application</a> &gt; <a href="index.source.html" class="el_package">com.turankanbur.calculator</a> &gt; <span class="el_source">Menu.java</span></div><h1>Menu.java</h1><pre class="source lang-java linenums">/**
+ * 
+@file Menu.java
+@brief This file serves as the main application file for the Menu.
+@details This file contains the entry point of the application, which is the main method. It initializes the necessary components and executes the Menu.
+*/
+
+/**
+@package com.turankanbur.calculator
+@brief The com.ucoruh.calculator package contains all the classes and files related to the Recipe Cost Calculator Application.
+*/
+package com.turankanbur.calculator;
+
+/**
+ * Imports the FileInputStream class, which is used to read data from a file as a stream of bytes.
+ */
+import java.io.FileInputStream;
+
+/**
+ * Imports the FileOutputStream class, which is used to write data to a file as a stream of bytes.
+ */
+import java.io.FileOutputStream;
+
+/**
+ * Imports the IOException class, which signals that an I/O exception of some sort has occurred.
+ */
+import java.io.IOException;
+
+/**
+ * Imports the ObjectInputStream class, which is used to deserialize objects from an InputStream.
+ */
+import java.io.ObjectInputStream;
+
+/**
+ * Imports the ObjectOutputStream class, which is used to serialize objects to an OutputStream.
+ */
+import java.io.ObjectOutputStream;
+
+/**
+ * Imports the Serializable interface, which is used to indicate that a class can be serialized.
+ */
+import java.io.Serializable;
+
+/**
+ * Imports the ArrayList class, which is used to create resizable arrays.
+ */
+import java.util.ArrayList;
+
+/**
+ * Imports the List interface, which is a collection used to store elements.
+ */
+import java.util.List;
+
+/**
+ * Imports the Scanner class, which is used to get user input from the console.
+ */
+import java.util.Scanner;
+
+
+
+/**
+ * Represents a menu interface for the Recipe Cost Calculator application.
+ * Provides functionality for user interaction and navigation within the application.
+ */
+<span class="fc" id="L65">public class Menu implements Serializable {</span>
+
+	/** Unique identifier for ensuring version compatibility of serialized objects. */
+    private static final long serialVersionUID = 1L;
+    
+    
+    /**
+     * The main entry point of the Recipe Cost Calculator application.
+     * Creates an instance of the Menu class, initializes a scanner object for user input,
+     * and calls the userMenu method to display the main menu and handle user interactions.
+     *
+     * @param args the command line arguments (not used in this application)
+     */
+	public static void main(String[] args) {
+
+<span class="fc" id="L80">		Menu rcp = new Menu();</span>
+<span class="fc" id="L81">		Scanner scanner = new Scanner(System.in);</span>
+<span class="fc" id="L82">		rcp.userMenu(scanner);</span>
+<span class="fc" id="L83">	}</span>
+
+	/**
+	 * Clears the console screen.
+	 *
+	 * This method attempts to clear the console screen by running the cmd command
+	 * with the /c option and the cls command on Windows. The standard input and
+	 * output streams of the new process are redirected to those of the current
+	 * process. If an exception is thrown while running the process, it is caught
+	 * and printed to the console.
+	 *
+	 * Note: This method is specific to the Windows operating system and may not
+	 * work on other platforms. To clear the console screen on other platforms, you
+	 * may need to use different commands or methods.
+	 */
+	public void clearScreen()
+
+	{
+
+		try {
+<span class="nc" id="L103">			new ProcessBuilder(&quot;cmd&quot;, &quot;/c&quot;, &quot;cls&quot;).inheritIO().start().waitFor();</span>
+<span class="fc" id="L104">		} catch (Exception e) {</span>
+<span class="fc" id="L105">			e.printStackTrace();</span>
+<span class="nc" id="L106">		}</span>
+
+<span class="fc" id="L108">	}</span>
+
+		/**
+     * Displays the main menu for user selection.
+     *
+     * @param scanner the scanner object for user input
+     * @return true if exit is requested, false otherwise
+     */
+	public boolean userMenu(Scanner scanner) {
+<span class="fc" id="L117">		clearScreen();</span>
+
+<span class="fc" id="L119">		System.out.println(&quot;----------------------&quot;);</span>
+
+<span class="fc" id="L121">		System.out.println(&quot;User Menu&quot;);</span>
+
+<span class="fc" id="L123">		System.out.println(&quot;----------------------&quot;);</span>
+
+<span class="fc" id="L125">		System.out.println(&quot;1-Register&quot;);</span>
+
+<span class="fc" id="L127">		System.out.println(&quot;2-Login&quot;);</span>
+
+<span class="fc" id="L129">		System.out.println(&quot;3-Guest Mode&quot;);</span>
+
+<span class="fc" id="L131">		System.out.println(&quot;4-Exit&quot;);</span>
+
+<span class="fc" id="L133">		System.out.println(&quot;Enter your choice:&quot;);</span>
+
+<span class="fc" id="L135">		String choice = scanner.nextLine();</span>
+<span class="fc" id="L136">		boolean exitRequested = false;</span>
+<span class="fc bfc" id="L137" title="All 5 branches covered.">		switch (choice) {</span>
+		case &quot;1&quot;:
+		case &quot;R&quot;:
+		case &quot;r&quot;:
+<span class="fc" id="L141">			registerUser(scanner);</span>
+<span class="fc" id="L142">			break;</span>
+		case &quot;2&quot;:
+		case &quot;L&quot;:
+		case &quot;l&quot;:
+<span class="fc" id="L146">			loginUser(scanner);</span>
+<span class="fc" id="L147">			break;</span>
+		case &quot;3&quot;:
+	    case &quot;G&quot;:
+	    case &quot;g&quot;:
+<span class="fc" id="L151">			guestMode(scanner);</span>
+<span class="fc" id="L152">			break;</span>
+		case &quot;4&quot;:
+	   	case &quot;E&quot;:
+	 	case &quot;e&quot;:
+<span class="fc" id="L156">			exitRequested = true;</span>
+			
+<span class="fc" id="L158">			break;</span>
+        default: 
+<span class="fc" id="L160">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L161">	        userMenu(scanner);</span>
+		}
+<span class="fc" id="L163">		scanner.close();</span>
+<span class="fc" id="L164">		return exitRequested;</span>
+	}
+
+	
+	 /**
+     * Registers a new user.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void registerUser(Scanner scanner) {
+<span class="fc" id="L174">		clearScreen();</span>
+
+<span class="fc" id="L176">		System.out.println(&quot;----------------------&quot;);</span>
+
+<span class="fc" id="L178">		System.out.println(&quot;Register User&quot;);</span>
+
+<span class="fc" id="L180">		System.out.println(&quot;----------------------&quot;);</span>
+
+<span class="fc" id="L182">		System.out.println(&quot;Enter username: &quot;);</span>
+<span class="fc" id="L183">		String username = scanner.nextLine();</span>
+
+<span class="fc" id="L185">		System.out.println(&quot;Enter password: &quot;);</span>
+<span class="fc" id="L186">		String password = scanner.nextLine();</span>
+
+<span class="fc" id="L188">		try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(&quot;register.bin&quot;))) {</span>
+<span class="fc" id="L189">			outputStream.writeObject(new User(username, password));</span>
+
+<span class="fc" id="L191">			System.out.println(&quot;User registered successfully.&quot;);</span>
+<span class="nc" id="L192">		} catch (IOException e) {</span>
+			;
+<span class="fc" id="L194">		}</span>
+
+<span class="fc" id="L196">		userMenu(scanner);</span>
+<span class="fc" id="L197">		scanner.close();</span>
+<span class="fc" id="L198">	}</span>
+
+	
+	/**
+     * Logs in an existing user.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void loginUser(Scanner scanner) {
+<span class="fc" id="L207">		clearScreen();</span>
+
+<span class="fc" id="L209">		System.out.println(&quot;--------------------&quot;);</span>
+
+<span class="fc" id="L211">		System.out.println(&quot;Login&quot;);</span>
+
+<span class="fc" id="L213">		System.out.println(&quot;--------------------&quot;);</span>
+
+<span class="fc" id="L215">		System.out.print(&quot;Enter username: &quot;);</span>
+<span class="fc" id="L216">		String username = scanner.nextLine();</span>
+
+<span class="fc" id="L218">		System.out.print(&quot;Enter password: &quot;);</span>
+<span class="fc" id="L219">		String password = scanner.nextLine();</span>
+
+<span class="fc" id="L221">		try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(&quot;register.bin&quot;))) {</span>
+			User user;
+<span class="pc bpc" id="L223" title="1 of 2 branches missed.">			while ((user = (User) inputStream.readObject()) != null) {</span>
+<span class="pc bpc" id="L224" title="2 of 4 branches missed.">				if (user.getUsername().equals(username) &amp;&amp; user.getPassword().equals(password)) {</span>
+
+<span class="fc" id="L226">					clearScreen();</span>
+<span class="fc" id="L227">					printMenu(scanner);</span>
+<span class="fc" id="L228">					return;</span>
+				}
+			}
+<span class="fc" id="L231">		} catch (IOException | ClassNotFoundException e) {</span>
+<span class="fc" id="L232">			System.out.println(&quot;Error&quot;);</span>
+<span class="nc" id="L233">		}</span>
+
+<span class="fc" id="L235">		System.out.println(&quot;Incorrect username or password. Please try again.&quot;);</span>
+<span class="fc" id="L236">		userMenu(scanner);</span>
+<span class="fc" id="L237">		scanner.close();</span>
+
+<span class="fc" id="L239">	}</span>
+
+	 /**
+     * Enters guest mode.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void guestMode(Scanner scanner) {
+<span class="fc" id="L247">		clearScreen();</span>
+
+<span class="fc" id="L249">		System.out.println(&quot;--------------------&quot;);</span>
+
+<span class="fc" id="L251">		System.out.println(&quot;Guest Mode&quot;);</span>
+
+<span class="fc" id="L253">		System.out.println(&quot;--------------------&quot;);</span>
+
+		// Clear the screen
+<span class="fc" id="L256">		clearScreen();</span>
+
+<span class="fc" id="L258">		System.out.println(&quot;Welcome To Recipe Cost Calculator App(Guest Mode)&quot;);</span>
+
+<span class="fc" id="L260">		System.out.println(&quot;1-Ingredient Management&quot;);</span>
+
+<span class="fc" id="L262">		System.out.println(&quot;2-Recipe Costing&quot;);</span>
+
+<span class="fc" id="L264">		System.out.println(&quot;3-Plan Meal&quot;);</span>
+
+<span class="fc" id="L266">		System.out.println(&quot;4-About&quot;);</span>
+
+<span class="fc" id="L268">		System.out.println(&quot;5-Exit&quot;);</span>
+
+<span class="fc" id="L270">		selectMenuForGuest(scanner);</span>
+<span class="fc" id="L271">	}</span>
+
+	 /**
+     * Displays the main menu options.
+     *
+     * @param Scanner the scanner object for user input
+     */
+	public void printMenu(Scanner Scanner) {
+
+		// Clear the screen
+<span class="fc" id="L281">		clearScreen();</span>
+
+		// Print the welcome message and the menu options
+
+<span class="fc" id="L285">		System.out.println(&quot;Welcome To Recipe Cost Calculator App&quot;);</span>
+
+<span class="fc" id="L287">		System.out.println(&quot;1-Ingredient Management&quot;);</span>
+
+<span class="fc" id="L289">		System.out.println(&quot;2-Recipe Costing&quot;);</span>
+
+<span class="fc" id="L291">		System.out.println(&quot;3-Plan Meals&quot;);</span>
+
+<span class="fc" id="L293">		System.out.println(&quot;4-About&quot;);</span>
+
+<span class="fc" id="L295">		System.out.println(&quot;5-Exit&quot;);</span>
+<span class="fc" id="L296">		selectMenu(Scanner);</span>
+
+<span class="fc" id="L298">	}</span>
+
+	
+	 /**
+     * Displays the main menu for guest users.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void printMenuForGuest(Scanner scanner) {
+		
+
+		// Clear the screen
+<span class="fc" id="L310">		clearScreen();</span>
+
+		// Print the welcome message and the menu options
+
+<span class="fc" id="L314">		System.out.println(&quot;Welcome To Recipe Cost Calculator App&quot;);</span>
+
+<span class="fc" id="L316">		System.out.println(&quot;1-Ingredient Management&quot;);</span>
+
+<span class="fc" id="L318">		System.out.println(&quot;2-Recipe Costing&quot;);</span>
+
+<span class="fc" id="L320">		System.out.println(&quot;3-Plan Meals&quot;);</span>
+
+<span class="fc" id="L322">		System.out.println(&quot;4-About&quot;);</span>
+
+<span class="fc" id="L324">		System.out.println(&quot;5-Exit&quot;);</span>
+
+<span class="fc" id="L326">		selectMenuForGuest(scanner);</span>
+<span class="fc" id="L327">	}</span>
+
+	/**
+     * Selects menu options based on user input.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void selectMenu(Scanner scanner) {
+		try {
+<span class="fc" id="L336">			System.out.println(&quot;Press First Character for further Operations&quot;);</span>
+<span class="fc" id="L337">			String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L339" title="All 6 branches covered.">			switch (choice) {</span>
+			case &quot;1&quot;:
+			case &quot;I&quot;:
+			case &quot;i&quot;:
+<span class="fc" id="L343">				IngredientManagement(scanner);</span>
+<span class="fc" id="L344">				break;</span>
+			case &quot;2&quot;:
+			case &quot;R&quot;:
+			case &quot;r&quot;:
+<span class="fc" id="L348">				RecipeCosting(scanner);</span>
+<span class="fc" id="L349">				break;</span>
+			case &quot;3&quot;:
+			case &quot;P&quot;:
+			case &quot;p&quot;:
+<span class="fc" id="L353">				PlanMeal(scanner);</span>
+<span class="fc" id="L354">				break;</span>
+			case &quot;4&quot;:
+			case &quot;A&quot;:
+			case &quot;a&quot;:
+
+<span class="fc" id="L359">				About(scanner);</span>
+<span class="fc" id="L360">				break;</span>
+			case &quot;5&quot;:
+			case &quot;E&quot;:
+			case &quot;e&quot;:
+<span class="fc" id="L364">				break;</span>
+			default: 
+<span class="fc" id="L366">		        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L367">		        printMenu(scanner);</span>
+			}
+		} finally {
+<span class="fc" id="L370">			scanner.close(); </span>
+		}
+<span class="fc" id="L372">	}</span>
+
+	
+	/**
+     * Selects menu options for guest users based on user input.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void selectMenuForGuest(Scanner scanner) {
+
+		try {
+<span class="fc" id="L383">			System.out.println(&quot;Press First Character for further Operations&quot;);</span>
+<span class="fc" id="L384">			String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L386" title="All 6 branches covered.">			switch (choice) {</span>
+			case &quot;1&quot;:
+			case &quot;I&quot;:
+			case &quot;i&quot;:
+<span class="fc" id="L390">				IngredientManagementForGuest(scanner);</span>
+<span class="fc" id="L391">				break;</span>
+			case &quot;2&quot;:
+			case &quot;R&quot;:
+			case &quot;r&quot;:
+<span class="fc" id="L395">				RecipeCostingForGuest(scanner);</span>
+<span class="fc" id="L396">				break;</span>
+			case &quot;3&quot;:
+			case &quot;P&quot;:
+		    case &quot;p&quot;:
+<span class="fc" id="L400">				PlanMealForGuest(scanner);</span>
+<span class="fc" id="L401">				break;</span>
+
+			case &quot;4&quot;:
+			case &quot;A&quot;:
+			case &quot;a&quot;:
+<span class="fc" id="L406">				clearScreen();</span>
+<span class="fc" id="L407">				AboutForGuest(scanner);</span>
+<span class="fc" id="L408">				break;</span>
+
+			case &quot;5&quot;:
+			case &quot;E&quot;:
+			case &quot;e&quot;:
+<span class="fc" id="L413">				break;</span>
+			default: 
+<span class="fc" id="L415">		        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L416">		        printMenuForGuest(scanner);</span>
+
+			}
+		} finally {
+<span class="fc" id="L420">			scanner.close();</span>
+		}
+
+<span class="fc" id="L423">	}</span>
+
+	
+	/**
+     * Manages ingredient operations.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void IngredientManagement(Scanner scanner) {
+<span class="fc" id="L432">		clearScreen();</span>
+
+<span class="fc" id="L434">		System.out.println(&quot;----------------&quot;);</span>
+<span class="fc" id="L435">		System.out.println(&quot;Ingredient Management Menu&quot;);</span>
+<span class="fc" id="L436">		System.out.println(&quot;----------------&quot;);</span>
+<span class="fc" id="L437">		System.out.println(&quot;1-Add Ingredient&quot;);</span>
+<span class="fc" id="L438">		System.out.println(&quot;2-View Ingredient&quot;);</span>
+<span class="fc" id="L439">		System.out.println(&quot;3-Edit Ingredient&quot;);</span>
+<span class="fc" id="L440">		System.out.println(&quot;4-Remove Ingredient&quot;);</span>
+<span class="fc" id="L441">		System.out.println(&quot;5-Main Menu&quot;);</span>
+		try {
+<span class="fc" id="L443">		System.out.println(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L445">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L447" title="All 6 branches covered.">		switch (choice) {</span>
+		case &quot;1&quot;:
+		case &quot;A&quot;:
+		case &quot;a&quot;:
+<span class="fc" id="L451">			clearScreen();</span>
+<span class="fc" id="L452">			addIngredient(scanner);</span>
+<span class="fc" id="L453">			break;</span>
+		case &quot;2&quot;:
+		case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L457">			clearScreen();</span>
+<span class="fc" id="L458">			viewIngredient(scanner);</span>
+<span class="fc" id="L459">			break;</span>
+		case &quot;3&quot;:
+		case &quot;E&quot;:
+		case &quot;e&quot;:
+<span class="fc" id="L463">			editIngredient(scanner);</span>
+<span class="fc" id="L464">			break;</span>
+		case &quot;4&quot;:
+		case &quot;R&quot;:
+		case &quot;r&quot;:
+<span class="fc" id="L468">			removeIngredient(scanner);</span>
+<span class="fc" id="L469">			break;</span>
+		case &quot;5&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L473">			clearScreen();</span>
+<span class="fc" id="L474">			printMenu(scanner);</span>
+<span class="fc" id="L475">			break;</span>
+			
+		default: 
+<span class="fc" id="L478">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L479">	        IngredientManagement(scanner);</span>
+
+		   }
+		} finally {
+<span class="fc" id="L483">			scanner.close();</span>
+		}
+<span class="fc" id="L485">	}</span>
+
+	
+	/**
+     * Manages ingredient operations for guest users.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void IngredientManagementForGuest(Scanner scanner) {
+
+<span class="fc" id="L495">		clearScreen();</span>
+
+<span class="fc" id="L497">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L499">		System.out.println(&quot;Ingredient Management Menu&quot;);</span>
+
+<span class="fc" id="L501">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L503">		System.out.println(&quot;1-View Ingredient&quot;);</span>
+
+<span class="fc" id="L505">		System.out.println(&quot;2-Main Menu&quot;);</span>
+
+<span class="fc" id="L507">		System.out.println(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L509">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L511" title="All 3 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+		case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L516">			clearScreen();</span>
+<span class="fc" id="L517">			viewIngredientForGuest(scanner);</span>
+<span class="fc" id="L518">			break;</span>
+
+		case &quot;2&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L523">			clearScreen();</span>
+<span class="fc" id="L524">			printMenuForGuest(scanner);</span>
+<span class="fc" id="L525">			break;</span>
+
+		default: 
+<span class="fc" id="L528">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L529">	        IngredientManagementForGuest(scanner);</span>
+		}
+
+<span class="fc" id="L532">		scanner.close();</span>
+<span class="fc" id="L533">	}</span>
+
+	
+	/**
+     * Manages recipe costing operations.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void RecipeCosting(Scanner scanner) {
+
+<span class="fc" id="L543">		clearScreen();</span>
+
+<span class="fc" id="L545">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L547">		System.out.println(&quot;Recipe Costing Menu&quot;);</span>
+
+<span class="fc" id="L549">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L551">		System.out.println(&quot;1-Create Recipe&quot;);</span>
+
+<span class="fc" id="L553">		System.out.println(&quot;2-View Recipes&quot;);</span>
+
+<span class="fc" id="L555">		System.out.println(&quot;3-Edit Recipes&quot;);</span>
+
+<span class="fc" id="L557">		System.out.println(&quot;4-Main Menu&quot;);</span>
+
+<span class="fc" id="L559">		System.out.println(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L561">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L563" title="All 5 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+		case &quot;C&quot;:
+		case &quot;c&quot;:
+<span class="fc" id="L568">			CreateRecipe(scanner);</span>
+<span class="fc" id="L569">			break;</span>
+
+		case &quot;2&quot;:
+		case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L574">			clearScreen();</span>
+<span class="fc" id="L575">			RecipeManagement.loadFromFile(&quot;recipes.bin&quot;);</span>
+<span class="fc" id="L576">			viewRecipe(scanner);</span>
+<span class="fc" id="L577">			break;</span>
+
+		case &quot;3&quot;:
+		case &quot;E&quot;:
+		case &quot;e&quot;:
+<span class="fc" id="L582">			editIngredient(scanner);</span>
+<span class="fc" id="L583">			break;</span>
+
+		case &quot;4&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L588">			clearScreen();</span>
+<span class="fc" id="L589">			printMenu(scanner);</span>
+<span class="fc" id="L590">			break;</span>
+
+		default: 
+<span class="fc" id="L593">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L594">	        RecipeCosting(scanner);</span>
+		}
+<span class="fc" id="L596">		scanner.close();</span>
+<span class="fc" id="L597">	}</span>
+
+	
+	/**
+     * Manages recipe costing operations for guest users.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void RecipeCostingForGuest(Scanner scanner) {
+
+<span class="fc" id="L607">		Menu a = new Menu();</span>
+<span class="fc" id="L608">		a.clearScreen();</span>
+
+<span class="fc" id="L610">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L612">		System.out.println(&quot;Recipe Costing Menu&quot;);</span>
+
+<span class="fc" id="L614">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L616">		System.out.println(&quot;1-View Recipe&quot;);</span>
+
+<span class="fc" id="L618">		System.out.println(&quot;2-Main Menu&quot;);</span>
+
+<span class="fc" id="L620">		System.out.println(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L622">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L624" title="All 3 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+		case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L629">			viewRecipeForGuest(scanner);</span>
+<span class="fc" id="L630">			break;</span>
+
+		case &quot;2&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L635">			clearScreen();</span>
+<span class="fc" id="L636">			printMenuForGuest(scanner);</span>
+<span class="fc" id="L637">			break;</span>
+
+		default: 
+<span class="fc" id="L640">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L641">	        RecipeCostingForGuest(scanner);</span>
+		}
+<span class="fc" id="L643">		scanner.close();</span>
+
+<span class="fc" id="L645">	}</span>
+
+	
+	/**
+     * Plans meal operations.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void PlanMeal(Scanner scanner) {
+
+<span class="fc" id="L655">		clearScreen();</span>
+
+<span class="fc" id="L657">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L659">		System.out.println(&quot;Plan Meal Menu&quot;);</span>
+
+<span class="fc" id="L661">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L663">		System.out.println(&quot;1-Create Meal&quot;);</span>
+
+<span class="fc" id="L665">		System.out.println(&quot;2-View Meals&quot;);</span>
+
+<span class="fc" id="L667">		System.out.println(&quot;3-Main Menu&quot;);</span>
+
+	
+<span class="fc" id="L670">		System.out.println(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L672">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L674" title="All 4 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+		case &quot;C&quot;:
+		case &quot;c&quot;:
+<span class="fc" id="L679">			clearScreen();</span>
+<span class="fc" id="L680">			CreateMeal(scanner);</span>
+<span class="fc" id="L681">			break;</span>
+
+		case &quot;2&quot;:
+     	case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L686">			clearScreen();</span>
+<span class="fc" id="L687">			viewMeal(scanner);</span>
+<span class="fc" id="L688">			break;</span>
+
+		case &quot;3&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L693">			clearScreen();</span>
+<span class="fc" id="L694">			printMenu(scanner);</span>
+<span class="fc" id="L695">			break;</span>
+
+		default: 
+<span class="fc" id="L698">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L699">	        PlanMeal(scanner);</span>
+		}
+<span class="fc" id="L701">		scanner.close();</span>
+<span class="fc" id="L702">	}</span>
+
+	
+	 /**
+     * Plans meal operations for guest users.
+     *
+     * @param scanner the scanner object for user input
+     */
+	public void PlanMealForGuest(Scanner scanner) {
+
+<span class="fc" id="L712">		clearScreen();</span>
+
+<span class="fc" id="L714">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L716">		System.out.println(&quot;Plan Meal Menu&quot;);</span>
+
+<span class="fc" id="L718">		System.out.println(&quot;----------------&quot;);</span>
+
+<span class="fc" id="L720">		System.out.println(&quot;1-View Meals&quot;);</span>
+
+<span class="fc" id="L722">		System.out.println(&quot;2-Main Menu&quot;);</span>
+
+<span class="fc" id="L724">		System.out.print(&quot;Press First Character for further Operation &quot;);</span>
+
+<span class="fc" id="L726">		String choice = scanner.next();</span>
+
+<span class="fc bfc" id="L728" title="All 3 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+		case &quot;V&quot;:
+		case &quot;v&quot;:
+<span class="fc" id="L733">			clearScreen();</span>
+<span class="fc" id="L734">			viewMealForGuest(scanner);</span>
+<span class="fc" id="L735">			break;</span>
+
+		case &quot;2&quot;:
+		case &quot;M&quot;:
+		case &quot;m&quot;:
+<span class="fc" id="L740">			clearScreen();</span>
+<span class="fc" id="L741">			printMenuForGuest(scanner);</span>
+<span class="fc" id="L742">			break;</span>
+
+		default: 
+<span class="fc" id="L745">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L746">	        PlanMealForGuest(scanner);</span>
+		}
+
+<span class="fc" id="L749">		scanner.close();</span>
+<span class="fc" id="L750">	}</span>
+
+	/**
+	 * Adds a new ingredient to the ingredient list. The user is prompted to enter the name and price of the ingredient.
+	 * The ingredient is then saved to the file &quot;ingredients.bin&quot;.
+	 * After adding the ingredient, the user is redirected to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void addIngredient(Scanner scanner) {
+
+<span class="fc" id="L761">		clearScreen();</span>
+
+<span class="fc" id="L763">		System.out.println(&quot;______________&quot;);</span>
+
+<span class="fc" id="L765">		System.out.println(&quot;Ingredients-Add Menu&quot;);</span>
+
+<span class="fc" id="L767">		System.out.println(&quot;______________&quot;);</span>
+<span class="fc" id="L768">		scanner.nextLine();</span>
+<span class="fc" id="L769">		System.out.print(&quot;Ingredients Name:\n&quot;);</span>
+<span class="fc" id="L770">		String name = scanner.nextLine();</span>
+
+<span class="fc" id="L772">		System.out.println(&quot;Ingredients Price:&quot;);</span>
+<span class="fc" id="L773">		int price = scanner.nextInt();</span>
+
+<span class="fc" id="L775">		Ingredient ingredient = new Ingredient(name, price);</span>
+
+<span class="fc" id="L777">		IngredientManagement management1 = new IngredientManagement(&quot;null&quot;, 0);</span>
+<span class="fc" id="L778">		management1.loadFromFile(&quot;ingredients.bin&quot;);</span>
+
+<span class="fc" id="L780">		management1.addIngredient(ingredient, &quot;ingredients.bin&quot;);</span>
+
+<span class="fc" id="L782">		management1.saveToFile(&quot;ingredients.bin&quot;);</span>
+
+<span class="fc" id="L784">		printMenu(scanner);</span>
+
+<span class="fc" id="L786">		scanner.close();</span>
+<span class="fc" id="L787">	}</span>
+
+	
+	/**
+	 * Displays the list of available ingredients to the user. The user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewIngredient(Scanner scanner) {
+
+<span class="fc" id="L797">		clearScreen();</span>
+		// Ingredient recipeCalculator = new Ingredient(null, 0);
+
+<span class="fc" id="L800">		IngredientManagement management = new IngredientManagement(&quot;null&quot;, 0);</span>
+
+<span class="fc" id="L802">		management.loadFromFile(&quot;ingredients.bin&quot;);</span>
+<span class="fc" id="L803">		management.listIngredients();</span>
+
+		// Calculate and display total stock and price
+
+<span class="fc" id="L807">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L809">		String userInput = scanner.next();</span>
+
+<span class="pc bpc" id="L811" title="1 of 2 branches missed.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="fc" id="L812">			printMenu(scanner);</span>
+
+		}
+<span class="fc" id="L815">		scanner.close();</span>
+<span class="fc" id="L816">	}</span>
+
+	
+	/**
+	 * Displays the list of available ingredients to the guest user. The guest user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewIngredientForGuest(Scanner scanner) {
+
+<span class="fc" id="L826">		clearScreen();</span>
+		// Ingredient recipeCalculator = new Ingredient(null, 0);
+
+<span class="fc" id="L829">		IngredientManagement management = new IngredientManagement(&quot;null&quot;, 0);</span>
+
+<span class="fc" id="L831">		management.loadFromFile(&quot;ingredients.bin&quot;);</span>
+<span class="fc" id="L832">		management.listIngredients();</span>
+
+		// Calculate and display total stock and price
+
+<span class="fc" id="L836">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L838">		String userInput = scanner.next();</span>
+
+<span class="fc bfc" id="L840" title="All 2 branches covered.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="fc" id="L841">			printMenuForGuest(scanner);</span>
+		} else {
+<span class="fc" id="L843">			System.out.println(&quot;Invalid input. Returning to the main menu...&quot;);</span>
+<span class="fc" id="L844">			printMenuForGuest(scanner);</span>
+		}
+<span class="fc" id="L846">		scanner.close();</span>
+<span class="fc" id="L847">	}</span>
+
+	
+	/**
+	 * Allows the user to edit the price of an existing ingredient. The user is prompted to enter the name of the ingredient
+	 * to edit, as well as the new price. After editing the ingredient, the user can choose to save or cancel the operation
+	 * and return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */	
+	public void editIngredient(Scanner scanner) {
+
+<span class="fc" id="L859">		clearScreen();</span>
+		// Ingredient rps = new Ingredient(null, 0);
+		// Ingredient listing = new Ingredient(null, 0);
+
+<span class="fc" id="L863">		System.out.println(&quot;______________&quot;);</span>
+
+<span class="fc" id="L865">		System.out.println(&quot;Ingredients-Edit Menu&quot;);</span>
+
+<span class="fc" id="L867">		System.out.println(&quot;______________&quot;);</span>
+<span class="fc" id="L868">		IngredientManagement management = new IngredientManagement(&quot;null&quot;, 0);</span>
+
+<span class="fc" id="L870">		management.loadFromFile(&quot;ingredients.bin&quot;);</span>
+
+<span class="fc" id="L872">		management.listIngredients();</span>
+<span class="fc" id="L873">		scanner.nextLine();</span>
+
+<span class="fc" id="L875">		System.out.println(&quot;Enter Ingredient Name to Edit:&quot;);</span>
+
+<span class="fc" id="L877">		String editName = scanner.next();</span>
+
+		// IngredientManagement management2 = new IngredientManagement(editName, 0);
+
+		// Display existing ingredients for user to choose from
+<span class="fc" id="L882">		IngredientManagement management1 = new IngredientManagement(&quot;null&quot;, 0);</span>
+<span class="fc" id="L883">		management1.loadFromFile(&quot;ingredients.bin&quot;);</span>
+
+		// Find the ingredient by name
+
+<span class="fc" id="L887">		Ingredient ingredientToEdit = management1.findIngredientByName(editName);</span>
+
+<span class="fc bfc" id="L889" title="All 2 branches covered.">		if (ingredientToEdit != null) {</span>
+			// Prompt user for new values
+
+<span class="fc" id="L892">			System.out.println(&quot;New Ingredients Price:&quot;);</span>
+
+<span class="fc" id="L894">			int newPrice = scanner.nextInt();</span>
+
+			// Update the ingredient
+
+<span class="fc" id="L898">			ingredientToEdit.setPrice(newPrice);</span>
+
+			// Save to file
+<span class="fc" id="L901">			management1.saveToFile(&quot;ingredients.bin&quot;);</span>
+			// Display updated list
+
+<span class="fc" id="L904">		} else {</span>
+<span class="fc" id="L905">			System.out.println(&quot;Ingredient not found. Please enter a valid name.&quot;);</span>
+		}
+<span class="fc" id="L907">		clearScreen();</span>
+
+<span class="fc" id="L909">		System.out.println(&quot;Save&quot;);</span>
+
+<span class="fc" id="L911">		System.out.println(&quot;Cancel&quot;);</span>
+
+<span class="fc" id="L913">		System.out.println(&quot;Press First character for the operation : &quot;);</span>
+
+<span class="fc" id="L915">		String a1 = scanner.next();</span>
+
+<span class="pc bpc" id="L917" title="1 of 3 branches missed.">		switch (a1) {</span>
+		case &quot;s&quot;:
+		case &quot;S&quot;:
+<span class="fc" id="L920">			printMenu(scanner);</span>
+<span class="fc" id="L921">			break;</span>
+
+		case &quot;c&quot;:
+		case &quot;C&quot;:
+<span class="nc" id="L925">			printMenu(scanner);</span>
+			break;
+		}
+
+<span class="fc" id="L929">		scanner.close();</span>
+<span class="fc" id="L930">	}</span>
+
+	
+	
+	/**
+	 * Allows the user to remove an ingredient from the ingredient list. The user is prompted to enter the name of the
+	 * ingredient to remove. After removing the ingredient, the user can choose to save or cancel the operation and return
+	 * to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void removeIngredient(Scanner scanner) {
+
+<span class="fc" id="L943">		clearScreen();</span>
+
+<span class="fc" id="L945">		IngredientManagement listing = new IngredientManagement(null, 0);</span>
+
+<span class="fc" id="L947">		System.out.println(&quot;______________&quot;);</span>
+
+<span class="fc" id="L949">		System.out.println(&quot;Ingredients-Remove Menu&quot;);</span>
+
+<span class="fc" id="L951">		System.out.println(&quot;______________&quot;);</span>
+
+<span class="fc" id="L953">		listing.loadFromFile(&quot;ingredients.bin&quot;);</span>
+<span class="fc" id="L954">		listing.listIngredients();</span>
+<span class="fc" id="L955">		scanner.nextLine();</span>
+
+<span class="fc" id="L957">		System.out.println(&quot;Enter Ingredient Name to Remove:&quot;);</span>
+
+<span class="fc" id="L959">		String removeName = scanner.next();</span>
+
+		// Load ingredients from file
+
+<span class="fc" id="L963">		IngredientManagement ingredientManagement = new com.turankanbur.calculator.IngredientManagement(removeName, 0);</span>
+
+		// Display existing ingredients for user to choose from
+<span class="fc" id="L966">		ingredientManagement.loadFromFile(&quot;ingredients.bin&quot;);</span>
+
+		// Find the ingredient by name
+<span class="fc" id="L969">		Ingredient ingredientToRemove = ingredientManagement.findIngredientByName(removeName);</span>
+
+<span class="fc bfc" id="L971" title="All 2 branches covered.">		if (ingredientToRemove != null) {</span>
+			// Remove the ingredient
+<span class="fc" id="L973">			ingredientManagement.getIngredients().remove(ingredientToRemove);</span>
+
+			// Save to file
+<span class="fc" id="L976">			ingredientManagement.saveToFile(&quot;ingredients.bin&quot;);</span>
+<span class="fc" id="L977">			System.out.println(&quot;Ingredient removed successfully.&quot;);</span>
+		} else {
+<span class="fc" id="L979">			System.out.println(&quot;Ingredient not found. Please enter a valid name.&quot;);</span>
+		}
+
+<span class="fc" id="L982">		clearScreen();</span>
+
+<span class="fc" id="L984">		System.out.println(&quot;Save&quot;);</span>
+
+<span class="fc" id="L986">		System.out.println(&quot;Cancel&quot;);</span>
+
+<span class="fc" id="L988">		System.out.println(&quot;Press First character for the operation : &quot;);</span>
+
+<span class="fc" id="L990">		String a1 = scanner.next();</span>
+
+<span class="pc bpc" id="L992" title="1 of 3 branches missed.">		switch (a1) {</span>
+		case &quot;s&quot;:
+		case &quot;S&quot;:
+<span class="fc" id="L995">			printMenu(scanner);</span>
+<span class="fc" id="L996">			break;</span>
+		case &quot;c&quot;:
+		case &quot;C&quot;:
+<span class="fc" id="L999">			printMenu(scanner);</span>
+			break;
+		}
+
+<span class="fc" id="L1003">		scanner.close();</span>
+<span class="fc" id="L1004">	}</span>
+
+	
+	/**
+	 * Allows the user to create a new recipe by selecting ingredients from the list of available ingredients. The user
+	 * selects ingredients and specifies their quantities, and then provides a name for the recipe. The created recipe is
+	 * then saved to the file &quot;recipes.bin&quot;.
+	 * After creating the recipe, the user is redirected to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void CreateRecipe(Scanner scanner) {
+<span class="fc" id="L1016">		scanner.nextLine();</span>
+<span class="fc" id="L1017">		IngredientManagement management = new IngredientManagement(&quot;null&quot;, 0);</span>
+
+<span class="fc" id="L1019">		management.loadFromFile(&quot;ingredients.bin&quot;);</span>
+
+		// Available ingredients from management
+<span class="fc" id="L1022">		List&lt;Ingredient&gt; availableIngredients = management.getIngredients();</span>
+
+		// Display available ingredients to the user
+<span class="fc" id="L1025">		System.out.println(&quot;Available Ingredients:&quot;);</span>
+<span class="fc bfc" id="L1026" title="All 2 branches covered.">		for (int i = 0; i &lt; availableIngredients.size(); i++) {</span>
+<span class="fc" id="L1027">			Ingredient ingredient = availableIngredients.get(i);</span>
+<span class="fc" id="L1028">			System.out.println((i + 1) + &quot;. &quot; + ingredient.getName() + &quot; - Price: &quot; + ingredient.getPrice()+&quot;$&quot;);</span>
+		}
+
+<span class="fc" id="L1031">		List&lt;Ingredient&gt; selectedIngredients = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L1032">		double totalCost = 0.0;</span>
+<span class="fc" id="L1033">		System.out.println(&quot;Enter ingredient numbers (press 'q' to finish):&quot;);</span>
+		while (true) {
+<span class="fc" id="L1035">			System.out.print(&quot;Ingredient number: &quot;);</span>
+<span class="fc" id="L1036">			String input = scanner.nextLine();</span>
+<span class="fc bfc" id="L1037" title="All 2 branches covered.">			if (input.equalsIgnoreCase(&quot;q&quot;)) {</span>
+<span class="fc" id="L1038">				break;</span>
+			}
+			try {
+<span class="fc" id="L1041">				int index = Integer.parseInt(input) - 1;</span>
+<span class="fc bfc" id="L1042" title="All 4 branches covered.">				if (index &lt; 0 || index &gt;= availableIngredients.size()) {</span>
+<span class="fc" id="L1043">					System.out.println(&quot;Invalid ingredient number. Please try again.&quot;);</span>
+<span class="fc" id="L1044">					continue;</span>
+				}
+<span class="fc" id="L1046">				Ingredient ingredient = availableIngredients.get(index);</span>
+<span class="fc" id="L1047">				System.out.print(&quot;Enter quantity for &quot; + ingredient.getName() + &quot;: &quot;);</span>
+<span class="fc" id="L1048">				int quantity = Integer.parseInt(scanner.nextLine()); // Get quantity input from user</span>
+
+				// Calculate and accumulate cost for selected ingredients
+<span class="fc" id="L1051">				double ingredientCost = ingredient.getPrice() * quantity;</span>
+<span class="fc" id="L1052">				totalCost += ingredientCost;</span>
+
+<span class="fc" id="L1054">				selectedIngredients.add(ingredient); // Add the selected ingredient to the list</span>
+<span class="fc" id="L1055">			} catch (NumberFormatException e) {</span>
+<span class="fc" id="L1056">				System.out.println(&quot;Invalid input. Please enter a number.&quot;);</span>
+<span class="fc" id="L1057">			}</span>
+
+<span class="fc" id="L1059">		}</span>
+<span class="fc" id="L1060">		System.out.print(&quot;Enter recipe name: &quot;);</span>
+<span class="fc" id="L1061">		String recipeName = scanner.nextLine();</span>
+<span class="fc" id="L1062">		RecipeManagement recipes = new RecipeManagement();</span>
+<span class="fc" id="L1063">		RecipeManagement.createRecipeFromUserInput(availableIngredients, recipes, recipeName, totalCost,</span>
+				selectedIngredients);
+
+<span class="fc" id="L1066">		printMenu(scanner);</span>
+
+<span class="fc" id="L1068">		scanner.close();</span>
+
+<span class="fc" id="L1070">	}</span>
+
+	
+	/**
+	 * Displays the list of available recipes to the user. The user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewRecipe(Scanner scanner) {
+
+<span class="fc" id="L1080">		RecipeManagement recipeManager = new RecipeManagement();</span>
+
+<span class="fc" id="L1082">		recipeManager.listRecipes(&quot;recipes.bin&quot;);</span>
+
+<span class="fc" id="L1084">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L1086">		String userInput = scanner.next();</span>
+
+<span class="pc bpc" id="L1088" title="1 of 2 branches missed.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="nc" id="L1089">			printMenu(scanner);</span>
+		} else {
+<span class="fc" id="L1091">			System.out.println(&quot;Invalid input. Returning to the main menu...&quot;);</span>
+<span class="fc" id="L1092">			printMenu(scanner);</span>
+		}
+<span class="fc" id="L1094">		scanner.close();</span>
+<span class="fc" id="L1095">	}</span>
+
+	
+	/**
+	 * Displays the list of available recipes to the guest user. The guest user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewRecipeForGuest(Scanner scanner) {
+<span class="fc" id="L1104">		RecipeManagement recipeManager = new RecipeManagement();</span>
+
+<span class="fc" id="L1106">		recipeManager.listRecipes(&quot;recipes.bin&quot;);</span>
+
+<span class="fc" id="L1108">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L1110">		String userInput = scanner.next();</span>
+
+<span class="fc bfc" id="L1112" title="All 2 branches covered.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="fc" id="L1113">			printMenuForGuest(scanner);</span>
+		} else {
+<span class="fc" id="L1115">			System.out.println(&quot;Invalid input. Returning to the main menu...&quot;);</span>
+<span class="fc" id="L1116">			printMenuForGuest(scanner);</span>
+		}
+<span class="fc" id="L1118">		scanner.close();</span>
+<span class="fc" id="L1119">	}</span>
+
+	
+	/**
+	 * Allows the user to create a new meal by selecting recipes from the list of available recipes. The user selects
+	 * recipes to include in the meal, provides a name for the meal, and then saves the created meal to the file &quot;meals.bin&quot;.
+	 * After creating the meal, the user is redirected to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void CreateMeal(Scanner scanner) {
+<span class="fc" id="L1130">		scanner.nextLine();</span>
+
+<span class="fc" id="L1132">		RecipeManagement recipeManager = new RecipeManagement();</span>
+<span class="fc" id="L1133">		RecipeManagement.loadFromFile(&quot;recipes.bin&quot;);</span>
+<span class="fc" id="L1134">		recipeManager.listRecipes(&quot;recipes.bin&quot;);</span>
+<span class="fc" id="L1135">		List&lt;Recipe&gt; availableRecipes = recipeManager.getRecipes();</span>
+
+<span class="fc" id="L1137">		System.out.println(&quot;Available Recipes:&quot;);</span>
+<span class="fc bfc" id="L1138" title="All 2 branches covered.">		for (int i = 0; i &lt; availableRecipes.size(); i++) {</span>
+<span class="fc" id="L1139">			Recipe recipe = availableRecipes.get(i);</span>
+<span class="fc" id="L1140">			System.out.println((i + 1) + &quot;. &quot; + recipe.getName());</span>
+		}
+<span class="fc" id="L1142">		List&lt;Recipe&gt; selectedRecipes = new ArrayList&lt;&gt;();</span>
+		while (true) {
+<span class="fc" id="L1144">			System.out.print(&quot;Select a recipe number to include in the meal (press 'q' to finish): &quot;);</span>
+<span class="fc" id="L1145">			String userInput = scanner.nextLine();</span>
+
+<span class="fc bfc" id="L1147" title="All 2 branches covered.">			if (userInput.equalsIgnoreCase(&quot;q&quot;)) {</span>
+<span class="fc" id="L1148">				break;</span>
+			}
+
+			try {
+<span class="fc" id="L1152">				int selectedRecipeIndex = Integer.parseInt(userInput) - 1;</span>
+<span class="pc bpc" id="L1153" title="1 of 4 branches missed.">				if (selectedRecipeIndex &lt; 0 || selectedRecipeIndex &gt;= availableRecipes.size()) {</span>
+<span class="fc" id="L1154">					System.out.println(&quot;Invalid recipe number selected. Please try again.&quot;);</span>
+<span class="fc" id="L1155">					continue;</span>
+				}
+
+<span class="fc" id="L1158">				Recipe selectedRecipe = availableRecipes.get(selectedRecipeIndex);</span>
+<span class="fc" id="L1159">				selectedRecipes.add(selectedRecipe);</span>
+
+<span class="fc" id="L1161">			} catch (NumberFormatException e) {</span>
+<span class="fc" id="L1162">				System.out.println(&quot;Invalid input. Please enter a valid recipe number or 'q' to finish.&quot;);</span>
+<span class="fc" id="L1163">			}</span>
+<span class="fc" id="L1164">		}</span>
+
+<span class="fc" id="L1166">		System.out.print(&quot;Enter meal name: &quot;);</span>
+<span class="fc" id="L1167">		String mealName = scanner.nextLine();</span>
+<span class="fc" id="L1168">		MealManagement meals = new MealManagement();</span>
+<span class="fc" id="L1169">		meals.createMealFromUserInput(mealName, selectedRecipes, recipeManager);</span>
+<span class="fc" id="L1170">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L1172">		printMenu(scanner);</span>
+
+<span class="fc" id="L1174">		scanner.close();</span>
+
+<span class="fc" id="L1176">	}</span>
+
+	
+	/**
+	 * Displays the list of available meals to the user. The user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewMeal(Scanner scanner) {
+
+<span class="fc" id="L1186">		MealManagement mealmanagement = new MealManagement();</span>
+
+<span class="fc" id="L1188">		mealmanagement.listMeals(&quot;meals.bin&quot;);</span>
+
+<span class="fc" id="L1190">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L1192">		String userInput = scanner.next();</span>
+
+<span class="fc bfc" id="L1194" title="All 2 branches covered.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="fc" id="L1195">			printMenu(scanner);</span>
+		} else {
+<span class="fc" id="L1197">			System.out.println(&quot;Invalid input. Returning to the main menu...&quot;);</span>
+<span class="fc" id="L1198">			selectMenu(scanner);</span>
+		}
+<span class="fc" id="L1200">		scanner.close();</span>
+<span class="fc" id="L1201">	}</span>
+
+	
+	/**
+	 * Displays the list of available meals to the guest user. The guest user can press 'c' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void viewMealForGuest(Scanner scanner) {
+
+<span class="fc" id="L1211">		MealManagement mealmanagement = new MealManagement();</span>
+
+<span class="fc" id="L1213">		mealmanagement.listMeals(&quot;meals.bin&quot;);</span>
+
+<span class="fc" id="L1215">		System.out.println(&quot;Press 'c' to return to the main menu.&quot;);</span>
+
+<span class="fc" id="L1217">		String userInput = scanner.next();</span>
+
+<span class="fc bfc" id="L1219" title="All 2 branches covered.">		if (userInput.equalsIgnoreCase(&quot;c&quot;)) {</span>
+<span class="fc" id="L1220">			printMenuForGuest(scanner);</span>
+		} else {
+<span class="fc" id="L1222">			System.out.println(&quot;Invalid input. Returning to the main menu...&quot;);</span>
+<span class="fc" id="L1223">			selectMenu(scanner);</span>
+		}
+<span class="fc" id="L1225">		scanner.close();</span>
+
+<span class="fc" id="L1227">	}</span>
+
+	
+	/**
+	 * Displays information about the Recipe Cost Calculator application. The user can press '1' to return to the main menu.
+	 * 
+	 * @param scanner The Scanner object used to get user input.
+	 */
+	public void About(Scanner scanner) {
+
+
+<span class="fc" id="L1238">		clearScreen();</span>
+
+<span class="fc" id="L1240">		System.out.println(&quot;***** RECIPE COST CALCULATOR APP *****&quot;);</span>
+
+<span class="fc" id="L1242">		System.out.println(&quot;=&gt; This Project Is About Recipe Cost &quot;);</span>
+
+<span class="fc" id="L1244">		System.out.println(&quot;=&gt; In This Project We Can Add , View, Edit And Remove Ingredient&quot;);</span>
+
+<span class="fc" id="L1246">		System.out.println(&quot;=&gt; In This Project We Can Create and View Recipes&quot;);</span>
+
+<span class="fc" id="L1248">		System.out.println(&quot;=&gt; In This Project We Can Create and View Meals&quot;);</span>
+
+<span class="fc" id="L1250">		System.out.println(&quot;&lt;&lt;&lt;&lt;-Press 1 for Main Menu-&gt;&gt;&gt;&gt;&quot;);</span>
+
+<span class="fc" id="L1252">		String choice = scanner.next();</span>
+<span class="fc bfc" id="L1253" title="All 2 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+<span class="fc" id="L1256">			clearScreen();</span>
+<span class="fc" id="L1257">			printMenu(scanner);</span>
+			
+<span class="fc" id="L1259">			break;</span>
+		default: 
+<span class="fc" id="L1261">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L1262">	        About(scanner);</span>
+		}
+<span class="fc" id="L1264">		scanner.close();</span>
+<span class="fc" id="L1265">	}</span>
+
+	/**
+	 * Displays information about the Recipe Cost Calculator App for guest users.
+	 * This method clears the screen and prints information about the project,
+	 * including its purpose and functionalities(Just Included View Option). 
+	 * After displaying the information,
+	 * it prompts the user to press 1 to return to the main menu.
+	 * 
+	 * @param scanner Scanner object to read user input.
+	 */
+	public void AboutForGuest(Scanner scanner) {
+		
+<span class="fc" id="L1278">		clearScreen();</span>
+
+<span class="fc" id="L1280">		System.out.println(&quot;***** RECIPE COST CALCULATOR APP *****&quot;);</span>
+
+<span class="fc" id="L1282">		System.out.println(&quot;=&gt; This Project Is About Recipe Cost &quot;);</span>
+
+<span class="fc" id="L1284">		System.out.println(&quot;=&gt; In This Project We Can Add , View, Edit And Remove Ingredient&quot;);</span>
+
+<span class="fc" id="L1286">		System.out.println(&quot;=&gt; In This Project We Can Create and View Recipes&quot;);</span>
+
+<span class="fc" id="L1288">		System.out.println(&quot;=&gt; In This Project We Can Create and View Meals&quot;);</span>
+
+<span class="fc" id="L1290">		System.out.println(&quot;&lt;&lt;&lt;&lt;-Press 1 for Main Menu-&gt;&gt;&gt;&gt;&quot;);</span>
+
+<span class="fc" id="L1292">		String choice = scanner.next();</span>
+<span class="fc bfc" id="L1293" title="All 2 branches covered.">		switch (choice) {</span>
+
+		case &quot;1&quot;:
+<span class="fc" id="L1296">			clearScreen();</span>
+<span class="fc" id="L1297">			printMenuForGuest(scanner);</span>
+			
+<span class="fc" id="L1299">			break;</span>
+		default: 
+<span class="fc" id="L1301">	        System.err.println(&quot;Please enter a valid key!&quot;);</span>
+<span class="fc" id="L1302">	        AboutForGuest(scanner);</span>
+		}
+<span class="fc" id="L1304">		scanner.close();</span>
+<span class="fc" id="L1305">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

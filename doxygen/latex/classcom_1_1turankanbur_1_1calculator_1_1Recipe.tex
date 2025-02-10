@@ -1,0 +1,221 @@
+\doxysection{com.\+turankanbur.\+calculator.\+Recipe Class Reference}
+\hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe}\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+Inheritance diagram for com.\+turankanbur.\+calculator.\+Recipe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1turankanbur_1_1calculator_1_1Recipe}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_adce0cc1b06cbde0f304095f1e5ec2e14}{Recipe}} (String name, List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ ingredients, double total\+Cost)
+\item 
+String \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a72cb7be3b47594b37a0dbd54698030ed}{get\+Name}} ()
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a68892c809daeb925c1328b7c94c4e91a}{get\+Ingredients}} ()
+\item 
+double \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a9e0c2fc720c221e24100cdcf8c686cf8}{get\+Total\+Cost}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ad5b23a7fef0dafd3b019807d1d86c3ec}{get\+Quantity}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a7b3b5b3f03e6bb8c7dee7bad6ce4ef9c}{set\+Quantity}} (int quantity)
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ace8576c7e5f4679af8dc33e9cfef0393}{set\+Total\+Cost}} (double total\+Cost)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality for serialization, allowing objects to be converted into byte streams. Provides functionality for storing and manipulating collections of objects. Represents a recipe consisting of a name, ingredients, quantity, and total cost. Provides methods to access and modify recipe information. 
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00022}{22}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_adce0cc1b06cbde0f304095f1e5ec2e14}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_adce0cc1b06cbde0f304095f1e5ec2e14} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!Recipe@{Recipe}}
+\index{Recipe@{Recipe}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{Recipe()}{Recipe()}}
+{\footnotesize\ttfamily com.\+turankanbur.\+calculator.\+Recipe.\+Recipe (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$}]{ingredients,  }\item[{double}]{total\+Cost }\end{DoxyParamCaption})}
+
+Constructs a Recipe object with the specified name, ingredients, and total cost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the recipe \\
+\hline
+{\em ingredients} & the list of ingredients required for the recipe \\
+\hline
+{\em total\+Cost} & the total cost of the recipe \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00049}{49}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ this.name\ =\ name;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this.ingredients\ =\ ingredients;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this.totalCost\ =\ totalCost;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a68892c809daeb925c1328b7c94c4e91a}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a68892c809daeb925c1328b7c94c4e91a} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ com.\+turankanbur.\+calculator.\+Recipe.\+get\+Ingredients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of ingredients required for the recipe.
+
+\begin{DoxyReturn}{Returns}
+the list of ingredients 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00069}{69}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ingredients;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{RecipeManagement_8java_source_l00185}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+list\+Recipes()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a72cb7be3b47594b37a0dbd54698030ed}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a72cb7be3b47594b37a0dbd54698030ed} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!getName@{getName}}
+\index{getName@{getName}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String com.\+turankanbur.\+calculator.\+Recipe.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the name of the recipe.
+
+\begin{DoxyReturn}{Returns}
+the name of the recipe 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00060}{60}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l01129}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Meal()}}, and \mbox{\hyperlink{RecipeManagement_8java_source_l00185}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+list\+Recipes()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ad5b23a7fef0dafd3b019807d1d86c3ec}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ad5b23a7fef0dafd3b019807d1d86c3ec} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!getQuantity@{getQuantity}}
+\index{getQuantity@{getQuantity}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{getQuantity()}{getQuantity()}}
+{\footnotesize\ttfamily int com.\+turankanbur.\+calculator.\+Recipe.\+get\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the quantity of the recipe.
+
+\begin{DoxyReturn}{Returns}
+the quantity of the recipe 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00087}{87}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ quantity;}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a9e0c2fc720c221e24100cdcf8c686cf8}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a9e0c2fc720c221e24100cdcf8c686cf8} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!getTotalCost@{getTotalCost}}
+\index{getTotalCost@{getTotalCost}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{getTotalCost()}{getTotalCost()}}
+{\footnotesize\ttfamily double com.\+turankanbur.\+calculator.\+Recipe.\+get\+Total\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the total cost of the recipe.
+
+\begin{DoxyReturn}{Returns}
+the total cost of the recipe 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00078}{78}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ totalCost;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{RecipeManagement_8java_source_l00185}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+list\+Recipes()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a7b3b5b3f03e6bb8c7dee7bad6ce4ef9c}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a7b3b5b3f03e6bb8c7dee7bad6ce4ef9c} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!setQuantity@{setQuantity}}
+\index{setQuantity@{setQuantity}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{setQuantity()}{setQuantity()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Recipe.\+set\+Quantity (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})}
+
+Sets the quantity of the recipe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & the quantity of the recipe to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00096}{96}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ this.quantity\ =\ quantity;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ace8576c7e5f4679af8dc33e9cfef0393}\label{classcom_1_1turankanbur_1_1calculator_1_1Recipe_ace8576c7e5f4679af8dc33e9cfef0393} 
+\index{com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}!setTotalCost@{setTotalCost}}
+\index{setTotalCost@{setTotalCost}!com.turankanbur.calculator.Recipe@{com.turankanbur.calculator.Recipe}}
+\doxysubsubsection{\texorpdfstring{setTotalCost()}{setTotalCost()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Recipe.\+set\+Total\+Cost (\begin{DoxyParamCaption}\item[{double}]{total\+Cost }\end{DoxyParamCaption})}
+
+Sets the total cost of the recipe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Cost} & the total cost of the recipe to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Recipe_8java_source_l00105}{105}} of file \mbox{\hyperlink{Recipe_8java_source}{Recipe.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ this.totalCost\ =\ totalCost;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/\mbox{\hyperlink{Recipe_8java}{Recipe.\+java}}\end{DoxyCompactItemize}

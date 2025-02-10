@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient" kind="interface"><name>com::turankanbur::calculator::IMainIngredient</name>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a380cdbc08aadcbab1ad50f5c7281dfad" kind="function"><name>addIngredient</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1afe75fe291ba0addcccf9dcc21a2912b3" kind="function"><name>saveToFile</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a50aa2091f47585e19dac995d06dc8dd4" kind="function"><name>loadFromFile</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1ae5344c73b3d6e80b04a33d20a7fa1898" kind="function"><name>listIngredients</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a4c2a33c10921866fcb86b275f17aef48" kind="function"><name>editIngredientPrice</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainIngredient_1a1b5b49e7933dfac99f4ec4ab1317acd9" kind="function"><name>findIngredientByName</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal" kind="interface"><name>com::turankanbur::calculator::IMainMeal</name>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0cfe52730049ae54a5a0dba226935ae2" kind="function"><name>addMeal</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa83ddabe2a050f4e2e0fcf015085ae4e" kind="function"><name>saveMealsToFile</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0f7ec01eb6ae18f4863898dee21bb0d8" kind="function"><name>loadMealsFromFile</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0be4b1b105cbca54f75522c735e0d474" kind="function"><name>createMealFromUserInput</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa3df9ccd10381f3a980dffd97b7bc6e2" kind="function"><name>listMeals</name></member>
+    <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a84a92ff477b12f53538c7ec4683d168c" kind="function"><name>getMeals</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" kind="class"><name>com::turankanbur::calculator::Ingredient</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a761946d4e813617e70773797e897d540" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a5a1c6265431c5ff2e9345aa02c706d6f" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a3b358caac15ec45173df8354f65cc53d" kind="variable"><name>price</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1aead73dd2c9dd5f90d40ebb73e76ecbfb" kind="function"><name>Ingredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a61c290adf6848285b93b25357104105a" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a9bc2645b91a8db2140d7a158f217a8f6" kind="function"><name>getPrice</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1aa98e8d3f3458e0922557e85bfcafdfc6" kind="function"><name>setPrice</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement" kind="class"><name>com::turankanbur::calculator::IngredientManagement</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a25f4f46374317fd358a7ca0e54b4352d" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a252d95c3f970a81acaadf669950221c1" kind="variable"><name>ingredients</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a5d0cc26f5698a18fec8624efecccb960" kind="function"><name>IngredientManagement</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a49858502a36b4af3178f8e3ccde0df0d" kind="function"><name>addIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a3aa55d99f0ae451655de8d675d6852fa" kind="function"><name>getIngredients</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1abf2fc0b9cd0c421fc9c46d8b4deacf63" kind="function"><name>setIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1ac0f2519b9b7f8c95b76220d3dc466427" kind="function"><name>saveToFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" kind="function"><name>loadFromFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1acb89dcbcc6ad5671419a183bd40e89e9" kind="function"><name>listIngredients</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1aeef4b512196171a875638e2bca2b0722" kind="function"><name>editIngredientPrice</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a7e245d5acf5d722891a5a88275cb0ee3" kind="function"><name>findIngredientByName</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kind="class"><name>com::turankanbur::calculator::Meal</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a3bd1e127a2d2534bdb622377e5230e75" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a87beb3bf87af092cfa2e01dbd40cf8be" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a584e7c11acff44f94d9eba810986988b" kind="variable"><name>recipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6b065aa20e13fb772fad441d24d53bb9" kind="variable"><name>totalCost</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a0e2657a2ceb568bb607d8591a27b355f" kind="function"><name>Meal</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6f4d3fb44f945f0a25fc05de0c148801" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a441805269b65f72578e69da99ad4c44b" kind="function"><name>getRecipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1aca8c449430aa7a4087085ad840d468bb" kind="function"><name>getTotalCost</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1af7eb64ce35698ac9d2c2dc88dbd11364" kind="function"><name>calculateTotalCost</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement" kind="class"><name>com::turankanbur::calculator::MealManagement</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ae59f490f1c605df37b91448fc4e831ec" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" kind="variable"><name>meals</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa2b2c09213156d4923ce729e876dd18b" kind="function"><name>MealManagement</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" kind="function"><name>addMeal</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ac54edf8538f3fdbce208391a9ee67f2e" kind="function"><name>getMeals</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a67e6df6870cceaa12d50403168dfc7d0" kind="function"><name>saveMealsToFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8ede9b07520f986d0c116d29084a2c4" kind="function"><name>loadMealsFromFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" kind="function"><name>createMealFromUserInput</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" kind="function"><name>listMeals</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1Menu" kind="class"><name>com::turankanbur::calculator::Menu</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aadec51eb9fb997efc817c591be641f58" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aad190a04054dc1f110dfccc10f407ece" kind="function"><name>main</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" kind="function"><name>clearScreen</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" kind="function"><name>userMenu</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" kind="function"><name>registerUser</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" kind="function"><name>loginUser</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" kind="function"><name>guestMode</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" kind="function"><name>printMenu</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" kind="function"><name>printMenuForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" kind="function"><name>selectMenu</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" kind="function"><name>selectMenuForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" kind="function"><name>IngredientManagement</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" kind="function"><name>IngredientManagementForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" kind="function"><name>RecipeCosting</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" kind="function"><name>RecipeCostingForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" kind="function"><name>PlanMeal</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" kind="function"><name>PlanMealForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" kind="function"><name>addIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" kind="function"><name>viewIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" kind="function"><name>viewIngredientForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" kind="function"><name>editIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" kind="function"><name>removeIngredient</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" kind="function"><name>CreateRecipe</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" kind="function"><name>viewRecipe</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" kind="function"><name>viewRecipeForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" kind="function"><name>CreateMeal</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" kind="function"><name>viewMeal</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" kind="function"><name>viewMealForGuest</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" kind="function"><name>About</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" kind="function"><name>AboutForGuest</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kind="class"><name>com::turankanbur::calculator::Recipe</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a08fd05bbe3483a0a2c3fc235b5000aa3" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1aa0acf45f72c5c0d1752fd591e07341dd" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a2e0084ce512cfbff094db10de2851f6a" kind="variable"><name>quantity</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a94e9242573585afccd97938c1d4218c3" kind="variable"><name>ingredients</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a989be51c9a765a81873cb1693e7da373" kind="variable"><name>totalCost</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1adce0cc1b06cbde0f304095f1e5ec2e14" kind="function"><name>Recipe</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a72cb7be3b47594b37a0dbd54698030ed" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a68892c809daeb925c1328b7c94c4e91a" kind="function"><name>getIngredients</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a9e0c2fc720c221e24100cdcf8c686cf8" kind="function"><name>getTotalCost</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1ad5b23a7fef0dafd3b019807d1d86c3ec" kind="function"><name>getQuantity</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a7b3b5b3f03e6bb8c7dee7bad6ce4ef9c" kind="function"><name>setQuantity</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1ace8576c7e5f4679af8dc33e9cfef0393" kind="function"><name>setTotalCost</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" kind="class"><name>com::turankanbur::calculator::RecipeManagement</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a58a3ecc95f8d416473c1a4475248d049" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9153e9a05e64a69773a266e511d858d2" kind="variable"><name>recipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9a8adda9a83167a5e21183e545d19c77" kind="function"><name>RecipeManagement</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" kind="function"><name>addRecipe</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a13fdbe43b729eeb79cdd7a4cc488856e" kind="function"><name>getRecipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" kind="function"><name>listRecipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a676ed176bd5feb15b1806f1423fb80b5" kind="function"><name>setRecipes</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a6c3330b8dd63d98553ed21c762494278" kind="function"><name>saveToFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" kind="function"><name>loadFromFile</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a3eb720f63462d973e488edc6de6b8c5f" kind="function"><name>createRecipeFromUserInput</name></member>
+  </compound>
+  <compound refid="classcom_1_1turankanbur_1_1calculator_1_1User" kind="class"><name>com::turankanbur::calculator::User</name>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1ad9d109108e986924f6fffef1f883e31b" kind="variable"><name>serialVersionUID</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1a52710b5b3a837b5b1617dd99180ebee5" kind="variable"><name>username</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1afc904fed793f73d44e694f60adbf743c" kind="variable"><name>password</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1afab84543e28a9e395d9c2889f5246bb6" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1a97399787514bd7cae661ed9be97eede7" kind="function"><name>getUsername</name></member>
+    <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1ad5e7fbaf18b7cbcb1953e5300af5d6e0" kind="function"><name>getPassword</name></member>
+  </compound>
+  <compound refid="namespacecom" kind="namespace"><name>com</name>
+  </compound>
+  <compound refid="namespacecom_1_1turankanbur" kind="namespace"><name>com::turankanbur</name>
+  </compound>
+  <compound refid="namespacecom_1_1turankanbur_1_1calculator" kind="namespace"><name>com::turankanbur::calculator</name>
+  </compound>
+  <compound refid="namespacejava_1_1lang" kind="namespace"><name>java::lang</name>
+  </compound>
+  <compound refid="Ingredient_8java" kind="file"><name>Ingredient.java</name>
+  </compound>
+  <compound refid="IngredientManagement_8java" kind="file"><name>IngredientManagement.java</name>
+  </compound>
+  <compound refid="Meal_8java" kind="file"><name>Meal.java</name>
+  </compound>
+  <compound refid="MealManagement_8java" kind="file"><name>MealManagement.java</name>
+  </compound>
+  <compound refid="Menu_8java" kind="file"><name>Menu.java</name>
+  </compound>
+  <compound refid="Recipe_8java" kind="file"><name>Recipe.java</name>
+  </compound>
+  <compound refid="RecipeManagement_8java" kind="file"><name>RecipeManagement.java</name>
+  </compound>
+  <compound refid="User_8java" kind="file"><name>User.java</name>
+  </compound>
+  <compound refid="dir_2c549c584b66900ee839c3e739328f67" kind="dir"><name>recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator</name>
+  </compound>
+  <compound refid="dir_071ad9a4b86036bb9b2c226ae47d2fdd" kind="dir"><name>recipe-cost-calculator-app/src/main/java/com</name>
+  </compound>
+  <compound refid="dir_2afe9b9aa3a77f3a20847c53f5aeeb21" kind="dir"><name>recipe-cost-calculator-app/src/main/java</name>
+  </compound>
+  <compound refid="dir_df7cbe6fd0411b1ea88dc908fe74818b" kind="dir"><name>recipe-cost-calculator-app/src/main</name>
+  </compound>
+  <compound refid="dir_df3a1876e73478385a1d9b888610838d" kind="dir"><name>recipe-cost-calculator-app</name>
+  </compound>
+  <compound refid="dir_2a8098b0c7bca27f3993174fe6c6f03a" kind="dir"><name>recipe-cost-calculator-app/src</name>
+  </compound>
+  <compound refid="dir_3dde931b26d004262f2ee0cb2fec8bbd" kind="dir"><name>recipe-cost-calculator-app/src/main/java/com/turankanbur</name>
+  </compound>
+</doxygenindex>

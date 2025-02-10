@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ingredient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-console-application</a> &gt; <a href="index.source.html" class="el_package">com.turankanbur.calculator</a> &gt; <span class="el_source">Ingredient.java</span></div><h1>Ingredient.java</h1><pre class="source lang-java linenums">/**
+ * The package com.turankanbur.calculator contains classes related to a calculator application.
+ * It includes classes for managing ingredients, performing calculations, and other utility functions.
+ */
+package com.turankanbur.calculator;
+
+/**
+ * Provides functionality for serializing and deserializing objects.
+ * This interface is implemented by classes whose objects need to be persisted.
+ */
+import java.io.Serializable;
+
+/**
+ * Represents an ingredient used in a recipe. This class provides methods to get
+ * and set the name and price of the ingredient.
+ */
+
+/**
+ * Interface representing main ingredients in a recipe or dish.
+ */
+interface IMainIngredient{
+	
+	
+	/**
+	 * Adds an ingredient to the list of managed ingredients.
+	 *
+	 * @param ingredient the ingredient to add
+	 * @param file       the name of the file to save the ingredients to
+	 */
+	 void addIngredient(Ingredient ingredient, String file);
+	
+    /**
+	 * Saves the managed ingredients to a file.
+	 *
+	 * @param fileName the name of the file to save to
+	 */
+	 void saveToFile(String fileName);
+
+	    /**
+	 * Loads ingredients from a file and populates the managed ingredients list.
+	 *
+	 * @param fileName the name of the file to load from
+	 */
+	    void loadFromFile(String fileName);
+	    
+		/**
+	 * Lists all managed ingredients along with their names and prices.
+	 */
+	 void listIngredients();
+
+	 /**
+	 * Edits the price of a specified ingredient.
+	 *
+	 * @param ingredientName the name of the ingredient to edit
+	 * @param newPrice       the new price of the ingredient
+	 */
+	 void editIngredientPrice(String ingredientName, int newPrice);
+
+	   /**
+	 * Finds an ingredient by its name.
+	 *
+	 * @param name the name of the ingredient to find
+	 * @return the ingredient if found, or null if not found
+	 */
+	 Ingredient findIngredientByName(String name);
+}
+
+
+/**
+ * Represents an ingredient used in a recipe. This class provides methods to get
+ * and set the name and price of the ingredient.
+ */
+public class Ingredient implements Serializable {
+
+	
+	/**
+	 * Unique identifier for ensuring version compatibility of serialized objects.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * The name of the ingredient.
+	 */
+	private String name;
+
+	/**
+	 * The price of the ingredient.
+	 */
+	private int price;
+
+	/**
+	 * Constructs an Ingredient object with the specified name and price.
+	 *
+	 * @param name  the name of the ingredient
+	 * @param price the price of the ingredient
+	 */
+<span class="fc" id="L97">	public Ingredient(String name, int price) {</span>
+<span class="fc" id="L98">		this.name = name;</span>
+<span class="fc" id="L99">		this.price = price;</span>
+<span class="fc" id="L100">	}</span>
+
+	/**
+	 * Retrieves the name of the ingredient.
+	 *
+	 * @return the name of the ingredient
+	 */
+	public String getName() {
+<span class="fc" id="L108">		return name;</span>
+	}
+
+	
+	
+
+	/**
+	 * Retrieves the price of the ingredient.
+	 *
+	 * @return the price of the ingredient
+	 */
+	public int getPrice() {
+<span class="fc" id="L120">		return price;</span>
+	}
+
+	/**
+	 * Sets the price of the ingredient.
+	 *
+	 * @param price the price to be set
+	 */
+	public void setPrice(int price) {
+<span class="fc" id="L129">		this.price = price;</span>
+<span class="fc" id="L130">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

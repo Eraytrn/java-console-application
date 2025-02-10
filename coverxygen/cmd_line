@@ -1,0 +1,1 @@
+genhtml ./recipe-cost-calculator-app/target/site/coverxygen/lcov.info --legend --title 'Documentation Coverage Report' -o recipe-cost-calculator-app/target/site/coverxygen

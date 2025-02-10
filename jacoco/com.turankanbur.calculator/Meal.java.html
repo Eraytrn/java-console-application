@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Meal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-console-application</a> &gt; <a href="index.source.html" class="el_package">com.turankanbur.calculator</a> &gt; <span class="el_source">Meal.java</span></div><h1>Meal.java</h1><pre class="source lang-java linenums">/**
+ * Package containing classes related to meal management and calculation.
+ */
+package com.turankanbur.calculator;
+
+/**
+ * Provides functionality for serialization, allowing objects to be converted into byte streams.
+ */
+import java.io.Serializable;
+
+/**
+ * Provides functionality for storing and manipulating collections of objects.
+ */
+import java.util.List;
+
+
+
+/**
+ * Interface representing main ingredients in a recipe or dish.
+ */
+
+interface IMainMeal{
+
+	/**
+	 * Adds a meal to the list of managed meals and saves it to a file.
+	 *
+	 * @param meal     the meal to add
+	 * @param fileName the name of the file to save the meals to
+	 */
+	void addMeal(Meal meal, String fileName);
+
+	/**
+	 * Saves a list of meals to a file.
+	 *
+	 * @param meals    the list of meals to save
+	 * @param fileName the name of the file to save to
+	 */
+	void saveMealsToFile(List&lt;Meal&gt; meals, String fileName);
+
+    /**
+	 * Loads meals from a file and returns them as a list.
+	 *
+	 * @param fileName the name of the file to load from
+	 * @return the list of loaded meals
+	 */
+	List&lt;Meal&gt; loadMealsFromFile(String fileName);
+
+
+	/**
+	 * Creates a meal from user input and adds it to the list of managed meals.
+	 *
+	 * @param mealName        the name of the meal
+	 * @param selectedRecipes the list of recipes included in the meal
+	 * @param recipeManager   the RecipeManagement object to interact with recipe
+	 *                        data
+	 */
+	void createMealFromUserInput(String mealName, List&lt;Recipe&gt; selectedRecipes, RecipeManagement recipeManager) ;
+
+	/**
+	 * Lists all managed meals along with their names and total costs.
+	 *
+	 * @param filename the name of the file to load meals from
+	 */
+	void listMeals(String filename);
+
+	/**
+	 * Retrieves the list of managed meals.
+	 *
+	 * @return the list of managed meals
+	 */
+	List&lt;Meal&gt; getMeals() ;
+	
+}
+/**
+ * Represents a meal consisting of one or more recipes. Provides functionality
+ * to calculate the total cost of the meal.
+ */
+public class Meal implements Serializable {
+
+	/**
+	 * Unique identifier for ensuring version compatibility of serialized objects.
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * The name of the meal.
+	 */
+	private String name;
+
+	/**
+	 * The list of recipes included in the meal.
+	 */
+	private List&lt;Recipe&gt; recipes;
+
+	/**
+	 * The total cost of the meal.
+	 */
+	private double totalCost;
+
+	/**
+	 * Constructs a Meal object with the specified name and list of recipes.
+	 * Calculates the total cost of the meal.
+	 *
+	 * @param name    the name of the meal
+	 * @param recipes the list of recipes included in the meal
+	 */
+<span class="fc" id="L107">	public Meal(String name, List&lt;Recipe&gt; recipes) {</span>
+<span class="fc" id="L108">		this.name = name;</span>
+<span class="fc" id="L109">		this.recipes = recipes;</span>
+<span class="fc" id="L110">		calculateTotalCost();</span>
+<span class="fc" id="L111">	}</span>
+
+	/**
+	 * Retrieves the name of the meal.
+	 *
+	 * @return the name of the meal
+	 */
+	public String getName() {
+<span class="fc" id="L119">		return name;</span>
+	}
+
+	/**
+	 * Retrieves the list of recipes included in the meal.
+	 *
+	 * @return the list of recipes
+	 */
+	public List&lt;Recipe&gt; getRecipes() {
+<span class="fc" id="L128">		return recipes;</span>
+	}
+
+	/**
+	 * Retrieves the total cost of the meal.
+	 *
+	 * @return the total cost of the meal
+	 */
+	public double getTotalCost() {
+<span class="fc" id="L137">		return totalCost;</span>
+	}
+
+	/**
+	 * Calculates the total cost of the meal based on the cost of its recipes.
+	 */
+	private void calculateTotalCost() {
+<span class="fc" id="L144">		totalCost = 0.0;</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">		for (Recipe recipe : recipes) {</span>
+<span class="fc" id="L146">			totalCost += recipe.getTotalCost();</span>
+<span class="fc" id="L147">		}</span>
+<span class="fc" id="L148">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

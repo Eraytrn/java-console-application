@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_df3a1876e73478385a1d9b888610838d" kind="dir">
+    <compoundname>recipe-cost-calculator-app</compoundname>
+    <innerdir refid="dir_2a8098b0c7bca27f3993174fe6c6f03a">recipe-cost-calculator-app/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="recipe-cost-calculator-app/"/>
+  </compounddef>
+</doxygen>

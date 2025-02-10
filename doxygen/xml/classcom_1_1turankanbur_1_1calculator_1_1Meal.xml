@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcom_1_1turankanbur_1_1calculator_1_1Meal" kind="class" language="Java" prot="public">
+    <compoundname>com::turankanbur::calculator::Meal</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a3bd1e127a2d2534bdb622377e5230e75" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.turankanbur.calculator.Meal.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.serialVersionUID</qualifiedname>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for ensuring version compatibility of serialized objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="83" column="27" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a87beb3bf87af092cfa2e01dbd40cf8be" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.Meal.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of the meal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="88" column="16" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a584e7c11acff44f94d9eba810986988b" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>List&lt;Recipe&gt; com.turankanbur.calculator.Meal.recipes</definition>
+        <argsstring></argsstring>
+        <name>recipes</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.recipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of recipes included in the meal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="93" column="14" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6b065aa20e13fb772fad441d24d53bb9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double com.turankanbur.calculator.Meal.totalCost</definition>
+        <argsstring></argsstring>
+        <name>totalCost</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.totalCost</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total cost of the meal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="98" column="16" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="98" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a0e2657a2ceb568bb607d8591a27b355f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.turankanbur.calculator.Meal.Meal</definition>
+        <argsstring>(String name, List&lt; Recipe &gt; recipes)</argsstring>
+        <name>Meal</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.Meal</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>recipes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a Meal object with the specified name and list of recipes. Calculates the total cost of the meal.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the meal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of recipes included in the meal </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="107" column="8" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6f4d3fb44f945f0a25fc05de0c148801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.Meal.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.getName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the name of the meal.</para>
+<para><simplesect kind="return"><para>the name of the meal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="118" column="15" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="118" bodyend="120"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a441805269b65f72578e69da99ad4c44b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>List&lt; Recipe &gt; com.turankanbur.calculator.Meal.getRecipes</definition>
+        <argsstring>()</argsstring>
+        <name>getRecipes</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.getRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of recipes included in the meal.</para>
+<para><simplesect kind="return"><para>the list of recipes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="127" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1aca8c449430aa7a4087085ad840d468bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double com.turankanbur.calculator.Meal.getTotalCost</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalCost</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.getTotalCost</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the total cost of the meal.</para>
+<para><simplesect kind="return"><para>the total cost of the meal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="136" column="15" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="136" bodyend="138"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" compoundref="MealManagement_8java" startline="123" endline="133">com.turankanbur.calculator.MealManagement.createMealFromUserInput</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Meal_1af7eb64ce35698ac9d2c2dc88dbd11364" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Meal.calculateTotalCost</definition>
+        <argsstring>()</argsstring>
+        <name>calculateTotalCost</name>
+        <qualifiedname>com.turankanbur.calculator.Meal.calculateTotalCost</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the total cost of the meal based on the cost of its recipes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="143" column="14" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="143" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a meal consisting of one or more recipes. Provides functionality to calculate the total cost of the meal. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.Meal</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1Meal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.Meal</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1Meal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="78" column="7" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="78" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1af7eb64ce35698ac9d2c2dc88dbd11364" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>calculateTotalCost</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6f4d3fb44f945f0a25fc05de0c148801" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>getName</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a441805269b65f72578e69da99ad4c44b" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>getRecipes</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1aca8c449430aa7a4087085ad840d468bb" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>getTotalCost</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a0e2657a2ceb568bb607d8591a27b355f" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>Meal</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a87beb3bf87af092cfa2e01dbd40cf8be" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>name</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a584e7c11acff44f94d9eba810986988b" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>recipes</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a3bd1e127a2d2534bdb622377e5230e75" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6b065aa20e13fb772fad441d24d53bb9" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Meal</scope><name>totalCost</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

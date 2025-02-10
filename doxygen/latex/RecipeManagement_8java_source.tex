@@ -1,0 +1,140 @@
+\doxysection{Recipe\+Management.\+java}
+\hypertarget{RecipeManagement_8java_source}{}\label{RecipeManagement_8java_source}\index{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/RecipeManagement.java@{recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/RecipeManagement.java}}
+\mbox{\hyperlink{RecipeManagement_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00004}00004\ \textcolor{keyword}{package\ }com.turankanbur.calculator;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.io.EOFException;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00014}00014\ \textcolor{keyword}{import}\ java.io.FileInputStream;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00019}00019\ \textcolor{keyword}{import}\ java.io.FileOutputStream;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00024}00024\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00029}00029\ \textcolor{keyword}{import}\ java.io.ObjectInputStream;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00034}00034\ \textcolor{keyword}{import}\ java.io.ObjectOutputStream;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00039}00039\ \textcolor{keyword}{import}\ java.io.Serializable;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00044}00044\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00049}00049\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00056}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{00056}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ \ \textcolor{keyword}{implements}\ Serializable\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{long}\ serialVersionUID\ =\ 1L;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{private}\ List<Recipe>\ recipes;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00067}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a9a8adda9a83167a5e21183e545d19c77}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a9a8adda9a83167a5e21183e545d19c77}{RecipeManagement}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ this.recipes\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00080}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3}{addRecipe}}(\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ recipe,\ String\ fileName)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ existing\ recipes\ from\ file}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ List<Recipe>\ existingRecipes\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(fileName);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ the\ new\ recipe\ to\ the\ existing\ list}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ existingRecipes.add(recipe);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ all\ recipes\ to\ file}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}{saveToFile}}(existingRecipes,\ fileName);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00096}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Recipe>\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e}{getRecipes}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.recipes;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00106}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}{saveToFile}}(List<Recipe>\ recipes,\ String\ fileName)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileOutputStream\ fos\ =\ \textcolor{keyword}{new}\ FileOutputStream(fileName);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObjectOutputStream\ oos\ =\ \textcolor{keyword}{new}\ ObjectOutputStream(fos))\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ r\ :\ recipes)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeObject(r);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeUTF(\textcolor{stringliteral}{"{}\#END\_RECIPE\#"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ saving\ to\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00126}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{00126}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Recipe>\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(String\ fileName)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ List<Recipe>\ loadedRecipes\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileInputStream\ fis\ =\ \textcolor{keyword}{new}\ FileInputStream(fileName);\ ObjectInputStream\ ois\ =\ \textcolor{keyword}{new}\ ObjectInputStream(fis))\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ loadedRecipe\ =\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}})\ ois.readObject();}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loadedRecipes.add(loadedRecipe);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ois.readUTF();}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (EOFException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ Reached\ end\ of\ file}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ |\ ClassNotFoundException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ loading\ from\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ loadedRecipes;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00159}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f}{00159}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f}{createRecipeFromUserInput}}(List<Ingredient>\ availableIngredients,\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{RecipeManagement}}\ recipeManager,}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ String\ recipeName,\ \textcolor{keywordtype}{double}\ totalCost,\ List<Ingredient>\ selectedIngredients)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ recipe\ details}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nRecipe\ Name:\ "{}}\ +\ recipeName);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Total\ Cost:\ "{}}\ +\ totalCost\ +\ \textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients:"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient\ :\ selectedIngredients)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/\ "{}}\ +\ ingredient.getName()\ +\ \textcolor{stringliteral}{"{}:\ "{}}\ +\ ingredient.getPrice()\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ \textcolor{stringliteral}{"{}\ per\ unit"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ recipe}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ recipe\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}(recipeName,\ selectedIngredients,\ totalCost);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ the\ recipe\ to\ the\ existing\ recipe\ manager\ and\ save\ to\ file}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ recipeManager.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3}{addRecipe}}(recipe,\ \textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00185}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{00185}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{listRecipes}}(String\ filename)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ recipes\ from\ file}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ recipes\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(filename);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recipes.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}No\ recipes\ found\ to\ list."{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ recipes.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}\ recipe\ =\ recipes.get(i);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nRecipe\ "{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Name:\ "{}}\ +\ recipe.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a72cb7be3b47594b37a0dbd54698030ed}{getName}}());}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Total\ Cost:\ "{}}\ +\ recipe.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a9e0c2fc720c221e24100cdcf8c686cf8}{getTotalCost}}()+\ \textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Ingredients:"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ List<Ingredient>\ ingredients\ =\ recipe.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe_a68892c809daeb925c1328b7c94c4e91a}{getIngredients}}();}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ ingredients.size();\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}}\ ingredient\ =\ ingredients.get(j);}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ -\/\ "{}}\ +\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a61c290adf6848285b93b25357104105a}{getName}}()\ +\ \textcolor{stringliteral}{"{}:\ "{}}\ +\ ingredient.\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient_a9bc2645b91a8db2140d7a158f217a8f6}{getPrice}}\ ()+\ \textcolor{stringliteral}{"{}\$"{}}\ +\ \textcolor{stringliteral}{"{}\ per\ unit"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00209}00209\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00215}\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a676ed176bd5feb15b1806f1423fb80b5}{00215}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a676ed176bd5feb15b1806f1423fb80b5}{setRecipes}}(List<Recipe>\ recipes2)\ \{}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ this.recipes\ =\ recipes2;}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00218}00218\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{RecipeManagement_8java_source_l00220}00220\ \}}
+
+\end{DoxyCode}

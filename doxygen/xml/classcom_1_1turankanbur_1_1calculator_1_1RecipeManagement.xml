@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" kind="class" language="Java" prot="public">
+    <compoundname>com::turankanbur::calculator::RecipeManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a58a3ecc95f8d416473c1a4475248d049" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.turankanbur.calculator.RecipeManagement.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.serialVersionUID</qualifiedname>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for ensuring version compatibility of serialized objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="61" column="27" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9153e9a05e64a69773a266e511d858d2" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>List&lt;Recipe&gt; com.turankanbur.calculator.RecipeManagement.recipes</definition>
+        <argsstring></argsstring>
+        <name>recipes</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.recipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of recipes managed by this RecipeManagement instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="64" column="14" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9a8adda9a83167a5e21183e545d19c77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.turankanbur.calculator.RecipeManagement.RecipeManagement</definition>
+        <argsstring>()</argsstring>
+        <name>RecipeManagement</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.RecipeManagement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a RecipeManagement object with an empty list of recipes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="67" column="8" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.RecipeManagement.addRecipe</definition>
+        <argsstring>(Recipe recipe, String fileName)</argsstring>
+        <name>addRecipe</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.addRecipe</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref></type>
+          <declname>recipe</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a recipe to the list of managed recipes and saves it to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the recipe to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save the recipes to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="80" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="80" bodyend="89"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" compoundref="RecipeManagement_8java" startline="126" endline="147">com.turankanbur.calculator.RecipeManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a6c3330b8dd63d98553ed21c762494278" compoundref="RecipeManagement_8java" startline="106" endline="118">com.turankanbur.calculator.RecipeManagement.saveToFile</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a3eb720f63462d973e488edc6de6b8c5f" compoundref="RecipeManagement_8java" startline="159" endline="176">com.turankanbur.calculator.RecipeManagement.createRecipeFromUserInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a13fdbe43b729eeb79cdd7a4cc488856e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>List&lt; Recipe &gt; com.turankanbur.calculator.RecipeManagement.getRecipes</definition>
+        <argsstring>()</argsstring>
+        <name>getRecipes</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.getRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of managed recipes.</para>
+<para><simplesect kind="return"><para>the list of managed recipes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="96" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="96" bodyend="98"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.RecipeManagement.listRecipes</definition>
+        <argsstring>(String filename)</argsstring>
+        <name>listRecipes</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.listRecipes</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all managed recipes along with their names, total costs, and ingredients.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load recipes from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="185" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="185" bodyend="207"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a68892c809daeb925c1328b7c94c4e91a" compoundref="Recipe_8java" startline="69" endline="71">com.turankanbur.calculator.Recipe.getIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a61c290adf6848285b93b25357104105a" compoundref="Ingredient_8java" startline="107" endline="109">com.turankanbur.calculator.Ingredient.getName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a72cb7be3b47594b37a0dbd54698030ed" compoundref="Recipe_8java" startline="60" endline="62">com.turankanbur.calculator.Recipe.getName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a9bc2645b91a8db2140d7a158f217a8f6" compoundref="Ingredient_8java" startline="119" endline="121">com.turankanbur.calculator.Ingredient.getPrice</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a9e0c2fc720c221e24100cdcf8c686cf8" compoundref="Recipe_8java" startline="78" endline="80">com.turankanbur.calculator.Recipe.getTotalCost</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" compoundref="RecipeManagement_8java" startline="126" endline="147">com.turankanbur.calculator.RecipeManagement.loadFromFile</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" compoundref="Menu_8java" startline="1078" endline="1095">com.turankanbur.calculator.Menu.viewRecipe</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" compoundref="Menu_8java" startline="1103" endline="1119">com.turankanbur.calculator.Menu.viewRecipeForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a676ed176bd5feb15b1806f1423fb80b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.RecipeManagement.setRecipes</definition>
+        <argsstring>(List&lt; Recipe &gt; recipes2)</argsstring>
+        <name>setRecipes</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.setRecipes</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>recipes2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the list of recipes managed by this RecipeManagement instance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipes2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of recipes to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="215" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="215" bodyend="218"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a6c3330b8dd63d98553ed21c762494278" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.turankanbur.calculator.RecipeManagement.saveToFile</definition>
+        <argsstring>(List&lt; Recipe &gt; recipes, String fileName)</argsstring>
+        <name>saveToFile</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.saveToFile</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>recipes</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves a list of recipes to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of recipes to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="106" column="20" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="106" bodyend="118"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" compoundref="RecipeManagement_8java" startline="80" endline="89">com.turankanbur.calculator.RecipeManagement.addRecipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+        <definition>static List&lt; Recipe &gt; com.turankanbur.calculator.RecipeManagement.loadFromFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>loadFromFile</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.loadFromFile</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads recipes from a file and returns them as a list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the list of loaded recipes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="126" column="20" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="126" bodyend="147"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" compoundref="RecipeManagement_8java" startline="80" endline="89">com.turankanbur.calculator.RecipeManagement.addRecipe</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" compoundref="RecipeManagement_8java" startline="185" endline="207">com.turankanbur.calculator.RecipeManagement.listRecipes</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a3eb720f63462d973e488edc6de6b8c5f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.turankanbur.calculator.RecipeManagement.createRecipeFromUserInput</definition>
+        <argsstring>(List&lt; Ingredient &gt; availableIngredients, RecipeManagement recipeManager, String recipeName, double totalCost, List&lt; Ingredient &gt; selectedIngredients)</argsstring>
+        <name>createRecipeFromUserInput</name>
+        <qualifiedname>com.turankanbur.calculator.RecipeManagement.createRecipeFromUserInput</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" kindref="compound">Ingredient</ref> &gt;</type>
+          <declname>availableIngredients</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" kindref="compound">RecipeManagement</ref></type>
+          <declname>recipeManager</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>recipeName</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>totalCost</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient" kindref="compound">Ingredient</ref> &gt;</type>
+          <declname>selectedIngredients</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a recipe from user input and adds it to the list of managed recipes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>availableIngredients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of available ingredients </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipeManager</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the RecipeManagement object to interact with recipe data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the recipe </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>totalCost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the total cost of the recipe </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selectedIngredients</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of selected ingredients for the recipe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="159" column="20" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="159" bodyend="176"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" compoundref="RecipeManagement_8java" startline="80" endline="89">com.turankanbur.calculator.RecipeManagement.addRecipe</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" compoundref="Menu_8java" startline="1015" endline="1070">com.turankanbur.calculator.Menu.CreateRecipe</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for handling end-of-file (EOF) conditions. Provides functionality for reading bytes from a file input stream. Provides functionality for writing bytes to a file output stream. Provides functionality for handling input/output (I/O) operations. Provides functionality for reading objects from an input stream. Provides functionality for writing objects to an output stream. Allows classes to implement serialization, allowing their objects to be converted into byte streams. Provides an implementation of the List interface backed by an array. Provides functionality for storing and manipulating collections of objects. Manages recipes, including adding, saving, loading, and listing recipes. This class provides functionality to create recipes from user input and interact with recipe data stored in files. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.RecipeManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.RecipeManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" line="56" column="7" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/RecipeManagement.java" bodystart="56" bodyend="220"/>
+    <listofallmembers>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a34bed27d573c737d2381589b7594acc3" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>addRecipe</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a3eb720f63462d973e488edc6de6b8c5f" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>createRecipeFromUserInput</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a13fdbe43b729eeb79cdd7a4cc488856e" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>getRecipes</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>listRecipes</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>loadFromFile</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9a8adda9a83167a5e21183e545d19c77" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>RecipeManagement</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a9153e9a05e64a69773a266e511d858d2" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>recipes</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a6c3330b8dd63d98553ed21c762494278" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>saveToFile</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a58a3ecc95f8d416473c1a4475248d049" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a676ed176bd5feb15b1806f1423fb80b5" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::RecipeManagement</scope><name>setRecipes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcom_1_1turankanbur_1_1calculator_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>com::turankanbur::calculator::User</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1User_1ad9d109108e986924f6fffef1f883e31b" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.turankanbur.calculator.User.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <qualifiedname>com.turankanbur.calculator.User.serialVersionUID</qualifiedname>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for ensuring version compatibility of serialized objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="20" column="27" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1User_1a52710b5b3a837b5b1617dd99180ebee5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.User.username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>com.turankanbur.calculator.User.username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The username of the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="23" column="16" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1User_1afc904fed793f73d44e694f60adbf743c" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.User.password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <qualifiedname>com.turankanbur.calculator.User.password</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The password of the user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="26" column="16" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1User_1afab84543e28a9e395d9c2889f5246bb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.turankanbur.calculator.User.User</definition>
+        <argsstring>(String username, String password)</argsstring>
+        <name>User</name>
+        <qualifiedname>com.turankanbur.calculator.User.User</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a User object with the specified username and password.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username of the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the password of the user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="34" column="8" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1User_1a97399787514bd7cae661ed9be97eede7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.User.getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <qualifiedname>com.turankanbur.calculator.User.getUsername</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the username of the user.</para>
+<para><simplesect kind="return"><para>the username of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="44" column="15" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="44" bodyend="46"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1User_1ad5e7fbaf18b7cbcb1953e5300af5d6e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.turankanbur.calculator.User.getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <qualifiedname>com.turankanbur.calculator.User.getPassword</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the password of the user.</para>
+<para><simplesect kind="return"><para>the password of the user </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="53" column="15" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="53" bodyend="55"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for serialization, allowing objects to be converted into byte streams. Represents a user with a username and password. Provides functionality to retrieve the username and password. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.User</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.User</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1User"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" line="15" column="7" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/User.java" bodystart="15" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1ad5e7fbaf18b7cbcb1953e5300af5d6e0" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>getPassword</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1a97399787514bd7cae661ed9be97eede7" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>getUsername</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1afc904fed793f73d44e694f60adbf743c" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>password</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1ad9d109108e986924f6fffef1f883e31b" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1afab84543e28a9e395d9c2889f5246bb6" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>User</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1User_1a52710b5b3a837b5b1617dd99180ebee5" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::User</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

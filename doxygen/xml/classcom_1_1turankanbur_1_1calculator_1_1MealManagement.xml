@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement" kind="class" language="Java" prot="public">
+    <compoundname>com::turankanbur::calculator::MealManagement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">com.turankanbur.calculator.IMainMeal</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ae59f490f1c605df37b91448fc4e831ec" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.turankanbur.calculator.MealManagement.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.serialVersionUID</qualifiedname>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for ensuring version compatibility of serialized objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="26" column="27" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+        <definition>List&lt;Meal&gt; com.turankanbur.calculator.MealManagement.meals</definition>
+        <argsstring></argsstring>
+        <name>meals</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.meals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of meals managed by this MealManagement instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="29" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ac54edf8538f3fdbce208391a9ee67f2e" compoundref="MealManagement_8java" startline="59" endline="61">com.turankanbur.calculator.MealManagement.getMeals</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a67e6df6870cceaa12d50403168dfc7d0" compoundref="MealManagement_8java" startline="70" endline="82">com.turankanbur.calculator.MealManagement.saveMealsToFile</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa2b2c09213156d4923ce729e876dd18b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.turankanbur.calculator.MealManagement.MealManagement</definition>
+        <argsstring>()</argsstring>
+        <name>MealManagement</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.MealManagement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a MealManagement object with an empty list of meals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="32" column="8" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.MealManagement.addMeal</definition>
+        <argsstring>(Meal meal, String fileName)</argsstring>
+        <name>addMeal</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.addMeal</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref></type>
+          <declname>meal</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a meal to the list of managed meals and saves it to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the meal to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save the meals to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="43" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="43" bodyend="52"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8ede9b07520f986d0c116d29084a2c4" compoundref="MealManagement_8java" startline="91" endline="112">com.turankanbur.calculator.MealManagement.loadMealsFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a67e6df6870cceaa12d50403168dfc7d0" compoundref="MealManagement_8java" startline="70" endline="82">com.turankanbur.calculator.MealManagement.saveMealsToFile</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" compoundref="MealManagement_8java" startline="123" endline="133">com.turankanbur.calculator.MealManagement.createMealFromUserInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ac54edf8538f3fdbce208391a9ee67f2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+        <definition>List&lt; Meal &gt; com.turankanbur.calculator.MealManagement.getMeals</definition>
+        <argsstring>()</argsstring>
+        <name>getMeals</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.getMeals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of managed meals.</para>
+<para><simplesect kind="return"><para>the list of managed meals </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="59" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="59" bodyend="61"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" compoundref="MealManagement_8java" startline="29">com.turankanbur.calculator.MealManagement.meals</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a67e6df6870cceaa12d50403168dfc7d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.MealManagement.saveMealsToFile</definition>
+        <argsstring>(List&lt; Meal &gt; meals, String fileName)</argsstring>
+        <name>saveMealsToFile</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.saveMealsToFile</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+          <declname>meals</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves a list of meals to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meals</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of meals to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="70" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="70" bodyend="82"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" compoundref="MealManagement_8java" startline="29">com.turankanbur.calculator.MealManagement.meals</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" compoundref="MealManagement_8java" startline="43" endline="52">com.turankanbur.calculator.MealManagement.addMeal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8ede9b07520f986d0c116d29084a2c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+        <definition>List&lt; Meal &gt; com.turankanbur.calculator.MealManagement.loadMealsFromFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>loadMealsFromFile</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.loadMealsFromFile</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads meals from a file and returns them as a list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the list of loaded meals </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="91" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="91" bodyend="112"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" compoundref="MealManagement_8java" startline="43" endline="52">com.turankanbur.calculator.MealManagement.addMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.MealManagement.createMealFromUserInput</definition>
+        <argsstring>(String mealName, List&lt; Recipe &gt; selectedRecipes, RecipeManagement recipeManager)</argsstring>
+        <name>createMealFromUserInput</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.createMealFromUserInput</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>mealName</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>selectedRecipes</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" kindref="compound">RecipeManagement</ref></type>
+          <declname>recipeManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a meal from user input and adds it to the list of managed meals.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mealName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the meal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selectedRecipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of recipes included in the meal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipeManager</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the RecipeManagement object to interact with recipe data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="123" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="123" bodyend="133"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" compoundref="MealManagement_8java" startline="43" endline="52">com.turankanbur.calculator.MealManagement.addMeal</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1aca8c449430aa7a4087085ad840d468bb" compoundref="Meal_8java" startline="136" endline="138">com.turankanbur.calculator.Meal.getTotalCost</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.MealManagement.listMeals</definition>
+        <argsstring>(String filename)</argsstring>
+        <name>listMeals</name>
+        <qualifiedname>com.turankanbur.calculator.MealManagement.listMeals</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all managed meals along with their names and total costs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load meals from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="141" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="141" bodyend="158"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1a6f4d3fb44f945f0a25fc05de0c148801" compoundref="Meal_8java" startline="118" endline="120">com.turankanbur.calculator.Meal.getName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Meal_1aca8c449430aa7a4087085ad840d468bb" compoundref="Meal_8java" startline="136" endline="138">com.turankanbur.calculator.Meal.getTotalCost</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8ede9b07520f986d0c116d29084a2c4" compoundref="MealManagement_8java" startline="91" endline="112">com.turankanbur.calculator.MealManagement.loadMealsFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" compoundref="MealManagement_8java" startline="29">com.turankanbur.calculator.MealManagement.meals</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" compoundref="Menu_8java" startline="1184" endline="1201">com.turankanbur.calculator.Menu.viewMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" compoundref="Menu_8java" startline="1209" endline="1227">com.turankanbur.calculator.Menu.viewMealForGuest</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for handling input/output (I/O) operations. Provides the framework for writing programs that manipulate collections of objects. Manages meals, including adding, saving, loading, and listing meals. This class provides functionality to create meals from user input and interact with meal data stored in files. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.MealManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.turankanbur.calculator.IMainMeal</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.MealManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.turankanbur.calculator.IMainMeal</label>
+      </node>
+    </collaborationgraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" line="21" column="7" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/MealManagement.java" bodystart="21" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a198b65ae91a46a3153c4cebb57ea4013" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>addMeal</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>createMealFromUserInput</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ac54edf8538f3fdbce208391a9ee67f2e" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>getMeals</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>listMeals</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8ede9b07520f986d0c116d29084a2c4" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>loadMealsFromFile</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa2b2c09213156d4923ce729e876dd18b" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>MealManagement</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1aa8fda65d9fe063b078a753d4a843feb7" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>meals</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a67e6df6870cceaa12d50403168dfc7d0" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>saveMealsToFile</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ae59f490f1c605df37b91448fc4e831ec" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::MealManagement</scope><name>serialVersionUID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

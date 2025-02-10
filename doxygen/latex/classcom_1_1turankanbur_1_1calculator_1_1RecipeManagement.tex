@@ -1,0 +1,354 @@
+\doxysection{com.\+turankanbur.\+calculator.\+Recipe\+Management Class Reference}
+\hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+Inheritance diagram for com.\+turankanbur.\+calculator.\+Recipe\+Management\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a9a8adda9a83167a5e21183e545d19c77}{Recipe\+Management}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3}{add\+Recipe}} (\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} recipe, String file\+Name)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e}{get\+Recipes}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}{list\+Recipes}} (String filename)
+\item 
+void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a676ed176bd5feb15b1806f1423fb80b5}{set\+Recipes}} (List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ recipes2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}{save\+To\+File}} (List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ recipes, String file\+Name)
+\item 
+static List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{load\+From\+File}} (String file\+Name)
+\item 
+static void \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f}{create\+Recipe\+From\+User\+Input}} (List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ available\+Ingredients, \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{Recipe\+Management}} recipe\+Manager, String recipe\+Name, double total\+Cost, List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$ selected\+Ingredients)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality for handling end-\/of-\/file (EOF) conditions. Provides functionality for reading bytes from a file input stream. Provides functionality for writing bytes to a file output stream. Provides functionality for handling input/output (I/O) operations. Provides functionality for reading objects from an input stream. Provides functionality for writing objects to an output stream. Allows classes to implement serialization, allowing their objects to be converted into byte streams. Provides an implementation of the List interface backed by an array. Provides functionality for storing and manipulating collections of objects. Manages recipes, including adding, saving, loading, and listing recipes. This class provides functionality to create recipes from user input and interact with recipe data stored in files. 
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00056}{56}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a9a8adda9a83167a5e21183e545d19c77}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a9a8adda9a83167a5e21183e545d19c77} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!RecipeManagement@{RecipeManagement}}
+\index{RecipeManagement@{RecipeManagement}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{RecipeManagement()}{RecipeManagement()}}
+{\footnotesize\ttfamily com.\+turankanbur.\+calculator.\+Recipe\+Management.\+Recipe\+Management (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a Recipe\+Management object with an empty list of recipes. 
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00067}{67}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ this.recipes\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a34bed27d573c737d2381589b7594acc3} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!addRecipe@{addRecipe}}
+\index{addRecipe@{addRecipe}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{addRecipe()}{addRecipe()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Recipe\+Management.\+add\+Recipe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}}}]{recipe,  }\item[{String}]{file\+Name }\end{DoxyParamCaption})}
+
+Adds a recipe to the list of managed recipes and saves it to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipe} & the recipe to add \\
+\hline
+{\em file\+Name} & the name of the file to save the recipes to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00080}{80}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ existing\ recipes\ from\ file}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ List<Recipe>\ existingRecipes\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(fileName);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ the\ new\ recipe\ to\ the\ existing\ list}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ existingRecipes.add(recipe);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ all\ recipes\ to\ file}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}{saveToFile}}(existingRecipes,\ fileName);}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{RecipeManagement_8java_source_l00126}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+load\+From\+File()}}, and \mbox{\hyperlink{RecipeManagement_8java_source_l00106}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+save\+To\+File()}}.
+
+
+
+Referenced by \mbox{\hyperlink{RecipeManagement_8java_source_l00159}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+create\+Recipe\+From\+User\+Input()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a3eb720f63462d973e488edc6de6b8c5f} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!createRecipeFromUserInput@{createRecipeFromUserInput}}
+\index{createRecipeFromUserInput@{createRecipeFromUserInput}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{createRecipeFromUserInput()}{createRecipeFromUserInput()}}
+{\footnotesize\ttfamily static void com.\+turankanbur.\+calculator.\+Recipe\+Management.\+create\+Recipe\+From\+User\+Input (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$}]{available\+Ingredients,  }\item[{\mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement}{Recipe\+Management}}}]{recipe\+Manager,  }\item[{String}]{recipe\+Name,  }\item[{double}]{total\+Cost,  }\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Ingredient}{Ingredient}} $>$}]{selected\+Ingredients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a recipe from user input and adds it to the list of managed recipes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em available\+Ingredients} & the list of available ingredients \\
+\hline
+{\em recipe\+Manager} & the Recipe\+Management object to interact with recipe data \\
+\hline
+{\em recipe\+Name} & the name of the recipe \\
+\hline
+{\em total\+Cost} & the total cost of the recipe \\
+\hline
+{\em selected\+Ingredients} & the list of selected ingredients for the recipe \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00159}{159}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ recipe\ details}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nRecipe\ Name:\ "{}}\ +\ recipeName);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Total\ Cost:\ "{}}\ +\ totalCost\ +\ \textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ingredients:"{}});}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Ingredient\ ingredient\ :\ selectedIngredients)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/\ "{}}\ +\ ingredient.getName()\ +\ \textcolor{stringliteral}{"{}:\ "{}}\ +\ ingredient.getPrice()\ +\ \textcolor{stringliteral}{"{}\$"{}}\ +\ \textcolor{stringliteral}{"{}\ per\ unit"{}});}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ recipe}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ Recipe\ recipe\ =\ \textcolor{keyword}{new}\ Recipe(recipeName,\ selectedIngredients,\ totalCost);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ the\ recipe\ to\ the\ existing\ recipe\ manager\ and\ save\ to\ file}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ recipeManager.addRecipe(recipe,\ \textcolor{stringliteral}{"{}recipes.bin"{}});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{RecipeManagement_8java_source_l00080}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+add\+Recipe()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l01015}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Recipe()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a13fdbe43b729eeb79cdd7a4cc488856e} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!getRecipes@{getRecipes}}
+\index{getRecipes@{getRecipes}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{getRecipes()}{getRecipes()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ com.\+turankanbur.\+calculator.\+Recipe\+Management.\+get\+Recipes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the list of managed recipes.
+
+\begin{DoxyReturn}{Returns}
+the list of managed recipes 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00096}{96}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.recipes;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l01129}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Meal()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_ac903048dc40ecb3872fc7bf7f74d7c44} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!listRecipes@{listRecipes}}
+\index{listRecipes@{listRecipes}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{listRecipes()}{listRecipes()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Recipe\+Management.\+list\+Recipes (\begin{DoxyParamCaption}\item[{String}]{filename }\end{DoxyParamCaption})}
+
+Lists all managed recipes along with their names, total costs, and ingredients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to load recipes from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00185}{185}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ recipes\ from\ file}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ recipes\ =\ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}{loadFromFile}}(filename);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recipes.isEmpty())\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}No\ recipes\ found\ to\ list."{}});}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ recipes.size();\ i++)\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ Recipe\ recipe\ =\ recipes.get(i);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nRecipe\ "{}}\ +\ (i\ +\ 1)\ +\ \textcolor{stringliteral}{"{}:"{}});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Name:\ "{}}\ +\ recipe.getName());}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Total\ Cost:\ "{}}\ +\ recipe.getTotalCost()+\ \textcolor{stringliteral}{"{}\$"{}});}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ Ingredients:"{}});}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ List<Ingredient>\ ingredients\ =\ recipe.getIngredients();}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ ingredients.size();\ j++)\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ingredient\ ingredient\ =\ ingredients.get(j);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ -\/\ "{}}\ +\ ingredient.getName()\ +\ \textcolor{stringliteral}{"{}:\ "{}}\ +\ ingredient.getPrice\ ()+\ \textcolor{stringliteral}{"{}\$"{}}\ +\ \textcolor{stringliteral}{"{}\ per\ unit"{}});}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{Recipe_8java_source_l00069}{com.\+turankanbur.\+calculator.\+Recipe.\+get\+Ingredients()}}, \mbox{\hyperlink{Ingredient_8java_source_l00107}{com.\+turankanbur.\+calculator.\+Ingredient.\+get\+Name()}}, \mbox{\hyperlink{Recipe_8java_source_l00060}{com.\+turankanbur.\+calculator.\+Recipe.\+get\+Name()}}, \mbox{\hyperlink{Ingredient_8java_source_l00119}{com.\+turankanbur.\+calculator.\+Ingredient.\+get\+Price()}}, \mbox{\hyperlink{Recipe_8java_source_l00078}{com.\+turankanbur.\+calculator.\+Recipe.\+get\+Total\+Cost()}}, and \mbox{\hyperlink{RecipeManagement_8java_source_l00126}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+load\+From\+File()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Menu_8java_source_l01129}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Meal()}}, \mbox{\hyperlink{Menu_8java_source_l01078}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Recipe()}}, and \mbox{\hyperlink{Menu_8java_source_l01103}{com.\+turankanbur.\+calculator.\+Menu.\+view\+Recipe\+For\+Guest()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a5ad78568d3fa0d44e3cbff3c04b446e1} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily static List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$ com.\+turankanbur.\+calculator.\+Recipe\+Management.\+load\+From\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Loads recipes from a file and returns them as a list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the name of the file to load from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of loaded recipes 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00126}{126}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ List<Recipe>\ loadedRecipes\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileInputStream\ fis\ =\ \textcolor{keyword}{new}\ FileInputStream(fileName);\ ObjectInputStream\ ois\ =\ \textcolor{keyword}{new}\ ObjectInputStream(fis))\ \{}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Recipe\ loadedRecipe\ =\ (Recipe)\ ois.readObject();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loadedRecipes.add(loadedRecipe);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ois.readUTF();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (EOFException\ e)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ Reached\ end\ of\ file}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ |\ ClassNotFoundException\ e)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ loading\ from\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ loadedRecipes;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{RecipeManagement_8java_source_l00080}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+add\+Recipe()}}, \mbox{\hyperlink{Menu_8java_source_l01129}{com.\+turankanbur.\+calculator.\+Menu.\+Create\+Meal()}}, \mbox{\hyperlink{RecipeManagement_8java_source_l00185}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+list\+Recipes()}}, and \mbox{\hyperlink{Menu_8java_source_l00541}{com.\+turankanbur.\+calculator.\+Menu.\+Recipe\+Costing()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a6c3330b8dd63d98553ed21c762494278} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily static void com.\+turankanbur.\+calculator.\+Recipe\+Management.\+save\+To\+File (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$}]{recipes,  }\item[{String}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Saves a list of recipes to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipes} & the list of recipes to save \\
+\hline
+{\em file\+Name} & the name of the file to save to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00106}{106}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ (FileOutputStream\ fos\ =\ \textcolor{keyword}{new}\ FileOutputStream(fileName);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObjectOutputStream\ oos\ =\ \textcolor{keyword}{new}\ ObjectOutputStream(fos))\ \{}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Recipe\ r\ :\ recipes)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeObject(r);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oos.writeUTF(\textcolor{stringliteral}{"{}\#END\_RECIPE\#"{}});}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Error\ saving\ to\ file:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{RecipeManagement_8java_source_l00080}{com.\+turankanbur.\+calculator.\+Recipe\+Management.\+add\+Recipe()}}.
+
+\Hypertarget{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a676ed176bd5feb15b1806f1423fb80b5}\label{classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_a676ed176bd5feb15b1806f1423fb80b5} 
+\index{com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}!setRecipes@{setRecipes}}
+\index{setRecipes@{setRecipes}!com.turankanbur.calculator.RecipeManagement@{com.turankanbur.calculator.RecipeManagement}}
+\doxysubsubsection{\texorpdfstring{setRecipes()}{setRecipes()}}
+{\footnotesize\ttfamily void com.\+turankanbur.\+calculator.\+Recipe\+Management.\+set\+Recipes (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1turankanbur_1_1calculator_1_1Recipe}{Recipe}} $>$}]{recipes2 }\end{DoxyParamCaption})}
+
+Sets the list of recipes managed by this Recipe\+Management instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em recipes2} & the list of recipes to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{RecipeManagement_8java_source_l00215}{215}} of file \mbox{\hyperlink{RecipeManagement_8java_source}{Recipe\+Management.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ this.recipes\ =\ recipes2;}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+recipe-\/cost-\/calculator-\/app/src/main/java/com/turankanbur/calculator/\mbox{\hyperlink{RecipeManagement_8java}{Recipe\+Management.\+java}}\end{DoxyCompactItemize}

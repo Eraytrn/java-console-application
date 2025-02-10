@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal" kind="interface" language="Java" prot="package">
+    <compoundname>com::turankanbur::calculator::IMainMeal</compoundname>
+    <derivedcompoundref refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement" prot="public" virt="non-virtual">com.turankanbur.calculator.MealManagement</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0cfe52730049ae54a5a0dba226935ae2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainMeal.addMeal</definition>
+        <argsstring>(Meal meal, String fileName)</argsstring>
+        <name>addMeal</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.addMeal</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref></type>
+          <declname>meal</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a meal to the list of managed meals and saves it to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the meal to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save the meals to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="30" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa83ddabe2a050f4e2e0fcf015085ae4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainMeal.saveMealsToFile</definition>
+        <argsstring>(List&lt; Meal &gt; meals, String fileName)</argsstring>
+        <name>saveMealsToFile</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.saveMealsToFile</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+          <declname>meals</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves a list of meals to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meals</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of meals to save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to save to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="38" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0f7ec01eb6ae18f4863898dee21bb0d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+        <definition>List&lt; Meal &gt; com.turankanbur.calculator.IMainMeal.loadMealsFromFile</definition>
+        <argsstring>(String fileName)</argsstring>
+        <name>loadMealsFromFile</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.loadMealsFromFile</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads meals from a file and returns them as a list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the list of loaded meals </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="46" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0be4b1b105cbca54f75522c735e0d474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainMeal.createMealFromUserInput</definition>
+        <argsstring>(String mealName, List&lt; Recipe &gt; selectedRecipes, RecipeManagement recipeManager)</argsstring>
+        <name>createMealFromUserInput</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.createMealFromUserInput</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>mealName</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe" kindref="compound">Recipe</ref> &gt;</type>
+          <declname>selectedRecipes</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement" kindref="compound">RecipeManagement</ref></type>
+          <declname>recipeManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a meal from user input and adds it to the list of managed meals.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mealName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the meal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selectedRecipes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of recipes included in the meal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipeManager</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the RecipeManagement object to interact with recipe data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="57" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa3df9ccd10381f3a980dffd97b7bc6e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.IMainMeal.listMeals</definition>
+        <argsstring>(String filename)</argsstring>
+        <name>listMeals</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.listMeals</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lists all managed meals along with their names and total costs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the file to load meals from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="64" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a84a92ff477b12f53538c7ec4683d168c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1turankanbur_1_1calculator_1_1Meal" kindref="compound">Meal</ref> &gt;</type>
+        <definition>List&lt; Meal &gt; com.turankanbur.calculator.IMainMeal.getMeals</definition>
+        <argsstring>()</argsstring>
+        <name>getMeals</name>
+        <qualifiedname>com.turankanbur.calculator.IMainMeal.getMeals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of managed meals.</para>
+<para><simplesect kind="return"><para>the list of managed meals </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="71" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides functionality for serialization, allowing objects to be converted into byte streams. Provides functionality for storing and manipulating collections of objects. Interface representing main ingredients in a recipe or dish. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>com.turankanbur.calculator.IMainMeal</label>
+      </node>
+      <node id="2">
+        <label>com.turankanbur.calculator.MealManagement</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" line="22" column="11" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Meal.java" bodystart="22" bodyend="73"/>
+    <listofallmembers>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0cfe52730049ae54a5a0dba226935ae2" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>addMeal</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0be4b1b105cbca54f75522c735e0d474" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>createMealFromUserInput</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a84a92ff477b12f53538c7ec4683d168c" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>getMeals</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa3df9ccd10381f3a980dffd97b7bc6e2" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>listMeals</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1a0f7ec01eb6ae18f4863898dee21bb0d8" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>loadMealsFromFile</name></member>
+      <member refid="interfacecom_1_1turankanbur_1_1calculator_1_1IMainMeal_1aa83ddabe2a050f4e2e0fcf015085ae4e" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::IMainMeal</scope><name>saveMealsToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

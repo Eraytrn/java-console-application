@@ -1,0 +1,1115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcom_1_1turankanbur_1_1calculator_1_1Menu" kind="class" language="Java" prot="public">
+    <compoundname>com::turankanbur::calculator::Menu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aadec51eb9fb997efc817c591be641f58" prot="private" static="yes" mutable="no">
+        <type>final long</type>
+        <definition>final long com.turankanbur.calculator.Menu.serialVersionUID</definition>
+        <argsstring></argsstring>
+        <name>serialVersionUID</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.serialVersionUID</qualifiedname>
+        <initializer>= 1L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for ensuring version compatibility of serialized objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="68" column="31" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="68" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aad190a04054dc1f110dfccc10f407ece" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.turankanbur.calculator.Menu.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The main entry point of the Recipe Cost Calculator application. Creates an instance of the Menu class, initializes a scanner object for user input, and calls the userMenu method to display the main menu and handle user interactions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command line arguments (not used in this application) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="78" column="20" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="78" bodyend="83"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.clearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearScreen</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.clearScreen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the console screen.</para>
+<para>This method attempts to clear the console screen by running the cmd command with the /c option and the cls command on Windows. The standard input and output streams of the new process are redirected to those of the current process. If an exception is thrown while running the process, it is caught and printed to the console.</para>
+<para>Note: This method is specific to the Windows operating system and may not work on other platforms. To clear the console screen on other platforms, you may need to use different commands or methods. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="98" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="98" bodyend="108"/>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" compoundref="Menu_8java" startline="1235" endline="1265">com.turankanbur.calculator.Menu.About</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" compoundref="Menu_8java" startline="1276" endline="1305">com.turankanbur.calculator.Menu.AboutForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" compoundref="Menu_8java" startline="759" endline="787">com.turankanbur.calculator.Menu.addIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" compoundref="Menu_8java" startline="857" endline="930">com.turankanbur.calculator.Menu.editIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" compoundref="Menu_8java" startline="246" endline="271">com.turankanbur.calculator.Menu.guestMode</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" compoundref="Menu_8java" startline="173" endline="198">com.turankanbur.calculator.Menu.registerUser</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" compoundref="Menu_8java" startline="941" endline="1004">com.turankanbur.calculator.Menu.removeIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" compoundref="Menu_8java" startline="795" endline="816">com.turankanbur.calculator.Menu.viewIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" compoundref="Menu_8java" startline="824" endline="847">com.turankanbur.calculator.Menu.viewIngredientForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.turankanbur.calculator.Menu.userMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>userMenu</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.userMenu</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the main menu for user selection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if exit is requested, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="116" column="16" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="116" bodyend="165"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" compoundref="Menu_8java" startline="246" endline="271">com.turankanbur.calculator.Menu.guestMode</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" compoundref="Menu_8java" startline="173" endline="198">com.turankanbur.calculator.Menu.registerUser</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aad190a04054dc1f110dfccc10f407ece" compoundref="Menu_8java" startline="78" endline="83">com.turankanbur.calculator.Menu.main</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" compoundref="Menu_8java" startline="173" endline="198">com.turankanbur.calculator.Menu.registerUser</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.registerUser</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>registerUser</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.registerUser</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a new user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="173" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="173" bodyend="198"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.loginUser</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>loginUser</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.loginUser</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Logs in an existing user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="206" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="206" bodyend="239"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1User_1ad5e7fbaf18b7cbcb1953e5300af5d6e0" compoundref="User_8java" startline="53" endline="55">com.turankanbur.calculator.User.getPassword</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1User_1a97399787514bd7cae661ed9be97eede7" compoundref="User_8java" startline="44" endline="46">com.turankanbur.calculator.User.getUsername</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.guestMode</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>guestMode</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.guestMode</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enters guest mode.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="246" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="246" bodyend="271"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" compoundref="Menu_8java" startline="116" endline="165">com.turankanbur.calculator.Menu.userMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.printMenu</definition>
+        <argsstring>(Scanner Scanner)</argsstring>
+        <name>printMenu</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.printMenu</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>Scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the main menu options.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="278" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="278" bodyend="298"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" compoundref="Menu_8java" startline="1235" endline="1265">com.turankanbur.calculator.Menu.About</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" compoundref="Menu_8java" startline="759" endline="787">com.turankanbur.calculator.Menu.addIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" compoundref="Menu_8java" startline="1015" endline="1070">com.turankanbur.calculator.Menu.CreateRecipe</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" compoundref="Menu_8java" startline="857" endline="930">com.turankanbur.calculator.Menu.editIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" compoundref="Menu_8java" startline="206" endline="239">com.turankanbur.calculator.Menu.loginUser</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" compoundref="Menu_8java" startline="941" endline="1004">com.turankanbur.calculator.Menu.removeIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" compoundref="Menu_8java" startline="795" endline="816">com.turankanbur.calculator.Menu.viewIngredient</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" compoundref="Menu_8java" startline="1184" endline="1201">com.turankanbur.calculator.Menu.viewMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" compoundref="Menu_8java" startline="1078" endline="1095">com.turankanbur.calculator.Menu.viewRecipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.printMenuForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>printMenuForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.printMenuForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the main menu for guest users.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="306" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="306" bodyend="327"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" compoundref="Menu_8java" startline="1276" endline="1305">com.turankanbur.calculator.Menu.AboutForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" compoundref="Menu_8java" startline="824" endline="847">com.turankanbur.calculator.Menu.viewIngredientForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" compoundref="Menu_8java" startline="1209" endline="1227">com.turankanbur.calculator.Menu.viewMealForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" compoundref="Menu_8java" startline="1103" endline="1119">com.turankanbur.calculator.Menu.viewRecipeForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.selectMenu</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>selectMenu</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.selectMenu</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects menu options based on user input.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="334" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="334" bodyend="372"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" compoundref="Menu_8java" startline="1235" endline="1265">com.turankanbur.calculator.Menu.About</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" compoundref="Menu_8java" startline="1184" endline="1201">com.turankanbur.calculator.Menu.viewMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" compoundref="Menu_8java" startline="1209" endline="1227">com.turankanbur.calculator.Menu.viewMealForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.selectMenuForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>selectMenuForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.selectMenuForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selects menu options for guest users based on user input.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="380" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="380" bodyend="423"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" compoundref="Menu_8java" startline="1276" endline="1305">com.turankanbur.calculator.Menu.AboutForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" compoundref="Menu_8java" startline="246" endline="271">com.turankanbur.calculator.Menu.guestMode</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.IngredientManagement</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>IngredientManagement</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.IngredientManagement</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manages ingredient operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="431" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="431" bodyend="485"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" compoundref="Menu_8java" startline="759" endline="787">com.turankanbur.calculator.Menu.addIngredient</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" compoundref="Menu_8java" startline="857" endline="930">com.turankanbur.calculator.Menu.editIngredient</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" compoundref="Menu_8java" startline="941" endline="1004">com.turankanbur.calculator.Menu.removeIngredient</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" compoundref="Menu_8java" startline="795" endline="816">com.turankanbur.calculator.Menu.viewIngredient</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.IngredientManagementForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>IngredientManagementForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.IngredientManagementForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manages ingredient operations for guest users.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="493" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="493" bodyend="533"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" compoundref="Menu_8java" startline="824" endline="847">com.turankanbur.calculator.Menu.viewIngredientForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.RecipeCosting</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>RecipeCosting</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.RecipeCosting</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manages recipe costing operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="541" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="541" bodyend="597"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" compoundref="Menu_8java" startline="1015" endline="1070">com.turankanbur.calculator.Menu.CreateRecipe</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" compoundref="Menu_8java" startline="857" endline="930">com.turankanbur.calculator.Menu.editIngredient</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" compoundref="RecipeManagement_8java" startline="126" endline="147">com.turankanbur.calculator.RecipeManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" compoundref="Menu_8java" startline="1078" endline="1095">com.turankanbur.calculator.Menu.viewRecipe</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.RecipeCostingForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>RecipeCostingForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.RecipeCostingForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manages recipe costing operations for guest users.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="605" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="605" bodyend="645"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" compoundref="Menu_8java" startline="1103" endline="1119">com.turankanbur.calculator.Menu.viewRecipeForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.PlanMeal</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>PlanMeal</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.PlanMeal</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plans meal operations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="653" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="653" bodyend="702"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" compoundref="Menu_8java" startline="1129" endline="1176">com.turankanbur.calculator.Menu.CreateMeal</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" compoundref="Menu_8java" startline="1184" endline="1201">com.turankanbur.calculator.Menu.viewMeal</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.PlanMealForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>PlanMealForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.PlanMealForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plans meal operations for guest users.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scanner object for user input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="710" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="710" bodyend="750"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" compoundref="Menu_8java" startline="1209" endline="1227">com.turankanbur.calculator.Menu.viewMealForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.addIngredient</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>addIngredient</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.addIngredient</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new ingredient to the ingredient list. The user is prompted to enter the name and price of the ingredient. The ingredient is then saved to the file &quot;ingredients.bin&quot;. After adding the ingredient, the user is redirected to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="759" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="759" bodyend="787"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a49858502a36b4af3178f8e3ccde0df0d" compoundref="IngredientManagement_8java" startline="92" endline="96">com.turankanbur.calculator.IngredientManagement.addIngredient</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1ac0f2519b9b7f8c95b76220d3dc466427" compoundref="IngredientManagement_8java" startline="122" endline="136">com.turankanbur.calculator.IngredientManagement.saveToFile</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewIngredient</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewIngredient</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewIngredient</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available ingredients to the user. The user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="795" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="795" bodyend="816"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1acb89dcbcc6ad5671419a183bd40e89e9" compoundref="IngredientManagement_8java" startline="168" endline="181">com.turankanbur.calculator.IngredientManagement.listIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewIngredientForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewIngredientForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewIngredientForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available ingredients to the guest user. The guest user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="824" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="824" bodyend="847"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1acb89dcbcc6ad5671419a183bd40e89e9" compoundref="IngredientManagement_8java" startline="168" endline="181">com.turankanbur.calculator.IngredientManagement.listIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" compoundref="Menu_8java" startline="493" endline="533">com.turankanbur.calculator.Menu.IngredientManagementForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.editIngredient</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>editIngredient</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.editIngredient</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to edit the price of an existing ingredient. The user is prompted to enter the name of the ingredient to edit, as well as the new price. After editing the ingredient, the user can choose to save or cancel the operation and return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="857" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="857" bodyend="930"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a7e245d5acf5d722891a5a88275cb0ee3" compoundref="IngredientManagement_8java" startline="209" endline="216">com.turankanbur.calculator.IngredientManagement.findIngredientByName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1acb89dcbcc6ad5671419a183bd40e89e9" compoundref="IngredientManagement_8java" startline="168" endline="181">com.turankanbur.calculator.IngredientManagement.listIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1ac0f2519b9b7f8c95b76220d3dc466427" compoundref="IngredientManagement_8java" startline="122" endline="136">com.turankanbur.calculator.IngredientManagement.saveToFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1aa98e8d3f3458e0922557e85bfcafdfc6" compoundref="Ingredient_8java" startline="128" endline="130">com.turankanbur.calculator.Ingredient.setPrice</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.removeIngredient</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>removeIngredient</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.removeIngredient</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to remove an ingredient from the ingredient list. The user is prompted to enter the name of the ingredient to remove. After removing the ingredient, the user can choose to save or cancel the operation and return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="941" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="941" bodyend="1004"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a7e245d5acf5d722891a5a88275cb0ee3" compoundref="IngredientManagement_8java" startline="209" endline="216">com.turankanbur.calculator.IngredientManagement.findIngredientByName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a3aa55d99f0ae451655de8d675d6852fa" compoundref="IngredientManagement_8java" startline="103" endline="105">com.turankanbur.calculator.IngredientManagement.getIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a5d0cc26f5698a18fec8624efecccb960" compoundref="IngredientManagement_8java" startline="80" endline="83">com.turankanbur.calculator.IngredientManagement.IngredientManagement</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1acb89dcbcc6ad5671419a183bd40e89e9" compoundref="IngredientManagement_8java" startline="168" endline="181">com.turankanbur.calculator.IngredientManagement.listIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1ac0f2519b9b7f8c95b76220d3dc466427" compoundref="IngredientManagement_8java" startline="122" endline="136">com.turankanbur.calculator.IngredientManagement.saveToFile</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" compoundref="Menu_8java" startline="431" endline="485">com.turankanbur.calculator.Menu.IngredientManagement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.CreateRecipe</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>CreateRecipe</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.CreateRecipe</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to create a new recipe by selecting ingredients from the list of available ingredients. The user selects ingredients and specifies their quantities, and then provides a name for the recipe. The created recipe is then saved to the file &quot;recipes.bin&quot;. After creating the recipe, the user is redirected to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1015" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1015" bodyend="1070"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a3eb720f63462d973e488edc6de6b8c5f" compoundref="RecipeManagement_8java" startline="159" endline="176">com.turankanbur.calculator.RecipeManagement.createRecipeFromUserInput</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a3aa55d99f0ae451655de8d675d6852fa" compoundref="IngredientManagement_8java" startline="103" endline="105">com.turankanbur.calculator.IngredientManagement.getIngredients</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a61c290adf6848285b93b25357104105a" compoundref="Ingredient_8java" startline="107" endline="109">com.turankanbur.calculator.Ingredient.getName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Ingredient_1a9bc2645b91a8db2140d7a158f217a8f6" compoundref="Ingredient_8java" startline="119" endline="121">com.turankanbur.calculator.Ingredient.getPrice</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1IngredientManagement_1a8bf40cd4431ddffe3969b2f4e3833530" compoundref="IngredientManagement_8java" startline="144" endline="162">com.turankanbur.calculator.IngredientManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewRecipe</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewRecipe</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewRecipe</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available recipes to the user. The user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1078" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1078" bodyend="1095"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" compoundref="RecipeManagement_8java" startline="185" endline="207">com.turankanbur.calculator.RecipeManagement.listRecipes</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" compoundref="Menu_8java" startline="541" endline="597">com.turankanbur.calculator.Menu.RecipeCosting</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewRecipeForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewRecipeForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewRecipeForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available recipes to the guest user. The guest user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1103" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1103" bodyend="1119"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" compoundref="RecipeManagement_8java" startline="185" endline="207">com.turankanbur.calculator.RecipeManagement.listRecipes</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" compoundref="Menu_8java" startline="605" endline="645">com.turankanbur.calculator.Menu.RecipeCostingForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.CreateMeal</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>CreateMeal</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.CreateMeal</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows the user to create a new meal by selecting recipes from the list of available recipes. The user selects recipes to include in the meal, provides a name for the meal, and then saves the created meal to the file &quot;meals.bin&quot;. After creating the meal, the user is redirected to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1129" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1129" bodyend="1176"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1a51d4bda2e34df97cd88c962d2d5ff0c3" compoundref="MealManagement_8java" startline="123" endline="133">com.turankanbur.calculator.MealManagement.createMealFromUserInput</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Recipe_1a72cb7be3b47594b37a0dbd54698030ed" compoundref="Recipe_8java" startline="60" endline="62">com.turankanbur.calculator.Recipe.getName</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a13fdbe43b729eeb79cdd7a4cc488856e" compoundref="RecipeManagement_8java" startline="96" endline="98">com.turankanbur.calculator.RecipeManagement.getRecipes</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1ac903048dc40ecb3872fc7bf7f74d7c44" compoundref="RecipeManagement_8java" startline="185" endline="207">com.turankanbur.calculator.RecipeManagement.listRecipes</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1RecipeManagement_1a5ad78568d3fa0d44e3cbff3c04b446e1" compoundref="RecipeManagement_8java" startline="126" endline="147">com.turankanbur.calculator.RecipeManagement.loadFromFile</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewMeal</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewMeal</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewMeal</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available meals to the user. The user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1184" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1184" bodyend="1201"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" compoundref="Menu_8java" startline="653" endline="702">com.turankanbur.calculator.Menu.PlanMeal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.viewMealForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>viewMealForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.viewMealForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the list of available meals to the guest user. The guest user can press &apos;c&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1209" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1209" bodyend="1227"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1MealManagement_1ab4e8b6e6461496e6dbe02b44738434b6" compoundref="MealManagement_8java" startline="141" endline="158">com.turankanbur.calculator.MealManagement.listMeals</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" compoundref="Menu_8java" startline="710" endline="750">com.turankanbur.calculator.Menu.PlanMealForGuest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.About</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>About</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.About</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays information about the Recipe Cost Calculator application. The user can press &apos;1&apos; to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Scanner object used to get user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1235" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1235" bodyend="1265"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" compoundref="Menu_8java" startline="1235" endline="1265">com.turankanbur.calculator.Menu.About</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" compoundref="Menu_8java" startline="278" endline="298">com.turankanbur.calculator.Menu.printMenu</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" compoundref="Menu_8java" startline="1235" endline="1265">com.turankanbur.calculator.Menu.About</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" compoundref="Menu_8java" startline="334" endline="372">com.turankanbur.calculator.Menu.selectMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.turankanbur.calculator.Menu.AboutForGuest</definition>
+        <argsstring>(Scanner scanner)</argsstring>
+        <name>AboutForGuest</name>
+        <qualifiedname>com.turankanbur.calculator.Menu.AboutForGuest</qualifiedname>
+        <param>
+          <type>Scanner</type>
+          <declname>scanner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays information about the Recipe Cost Calculator App for guest users. This method clears the screen and prints information about the project, including its purpose and functionalities(Just Included View Option). After displaying the information, it prompts the user to press 1 to return to the main menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scanner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scanner object to read user input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="1276" column="13" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="1276" bodyend="1305"/>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" compoundref="Menu_8java" startline="1276" endline="1305">com.turankanbur.calculator.Menu.AboutForGuest</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" compoundref="Menu_8java" startline="98" endline="108">com.turankanbur.calculator.Menu.clearScreen</references>
+        <references refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" compoundref="Menu_8java" startline="306" endline="327">com.turankanbur.calculator.Menu.printMenuForGuest</references>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" compoundref="Menu_8java" startline="1276" endline="1305">com.turankanbur.calculator.Menu.AboutForGuest</referencedby>
+        <referencedby refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" compoundref="Menu_8java" startline="380" endline="423">com.turankanbur.calculator.Menu.selectMenuForGuest</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Imports the FileInputStream class, which is used to read data from a file as a stream of bytes. Imports the FileOutputStream class, which is used to write data to a file as a stream of bytes. Imports the IOException class, which signals that an I/O exception of some sort has occurred. Imports the ObjectInputStream class, which is used to deserialize objects from an InputStream. Imports the ObjectOutputStream class, which is used to serialize objects to an OutputStream. Imports the Serializable interface, which is used to indicate that a class can be serialized. Imports the ArrayList class, which is used to create resizable arrays. Imports the List interface, which is a collection used to store elements. Imports the Scanner class, which is used to get user input from the console. Represents a menu interface for the Recipe Cost Calculator application. Provides functionality for user interaction and navigation within the application. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.Menu</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1Menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+      <node id="1">
+        <label>com.turankanbur.calculator.Menu</label>
+        <link refid="classcom_1_1turankanbur_1_1calculator_1_1Menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" line="65" column="7" bodyfile="recipe-cost-calculator-app/src/main/java/com/turankanbur/calculator/Menu.java" bodystart="65" bodyend="1306"/>
+    <listofallmembers>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6585a50e1f7491785e6c5d2a04be9984" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>About</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a90226ffe862b85beb4d63f5f06d41791" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>AboutForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3a93d3eb4cd5243a3b25dcdd68c6299d" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>addIngredient</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a7cfaa699759fb3d2b5069ca281cf7eba" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>clearScreen</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad3946db636273739e1456092c34511ac" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>CreateMeal</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a5c7799ba8249f060dc832808e65dc64d" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>CreateRecipe</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ae56f188083c5d75e1411b57a1936b193" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>editIngredient</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a05a7f16c56b101a6f9840888f1df14aa" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>guestMode</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a64d464b5d449f8b241360dc96dca6798" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>IngredientManagement</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1af2e590d0b927420dd6f16a29db58fc99" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>IngredientManagementForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1407d1ed36c8383d44b0c6c9ff71a411" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>loginUser</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aad190a04054dc1f110dfccc10f407ece" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>main</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a85a0b1d3f1c517cc10b09fdea2ca3034" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>PlanMeal</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aaca852f333c82f4a8ed573b0e2eafa5d" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>PlanMealForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a3c4df9c7728bb43b8d99e0027552e181" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>printMenu</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ac3fe800fd5f46fedd6a6ec3c6e8003ca" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>printMenuForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a47f9dbb6da59ea70e5235e0f3616deb4" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>RecipeCosting</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a2b654e4d7adf220403947031cab9317f" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>RecipeCostingForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aef7a9dcf89dd0d83794e82703dce4dab" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>registerUser</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a02a598ee21df087aefee1832cc8f41b7" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>removeIngredient</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1afd68d9a49f4664af10f2f9dc7f2af464" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>selectMenu</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a6d0f64d41e3bb367665aa3ffaf8054d4" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>selectMenuForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aadec51eb9fb997efc817c591be641f58" prot="private" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>serialVersionUID</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a32be5e207d15391b9b009f6c1ef6aa40" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>userMenu</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a160a45812969b71f33f8911a9467011b" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewIngredient</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a9551a30f5aa3b2fb791c5a8b1b42da3f" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewIngredientForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1ad5481339a0104e64062e0d77291b8c1f" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewMeal</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a1800dcfe54b9ff5c645c87130480c8f2" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewMealForGuest</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1a745fbc2030305907d61c9954d4578069" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewRecipe</name></member>
+      <member refid="classcom_1_1turankanbur_1_1calculator_1_1Menu_1aa7b0e82ab3195587e43acfdbda5780ed" prot="public" virt="non-virtual"><scope>com::turankanbur::calculator::Menu</scope><name>viewRecipeForGuest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

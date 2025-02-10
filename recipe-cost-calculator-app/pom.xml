@@ -184,7 +184,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>4.0.0-M13</version>
+				<version>4.0.0</version>
 				<configuration>
 					<port>9000</port>
 					<tempWebappDirectory>${basedir}/target/site</tempWebappDirectory>

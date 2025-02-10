@@ -126,7 +126,7 @@ jobs:
         shell: bash
 
       - name: Perform Maven site generation
-        run: mvn site
+        run: mvn site -DskipSite
         working-directory: ./recipe-cost-calculator-app
 
       #- name: Archive Coverage Report

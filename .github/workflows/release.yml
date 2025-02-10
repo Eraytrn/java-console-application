@@ -125,9 +125,12 @@ jobs:
             cp -r ./assets/ ./recipe-cost-calculator-app/src/site/resources
         shell: bash
 
-      - name: Perform Maven site generation
-        run: mvn site -DskipSite
-        working-directory: ./recipe-cost-calculator-app
+
+
+
+
+
+
 
       #- name: Archive Coverage Report
       #  uses: actions/upload-artifact@v2
